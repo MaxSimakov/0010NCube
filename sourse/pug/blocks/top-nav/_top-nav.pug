@@ -18,11 +18,19 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
+			.row.align-items-center
+				.col-auto
+					+e.logo
+						img(src="img/@2x/header-logo.png", alt="")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					+e.tel(href="tel:+74957203051")
+						+icon('phone')
+						span +7 495 720-30-51
+
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
-					+mnu()
 					
 	// end top-nav

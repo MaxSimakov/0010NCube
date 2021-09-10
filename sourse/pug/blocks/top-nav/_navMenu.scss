@@ -1,19 +1,24 @@
 .menu{
 	display: flex;
 	list-style: none;
-	@include roww(20px);
+	@include roww(30px);
 	position: relative;
 	margin-bottom: 0;
-	max-width: 100%;
+	// max-width: 100%;
 	flex-wrap: wrap;
+	
 	li{
 		// margin-left: 0;
 		// margin-right: 0;
-		padding: 0;
+		// padding: 0;
 	}
 	a{
 		display: block;
 		text-align: center;
-		padding: rem(20) rem(10);
+		padding: rem(20) rem(15);
+		color: #5A5A5A;
+		&:hover {
+			color: $primary;
+		}
 	}
 }
