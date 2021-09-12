@@ -1,12 +1,12 @@
 
-$h: em(2);
+$h: 4px;
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 12;
+	height: $h* 11.25;
 	position: relative;
-	color: $primary;
-	font-size: 32px;
+	color: #5A5A5A;
+	font-size: 34px;
 	width: 1em;
 	cursor: pointer;
 	&.on {
@@ -47,7 +47,7 @@ $h: em(2);
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
-		border-radius: 6px;
+		border-radius: 2px;
 		transform-origin: 50% 50%;
 	}
 
@@ -79,9 +79,9 @@ $h: em(2);
 .menu-mobile {
 	position: fixed !important;
 	z-index: 999;
-	max-width: 85%;
+	max-width: 100%;
 	height: calc(var(--vh, 1vh) * 100);
-	width: 280px;
+	width: 480px;
 	top: 0;
 	// left: 0;
 	right: 0;
@@ -95,7 +95,11 @@ $h: em(2);
 	will-change: transform;
 
 	&__inner {
-		padding: rem(20) 0;
+		position: relative;
+		max-width: 320px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: rem(135) 0 rem(20);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -114,20 +118,21 @@ $h: em(2);
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-left: -15%;
+		// margin-left: -15%;
 		position: absolute;
 		opacity: 0;
-		left: 0;
-		right: auto;
+		left: auto;
+		right: -3px;
 		color: #FFF;
-		top: 10px;
+		top: 16px;
 		z-index: 9999;
 		background-color: transparent;
-
+		width: 43px;
 		span,
 		span:after,
 		span:before {
-			background-color: #FFF;
+			background-color: #5A5A5A;
+			width: 43px;
 		}
 
 		&.on {
@@ -145,13 +150,15 @@ $h: em(2);
 
 	li {
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		// margin: 0;
+		// border-top: 1px solid rgba(255, 255, 255, .13);
+		width: 100%;
+		margin-bottom: rem(9);
 
 		a {
 			// font-size: 16px;
 
-			padding: 10px;
+			padding: rem(10);
 			display: block;
 
 		}

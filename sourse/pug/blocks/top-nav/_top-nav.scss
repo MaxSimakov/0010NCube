@@ -1,13 +1,73 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary);
 	background-color: #e0dedc;
-	padding: rem(18) 0;
+	padding: rem(14) 0 rem(9) 0;
+	@include media-breakpoint-up(lg) {
+		padding: rem(13.2) 0;
+	}
+	@include media-breakpoint-up(xxl) {
+		padding: rem(18) 0;
+	}
+	& > .container {
+		& > .row {
+			--bs-gutter-x: #{rem(24)};
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(30)};
+			}
+		}
+	}
+	&__logo {
+		display: inline-block;
+		img {
+			max-width: 127px;
+			@include media-breakpoint-up(lg) {
+				max-width: 188px;
+			}
+			@include media-breakpoint-up(xxl) {
+				max-width: 258px;
+			}
+		}
+	}
 	&__tel {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
+		justify-content: center;
+		font-size: rem(14);
+		color: #5a5a5a;
+		border-radius: 50%;
+		padding: rem(11.5);
+		background-color: $white;
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+			padding: rem(11.5) 0;
+			border-radius: 0;
+			margin-left: rem(35);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(20);
+			margin-left: rem(55);
+		}
+		span {
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
 		.icon {
-			font-size: rem(23);
-			margin-right: rem(15);
+			@include mt;
+			color: $primary;
+			font-size: rem(22);
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(15);
+			}
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(23);
+			}
+		}
+		&:hover,
+		&:active {
+			@include media-breakpoint-up(lg) {
+				color: $primary;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {

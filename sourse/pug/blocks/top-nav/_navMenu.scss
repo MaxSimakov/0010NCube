@@ -1,22 +1,35 @@
-.menu{
+.menu {
 	display: flex;
 	list-style: none;
-	@include roww(30px);
 	position: relative;
 	margin-bottom: 0;
 	// max-width: 100%;
 	flex-wrap: wrap;
-	
-	li{
+	@include media-breakpoint-up(lg) {
+		@include roww(30px);
+		justify-content: center;
+	}
+	@include media-breakpoint-up(xxl) {
+	}
+
+	li {
 		// margin-left: 0;
 		// margin-right: 0;
 		// padding: 0;
 	}
-	a{
+	a {
 		display: block;
 		text-align: center;
-		padding: rem(20) rem(15);
-		color: #5A5A5A;
+		color: #5a5a5a;
+		font-size: rem(26);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(14);
+			padding: rem(14) rem(5);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(20) rem(15);
+			font-size: rem(17);
+		}
 		&:hover {
 			color: $primary;
 		}

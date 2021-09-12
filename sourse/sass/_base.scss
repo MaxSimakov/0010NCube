@@ -499,7 +499,7 @@ iframe {
 	&:hover, &:focus {
 		box-shadow: 4px 4px 4px rgba(111, 81, 46, 0.25);
 	}
-	&:active {
+	&:active, &:active:focus {
 		box-shadow: inset 4px 4px 4px rgba(111, 81, 46, 0.1);
 	}
 }

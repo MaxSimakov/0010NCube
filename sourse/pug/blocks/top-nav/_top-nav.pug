@@ -9,10 +9,11 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
-		+e.inner
-			+mnu()
+		.container
+			+e.inner
+				+b.toggle-menu-mobile--js
+					span
+				+mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -20,11 +21,11 @@ mixin top-nav()
 		.container
 			.row.align-items-center
 				.col-auto
-					+e.logo
+					+e.logo(href="/")
 						img(src="img/@2x/header-logo.png", alt="")
 				.col.d-none.d-lg-block
 					+mnu()
-				.col-auto
+				.col.col-lg-auto.text-end.text-lg-start
 					+e.tel(href="tel:+74957203051")
 						+icon('phone')
 						span +7 495 720-30-51
