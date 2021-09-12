@@ -9,8 +9,8 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		.container
-			+e.inner
+		+e.inner
+			.container
 				+b.toggle-menu-mobile--js
 					span
 				+mnu()
@@ -29,7 +29,6 @@ mixin top-nav()
 					+e.tel(href="tel:+74957203051")
 						+icon('phone')
 						span +7 495 720-30-51
-
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

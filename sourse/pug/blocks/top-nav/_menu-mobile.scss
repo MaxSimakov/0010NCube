@@ -96,10 +96,7 @@ $h: 4px;
 
 	&__inner {
 		position: relative;
-		max-width: 320px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: rem(135) 0 rem(20);
+		max-width: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -107,6 +104,12 @@ $h: 4px;
 		@include mt(.3s);
 		transition-delay: .4s;
 		opacity: var(--opacity);
+		.container {
+			position: relative;
+			padding-top: rem(135);
+			padding-bottom: rem(20);
+			max-width: 360px;
+		}
 	}
 
 	&.active { 
@@ -122,12 +125,13 @@ $h: 4px;
 		position: absolute;
 		opacity: 0;
 		left: auto;
-		right: -3px;
+		right: 12px;
 		color: #FFF;
 		top: 16px;
 		z-index: 9999;
 		background-color: transparent;
 		width: 43px;
+		
 		span,
 		span:after,
 		span:before {
