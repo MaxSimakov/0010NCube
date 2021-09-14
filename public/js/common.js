@@ -306,8 +306,8 @@ function eventHandler() {
 
 	JSCCommon.mobileMenu(); // JSCCommon.inputMask();
 	// JSCCommon.sendForm();
-	// JSCCommon.heightwindow();
-	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
+
+	JSCCommon.heightwindow(); // JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	// JSCCommon.CustomInputFile(); 
 
@@ -361,11 +361,11 @@ function eventHandler() {
 
 		}
 	};
-	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+	const headerBlockSlider = new Swiper('.headerBlock__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
-		freeMode: true,
+		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window

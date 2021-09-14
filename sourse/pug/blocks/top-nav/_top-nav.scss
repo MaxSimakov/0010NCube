@@ -19,7 +19,7 @@
 	&__logo {
 		display: inline-block;
 		img {
-			max-width: rem(127);
+			max-width: rem(145);
 			@include media-breakpoint-up(lg) {
 				max-width: rem(188);
 			}
