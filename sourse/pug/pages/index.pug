@@ -1,9 +1,13 @@
 extends layout/main.pug
 
-
-include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sTEst00/_sTEst00.pug
+include ../blocks/sWelcome/_sWelcome.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sOptions/_sOptions.pug
+include ../blocks/sTrusted/_sTrusted.pug
+include ../blocks/sFollowUs/_sFollowUs.pug
+include ../blocks/sFaq/_sFaq.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -17,7 +21,13 @@ block pagecontent
 	+header()
 		+top-nav()
 	+headerBlock()
-	+sForm()
+	+sWelcome()
+	+sProjects()
+	+sAdvantages()
+	+sOptions()
+	+sTrusted()
+	+sFollowUs()
+	+sFaq()
 	+sContact()
 	+footer()
 
