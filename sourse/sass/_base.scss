@@ -523,3 +523,18 @@ h2 {
 	position: absolute;
 	background-color: rgba(207, 207, 207, 0.57);
 }
+
+.services{
+	.top-nav{
+		.container{
+			@include media-breakpoint-up(lg){
+				padding-bottom: rem(18);
+				border-bottom: 1px solid #CFCFCF;
+			}
+		}
+		@include media-breakpoint-up(lg){
+			padding-bottom: 0;
+			background-color: #F2F2F2;
+		}
+	}
+}

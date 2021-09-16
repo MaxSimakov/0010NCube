@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sWelcome/_sWelcome.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sOptions/_sOptions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sSocialMedia/_sSocialMedia.pug
+//- include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sVariants/_sVariants.pug
+
+block variables
+	- let  mainPage= 'services' 
+	- let  bg= "services.jpg"
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+sVariants()
+	//- +headerBlock()
+	//- +sWelcome()
+	//- +sProjects()
+	//- +sAdvantages()
+	//- +sOptions()
+	//- +sReviews()
+	//- +sSocialMedia()
+	//- +sFaq()
+	//- +sContact()
+	+footer()
+
+
+

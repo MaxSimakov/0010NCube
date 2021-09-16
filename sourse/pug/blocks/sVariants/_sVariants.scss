@@ -1,0 +1,31 @@
+// start .sVariants
+.sVariants {
+	background-color: #f2f2f2;
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: 32px;
+	@include media-breakpoint-up(xxxl){
+		--sTPB: #{rem(27)};
+	}
+	@include media-breakpoint-up(md){
+		--sTPB: 20px;
+	}
+	.title {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 28px;
+		line-height: 34px;
+		@include media-breakpoint-up(xxxl) {
+			max-width: rem(820);
+			font-size: rem(46);
+			line-height: rem(56);
+		}
+		@include media-breakpoint-up(md){
+			max-width: 600px;
+			font-size: 33px;
+			line-height: 40px;
+		}
+	}
+} // end.sVariants
