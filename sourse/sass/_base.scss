@@ -523,3 +523,11 @@ h2 {
 	position: absolute;
 	background-color: rgba(207, 207, 207, 0.57);
 }
+.decorative-circle {
+	position: absolute;
+	width: rem(355);
+	height: rem(355);
+	border-radius: 50%;
+	border: 1px solid #e0e0e0;
+	z-index: -1;
+}
