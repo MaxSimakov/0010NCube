@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-	 
-
 }
- 
 
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,3 +28,26 @@
 	}
 }
 
+.btn-round {
+	display: inline-block;
+	position: relative;
+	width: rem(105);
+	height: rem(105);
+	min-width: rem(105);
+	border-radius: 50%;
+	background: $white;
+	border: 1px solid $primary;
+	// box-shadow: none !important;
+	.icon {
+		position: absolute;
+		@include a-cent;
+		font-size: rem(34);
+		&.icon-play-button {
+			font-size: rem(24);
+		}
+	}
+	&:hover {
+		@extend .btn-primary;
+	}
+	
+}

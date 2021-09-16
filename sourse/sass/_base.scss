@@ -1,5 +1,5 @@
 .pixel-perfect {
-	top: 0;
+	top: -1170px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -470,12 +470,13 @@ iframe {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	&:hover,
-	&:focus {
-		box-shadow: 4px 4px 4px rgba(111, 81, 46, 0.25);
+	&:focus,
+	&:hover:focus {
+		box-shadow: 4px 4px 4px rgba(111, 81, 46, 0.25) !important;
 	}
 	&:active,
 	&:active:focus {
-		box-shadow: inset 4px 4px 4px rgba(111, 81, 46, 0.1);
+		box-shadow: inset 4px 4px 4px rgba(111, 81, 46, 0.1) !important;
 	}
 }
 
@@ -497,4 +498,28 @@ h1 {
 	@include media-breakpoint-up(xl) {
 		font-size: rem(56);
 	}
+}
+h2 {
+	@include media-breakpoint-up(xl) {
+		font-size: rem(46);
+	}
+}
+
+.bg-text {
+	position: absolute;
+	font-family: Oranienbaum;
+	text-transform: uppercase;
+	line-height: 1;
+	font-size: rem(120);
+	@include media-breakpoint-up(sm) {
+	font-size: rem(150);
+	}
+	@include media-breakpoint-up(xxl) {
+		font-size: rem(180);
+	}
+}
+
+.decorative-line {
+	position: absolute;
+	background-color: rgba(207, 207, 207, 0.57);
 }

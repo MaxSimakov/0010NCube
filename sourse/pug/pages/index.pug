@@ -5,8 +5,8 @@ include ../blocks/sWelcome/_sWelcome.pug
 include ../blocks/sProjects/_sProjects.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sOptions/_sOptions.pug
-include ../blocks/sTrusted/_sTrusted.pug
-include ../blocks/sFollowUs/_sFollowUs.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sSocialMedia/_sSocialMedia.pug
 include ../blocks/sFaq/_sFaq.pug
 
 block variables
@@ -22,11 +22,11 @@ block pagecontent
 		+top-nav()
 	+headerBlock()
 	+sWelcome()
-	+sProjects()
+	//- +sProjects()
 	+sAdvantages()
 	+sOptions()
-	+sTrusted()
-	+sFollowUs()
+	+sReviews()
+	+sSocialMedia()
 	+sFaq()
 	+sContact()
 	+footer()

@@ -22,7 +22,10 @@
 		overflow: hidden;
 		padding-top: rem(75);
 		padding-bottom: rem(150);
-
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(100);
+			padding-bottom: rem(150);
+		}
 		.container {
 			position: relative;
 			z-index: 2;
@@ -38,7 +41,7 @@
 		&::before {
 			content: "";
 			position: absolute;
-			width: 962px;
+			width: 1100px;
 			height: 767px;
 			left: -341px;
 			top: -154px;
@@ -100,14 +103,9 @@
 	ul {
 		max-width: 33em;
 		list-style-type: none;
-		margin-bottom: rem(70);
+		margin-bottom: rem(65);
 		min-height: 117px;
-		@include media-breakpoint-up(md) {
-			margin-bottom: rem(60);
-		}
-		@include media-breakpoint-up(xxl) {
-			margin-bottom: rem(80);
-		}
+		
 		li {
 			color: #0f0f0f;
 			font-size: rem(20);
