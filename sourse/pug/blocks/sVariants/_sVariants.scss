@@ -353,7 +353,7 @@
 				width: auto;
 				max-width: 100%;
 				text-overflow: clip;
-				overflow:hidden;
+				overflow: hidden;
 			}
 		}
 		.is-close {
@@ -476,6 +476,9 @@
 			line-height: 24px;
 			padding-bottom: rem(40);
 		}
+		@include media-breakpoint-down(sm) {
+			max-width: 80%;
+		}
 		span {
 			color: #ef7f1a;
 		}
@@ -562,10 +565,21 @@
 		}
 	}
 }
-@media (max-width: 370px) {
+@media (max-width: 440px) {
 	.modal-win--services .add-info {
-		padding-top: 10px;
+		padding-top: 20px;
 		padding-right: 10px;
 		padding-left: 10px;
+	}
+	.modal-win--services .main-info__wrap {
+		// padding-top: 10px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.modal-win__list li {
+		font-size: 11px;
+	}
+	.modal-win--services .main-info__wrap:before {
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 23%);
 	}
 }
