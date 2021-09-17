@@ -9,6 +9,7 @@ extends layout/main.pug
 //- include ../blocks/sSocialMedia/_sSocialMedia.pug
 //- include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sVariants/_sVariants.pug
+include ../blocks/sStages/_sStages.pug
 
 block variables
 	- let  mainPage= 'services' 
@@ -22,6 +23,7 @@ block pagecontent
 	+header()
 		+top-nav()
 	+sVariants()
+	+sStages()
 	//- +headerBlock()
 	//- +sWelcome()
 	//- +sProjects()
