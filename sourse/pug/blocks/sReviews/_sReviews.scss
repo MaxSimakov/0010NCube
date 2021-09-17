@@ -3,7 +3,8 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	color: $white;
+	background-color: #41403E;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
