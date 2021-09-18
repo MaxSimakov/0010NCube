@@ -1,6 +1,6 @@
 .pixel-perfect {
 	// top: -1170px;
-	top: -1033px;
+	top: 0px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -534,7 +534,6 @@ h2 {
 	// z-index: -1;
 }
 
-
 .services{
 	.top-nav{
 		.container{
@@ -546,6 +545,39 @@ h2 {
 		@include media-breakpoint-up(lg){
 			padding-bottom: 0;
 			background-color: #F2F2F2;
+		}
+	}
+}
+.bread-nav{
+	position: absolute;
+	top: 32px;
+	left: 0;
+	z-index: 30;
+	@include media-breakpoint-down(lg){
+		display: none;
+	}
+}
+.breadcrumb{
+	list-style-type: none;
+	display: flex;
+	padding-left: 15px;
+	li{
+		font-size: rem(12);
+		margin-right: rem(20);
+		a{
+			color: #5A5A5A;
+		}
+	}
+	.prev-active{
+		position: relative;
+		a{
+			&::after{
+				content:'/';
+				position: absolute;
+				top: 0;
+				right: rem(-12);
+				color: #5A5A5A;
+			}
 		}
 	}
 }

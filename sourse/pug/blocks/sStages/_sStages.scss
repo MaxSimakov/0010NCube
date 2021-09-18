@@ -236,7 +236,7 @@
 	&--stages{
 		&-first{
 			position: absolute;
-			width: 2px;
+			width: 1px;
 			@include media-breakpoint-up(xxxl){
 				top: -250px;
 				height: 1070px;
@@ -258,7 +258,7 @@
 		}
 		&-second{
 			position: absolute;
-			width: 2px;
+			width: 1px;
 			
 			@include media-breakpoint-up(xxxl){
 				top: -140px;
