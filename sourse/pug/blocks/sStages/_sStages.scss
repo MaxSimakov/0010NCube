@@ -5,6 +5,9 @@
 	--sTPB: #{rem(65)};
 	position: relative;
 	z-index: 20;
+	@include media-breakpoint-between(lg,xxl){
+		--sPB:0;
+	}
 	.row-reverse {
 		flex-direction: row-reverse;
 		@include media-breakpoint-up(xxl) {

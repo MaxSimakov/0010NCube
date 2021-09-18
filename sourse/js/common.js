@@ -345,7 +345,7 @@ function eventHandler() {
 			// }
 		},
 	}
-
+	
 	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
