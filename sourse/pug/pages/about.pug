@@ -1,0 +1,21 @@
+extends layout/main.pug
+
+include ../blocks/sCalc/_sCalc.pug
+
+block variables
+	- let  mainPage= 'about' 
+	- let  bg= "about.jpg"
+
+block title
+	- let  title= 'О студии'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sVariants()
+	+footer()
+
+
+
