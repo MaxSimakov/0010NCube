@@ -1,5 +1,5 @@
 .soc {
-	@include roww(10px, m);
+	@include roww(30px, m);
 	display: flex;
 	&__item {
 		text-decoration: none !important;
@@ -41,7 +41,16 @@
 	.icon {
 		position: absolute;
 		@include a-cent;
-		font-size: rem(34);
+		font-size: rem(36);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(24);
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(30);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(34);
+		}
 		&.icon-play-button {
 			font-size: rem(24);
 		}
@@ -49,5 +58,4 @@
 	&:hover {
 		@extend .btn-primary;
 	}
-	
 }

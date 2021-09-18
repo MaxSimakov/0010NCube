@@ -88,7 +88,11 @@ body {
 		}
 	}
 }
-
+.main-wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
 // .main-wrapper {
 // 	display: flex;
 // 	flex-direction: row;
