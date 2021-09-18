@@ -1,10 +1,94 @@
 // start .sReviews
 .sReviews {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(45)};
+	--sPB: #{rem(140)};
+	--sTPB: #{rem(45)};
 	color: $white;
-	background-color: #41403E;
+	background-color: #41403e;
+	position: relative;
+	overflow-x: clip;
+	margin-top: -1px;
+	@include media-breakpoint-up(md) {
+		--sPB: 0;
+	}
+	&__wrapper {
+		position: relative;
+		overflow: hidden;
+		z-index: 3;
+	}
+	.bg-text {
+		position: absolute;
+		left: 2%;
+		bottom: -1%;
+		// z-index: 3;
+		color: rgba(255, 255, 255, 0.06);
+		font-size: rem(110);
+		@include media-breakpoint-up(md) {
+			left: 2%;
+			bottom: -1.5%;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(130);
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(180);
+		}
+		@include media-breakpoint-up(xxxl) {
+			left: 5%;
+			bottom: -3.1%;
+		}
+	}
+	.decorative-circle {
+		border: 1px solid #515151;
+		left: 20%;
+		top: -9%;
+		width: rem(440);
+		height: rem(440);
+		@include media-breakpoint-up(md) {
+			left: 33%;
+			top: -9%;
+			width: rem(642);
+			height: rem(642);
+		}
+		// z-index: 1;
+	}
+	&__content {
+		max-width: 665px;
+		height: 100%;
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(md) {
+			padding-bottom: 182px;
+			padding-right: calc(var(--bs-gutter-x) * 0.4);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-right: calc(var(--bs-gutter-x) * 1.5);
+		}
+	}
+	&__name {
+		font-weight: 600;
+		font-size: rem(24);
+		margin-bottom: rem(30);
+	}
+	&__adress {
+		font-size: rem(24);
+		margin-bottom: rem(30);
+	}
+	p {
+		// margin-bottom: 0;
+		line-height: 125%;
+	}
+	&__btn {
+		@include media-breakpoint-up(md) {
+			margin-top: rem(35);
+		}
+		@include media-breakpoint-down(md) {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 300px;
+			margin-top: rem(55);
+		}
+	}
 	&__col {
 		min-height: 561px;
 		@include media-breakpoint-up(md) {
@@ -20,15 +104,25 @@
 				left: 0;
 				top: 0;
 				height: 100%;
-				width: calc((100vw - 300%) / 2 + 100%);
+				width: calc(50vw + 5%);
+			}
+			@include media-breakpoint-up(lg) {
+				margin-left: calc(-1 * var(--bs-gutter-x));
 			}
 		}
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sReviews

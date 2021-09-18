@@ -1,11 +1,10 @@
 // start .sOptions
 .sOptions {
-	// --sPB: ;
+	--sPB: #{rem(45)};
 	--sPT: #{rem(85)};
 	--sTPB: #{rem(40)};
 	position: relative;
 	overflow: hidden;
-	z-index: 2;
 	background-color: #41403e;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(135)};
@@ -19,9 +18,9 @@
 		top: 0;
 		left: 0;
 		background-color: $white;
-		z-index: -1;
+		// z-index: -1;
 		@include media-breakpoint-up(md) {
-			height: 36%;
+			height: 37%;
 		}
 	}
 	&::after {
@@ -33,7 +32,7 @@
 		background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 100%);
 		z-index: -1;
 		@include media-breakpoint-up(md) {
-			top: 36%;
+			top: 37%;
 		}
 		@include media-breakpoint-up(xxl) {
 			width: 84%;
@@ -41,6 +40,7 @@
 	}
 	.container {
 		position: relative;
+		z-index: 2;
 	}
 	.section-title {
 		h2 {
@@ -59,13 +59,13 @@
 			display: block;
 		}
 		&--first {
-			left: 14px;
+			left: rem(14);
 		}
 		&--second {
 			left: 81.5%;
 		}
 		&--third {
-			right: 14px;
+			right: rem(14);
 		}
 	}
 	.bg-text {
@@ -119,6 +119,9 @@
 			}
 			padding-left: rem(30);
 			padding-right: rem(30);
+		}
+		.bg-card {
+			z-index: 1;
 		}
 	}
 
