@@ -10,6 +10,7 @@ extends layout/main.pug
 //- include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sVariants/_sVariants.pug
 include ../blocks/sStages/_sStages.pug
+include ../blocks/sCalc/_sCalc.pug
 
 block variables
 	- let  mainPage= 'services' 
@@ -22,8 +23,10 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
+	+breadcrumb('Главная',title)
 	+sVariants()
 	+sStages()
+	+sCalc()
 	//- +headerBlock()
 	//- +sWelcome()
 	//- +sProjects()

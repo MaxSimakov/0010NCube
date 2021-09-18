@@ -66,6 +66,16 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
+			<div class="container" style="position:relative;">
+				<nav class="bread-nav" aria-label="breadcrumb">
+					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb-item prev-active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+								<meta itemprop="position" content="1"/></a></li>
+						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Услуги и стоимость</span>
+								<meta itemprop="position" content="2"/></a></li>
+					</ol>
+				</nav>
+			</div>
 			<!-- start sVariants-->
 			<section class="sVariants section" id="sVariants">
 				<div class="container">
@@ -444,6 +454,84 @@
 				</div>
 			</section>
 			<!-- end sStages-->
+			<!-- start sCalc-->
+			<section class="sCalc section" id="sCalc">
+				<div class="container">
+					<div class="section-title text-center">
+						<h1>Калькулятор расчета цены дизайн проекта</h1>
+					</div>
+				</div>
+				<div class="container container--calc">
+					<div class="sCalc__block">
+						<div class="sCalc__block-title">Выберите тариф
+						</div>
+						<form action="" name="type">
+							<div class="row row--tariffs">
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio calc-tariff" type="radio" value="1" name="tariff" checked="checked"/><span class="sCalc__calc-info">Start cube</span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio calc-tariff" type="radio" value="2" name="tariff"/><span class="sCalc__calc-info">project cube</span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio calc-tariff" type="radio" value="3" name="tariff"/><span class="sCalc__calc-info">project cube +</span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio calc-tariff" type="radio" value="4" name="tariff"/><span class="sCalc__calc-info">maxi cube</span>
+									</div>
+								</div>
+							</div>
+						</form>
+						<form action="" name="formSquare"> 
+							<div class="row row--price">
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio" type="radio" value="1sq" name="square"/><span class="sCalc__calc-info"><span>0 - 60 м²</span><span>1 м² - 0000&nbsp;р</span></span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio" type="radio" value="2sq" name="square"/><span class="sCalc__calc-info"><span>60 - 100 м²</span><span>1 м² - 0000&nbsp;р</span></span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio" type="radio" value="3sq" name="square"/><span class="sCalc__calc-info"><span>100 - 250 м²</span><span>1 м² - 0000&nbsp;р</span></span>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sCalc__calc-label"><input class="sCalc__calc-radio" type="radio" value="4sq" name="square"/><span class="sCalc__calc-info"><span>250 м² +</span><span>1 м² - 0000&nbsp;р</span></span>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="row row--calc">
+							<div class="sCalc__square">
+								<div class="sCalc__calc-title">Площадь вашего объекта
+								</div>
+								<input type="text" name="squareValue" placeholder="000 м²"/>
+							</div>
+							<div class="sCalc__final">
+								<div class="sCalc__final-price">
+									<div class="sCalc__calc-title">Стоимость работ
+									</div>
+									<div class="sCalc__input-final">420 000 р
+									</div>
+								</div>
+								<div class="sCalc__sale-price">
+									<div class="sCalc__calc-title">Со скидкой 5% 
+									</div>
+									<div class="sCalc__input-sale">399 000 р
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCalc__btn-fix">Зафиксировать скидку
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCalc-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">

@@ -1,0 +1,314 @@
+// start .sCalc
+.sCalc {
+	@include media-breakpoint-up(xxl) {
+		--sPT: #{rem(60)};
+	}
+	--sPT: 40px;
+	// --sPB: ;
+	--sTPB: #{rem(55)};
+	.container {
+		&--calc {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+				max-width: none;
+				padding: 0;
+			}
+		}
+	}
+	h1 {
+		text-align: left;
+		font-size: 28px;
+		line-height: 34px;
+		max-width: 400px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(42);
+			line-height: rem(51);
+			max-width: rem(630);
+		}
+	}
+	&__block {
+		background-color: #5a5a5a;
+		padding-top: 48px;
+		padding-left: 45px;
+		padding-right: 45px;
+		padding-bottom: 83px;
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(70);
+			padding-left: rem(98);
+			padding-right: rem(98);
+			padding-bottom: rem(84);
+		}
+		&-title {
+			font-weight: 600;
+			color: #ffffff;
+			text-transform: uppercase;
+			font-size: 22px;
+			line-height: 32px;
+			padding-bottom: 15px;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(22);
+				line-height: rem(32);
+				padding-bottom: rem(20);
+			}
+		}
+		.row {
+			--bs-gutter-x: 13px;
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(39)};
+			}
+			&--tariffs {
+				padding-bottom: rem(27);
+				@include media-breakpoint-down(lg) {
+					--bs-gutter-y: 26px;
+					padding-bottom: 23px;
+				}
+			}
+			&--price {
+				padding-bottom: rem(25);
+				@include media-breakpoint-down(lg) {
+					--bs-gutter-y: 17px;
+					padding-bottom: 55px;
+				}
+				.sCalc__calc-info {
+					height: auto !important;
+					padding-top: 25px;
+					padding-left: 36px;
+					padding-bottom: 25px;
+					@include media-breakpoint-down(sm) {
+						height: 100% !important;
+						padding-left: 20px;
+					}
+					@include media-breakpoint-up(lg) {
+						text-align: left;
+						padding-left: rem(44);
+						padding-top: rem(27);
+						padding-bottom: rem(30);
+						height: rem(120);
+						text-transform: unset;
+					}
+					span {
+						display: block;
+						text-align: left;
+						&:nth-child(1) {
+							font-size: 22px;
+							line-height: 27px;
+							margin-bottom: 20px;
+							@include media-breakpoint-up(xxl) {
+								font-size: rem(24);
+							}
+							@include media-breakpoint-up(lg) {
+								font-size: 20px;
+								line-height: rem(29);
+								margin-bottom: rem(24);
+							}
+						}
+						&:nth-child(2) {
+							font-size: 16px;
+							line-height: 20px;
+							@include media-breakpoint-up(lg) {
+								font-size: rem(18);
+								line-height: rem(22);
+							}
+						}
+					}
+				}
+			}
+			&--calc {
+				padding-bottom: 54px;
+				@include media-breakpoint-up(lg) {
+					justify-content: space-between;
+					padding-bottom: rem(47);
+				}
+				@include media-breakpoint-down(lg) {
+					flex-direction: column;
+				}
+			}
+			&--calc > * {
+				width: auto;
+			}
+		}
+	}
+	&__calc {
+		&-label {
+			position: relative;
+			height: 100%;
+		}
+		&-radio {
+			position: absolute;
+			// clip: rect(0, 0, 0, 0);
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+		&-info {
+			@include mt;
+			width: 100%;
+			font-size: 17px;
+			line-height: 60px;
+			display: block;
+			background-color: $white;
+			border: 3px solid transparent;
+			text-transform: uppercase;
+			text-align: center;
+			color: #5a5a5a;
+			@include media-breakpoint-down(sm) {
+				line-height: 21px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+			@include media-breakpoint-up(lg) {
+				height: rem(60);
+				font-size: rem(18);
+				line-height: rem(60);
+			}
+			@include media-breakpoint-down(lg) {
+				min-height: 60px;
+				height: 100%;
+			}
+			&:hover{
+				border-color: #ef7f1a;
+				font-weight: 800;
+				color: #ef7f1a;
+			}
+		}
+		&-radio:checked + .sCalc__calc-info {
+			border-color: #ef7f1a;
+			font-weight: 800;
+			color: #ef7f1a;
+		}
+	}
+	&__calc-title {
+		text-transform: uppercase;
+		color: #ffffff;
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 32px;
+		max-width: 260px;
+		padding-bottom: 17px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(22);
+			line-height: rem(32);
+			max-width: none;
+			padding-bottom: rem(21);
+		}
+	}
+	&__square {
+		input {
+			font-size: 24px;
+			line-height: 29px;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			padding-left: 40px;
+			padding-right: 40px;
+			height: 72px;
+			width: 220px;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(24);
+				line-height: rem(29);
+				padding-top: rem(17);
+				padding-bottom: rem(17);
+				padding-left: rem(40);
+				padding-right: rem(40);
+				height: rem(72);
+				width: rem(220);
+			}
+		}
+	}
+	&__final {
+		display: flex;
+		@include media-breakpoint-down(lg) {
+			flex-direction: column;
+		}
+	}
+	&__square {
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 27px;
+		}
+	}
+	&__input-final {
+		font-weight: 600;
+		color: $white;
+		border: 1px solid $white;
+		line-height: 143.4%;
+		font-size: 26px;
+		padding-top: 19px;
+		padding-bottom: 19px;
+		padding-left: 31px;
+		padding-right: 20px;
+		height: 72px;
+		width: 220px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(26);
+			padding-top: rem(19);
+			padding-bottom: rem(19);
+			padding-left: rem(31);
+			padding-right: rem(20);
+			height: rem(72);
+			width: rem(220);
+		}
+	}
+	&__final-price {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 24px;
+		}
+	}
+	&__sale-price {
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(45);
+		}
+	}
+	&__input-sale {
+		font-weight: 600;
+		color: $white;
+		border: 1px solid $white;
+		line-height: 143.4%;
+		font-size: 26px;
+		padding-top: 19px;
+		padding-bottom: 19px;
+		padding-left: 31px;
+		padding-right: 20px;
+		height: 72px;
+		width: 220px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(26);
+			padding-top: rem(19);
+			padding-bottom: rem(19);
+			padding-left: rem(31);
+			padding-right: rem(20);
+			height: rem(72);
+			width: rem(220);
+		}
+	}
+	&__btn-fix {
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+		color: $white;
+		background-color: #ef7f1a;
+		font-weight: 600;
+		text-align: center;
+		font-size: 18px;
+		line-height: 22px;
+		padding-left: 36px;
+		padding-right: 36px;
+		padding-top: 23px;
+		padding-bottom: 23px;
+		min-height: 75px;
+		max-width: 356;
+		text-transform: uppercase;
+		@include media-breakpoint-down(sm){
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+			line-height: rem(22);
+			padding-left: rem(36);
+			padding-right: rem(36);
+			padding-top: rem(23);
+			padding-bottom: rem(23);
+			height: rem(75);
+			max-width: rem(356);
+		}
+	}
+} // end.sCalc

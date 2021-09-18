@@ -1,0 +1,66 @@
+mixin sCalc(data)
+	// start sCalc
+	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Калькулятор расчета цены дизайн проекта
+		.container.container--calc
+			+e.block
+				+e.block-title Выберите тариф
+				form(action="" name="type")
+					.row.row--tariffs
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio.calc-tariff(type="radio" value="1" name="tariff" checked)
+								+e.SPAN.calc-info Start cube
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio.calc-tariff(type="radio" value="2" name="tariff")
+								+e.SPAN.calc-info project cube
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio.calc-tariff(type="radio" value="3" name="tariff")
+								+e.SPAN.calc-info project cube +
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio.calc-tariff(type="radio" value="4" name="tariff")
+								+e.SPAN.calc-info maxi cube
+				form(action="" name="formSquare") 
+					.row.row--price
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio(type="radio" value="1sq" name="square")
+								+e.SPAN.calc-info
+									span 0 - 60 м²
+									span 1 м² - 0000&nbsp;р
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio(type="radio" value="2sq" name="square")
+								+e.SPAN.calc-info
+									span 60 - 100 м²
+									span 1 м² - 0000&nbsp;р
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio(type="radio" value="3sq" name="square")
+								+e.SPAN.calc-info
+									span 100 - 250 м²
+									span 1 м² - 0000&nbsp;р
+						.col-lg-3.col-6
+							+e.calc-label
+								+e.INPUT.calc-radio(type="radio" value="4sq" name="square")
+								+e.SPAN.calc-info
+									span 250 м² +
+									span 1 м² - 0000&nbsp;р
+				.row.row--calc
+					+e.square
+						+e.calc-title Площадь вашего объекта
+						input(type="text" name="squareValue" placeholder="000 м²")
+					+e.final
+						+e.final-price
+							+e.calc-title Стоимость работ
+							+e.input-final 420 000 р
+						+e.sale-price
+							+e.calc-title Со скидкой 5% 
+							+e.input-sale 399 000 р
+				+e.btn-fix Зафиксировать скидку
+	// end sCalc
