@@ -59,13 +59,13 @@
 			display: block;
 		}
 		&--first {
-			left: 14px;
+			left: rem(14);
 		}
 		&--second {
 			left: 81.5%;
 		}
 		&--third {
-			right: 14px;
+			right: rem(14);
 		}
 	}
 	.bg-text {
