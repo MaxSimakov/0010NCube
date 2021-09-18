@@ -1,22 +1,32 @@
 // start .sReviews
 .sReviews {
-	// --sPT: ;
-	--sPB: 0;
+	--sPT: #{rem(45)};
+	--sPB: #{rem(140)};
 	--sTPB: #{rem(45)};
 	color: $white;
 	background-color: #41403e;
 	position: relative;
+	overflow-x: clip;
+	margin-top: -1px;
+	@include media-breakpoint-up(md) {
+		--sPB: 0;
+	}
 	&__wrapper {
 		position: relative;
 		overflow: hidden;
+		z-index: 3;
 	}
 	.bg-text {
 		position: absolute;
 		left: 2%;
-		bottom: -2%;
-		z-index: 3;
+		bottom: -1%;
+		// z-index: 3;
 		color: rgba(255, 255, 255, 0.06);
 		font-size: rem(110);
+		@include media-breakpoint-up(md) {
+			left: 2%;
+			bottom: -1.5%;
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: rem(130);
 		}
@@ -27,6 +37,20 @@
 			left: 5%;
 			bottom: -3.1%;
 		}
+	}
+	.decorative-circle {
+		border: 1px solid #515151;
+		left: 20%;
+		top: -9%;
+		width: rem(440);
+		height: rem(440);
+		@include media-breakpoint-up(md) {
+			left: 33%;
+			top: -9%;
+			width: rem(642);
+			height: rem(642);
+		}
+		// z-index: 1;
 	}
 	&__content {
 		max-width: 665px;
@@ -55,6 +79,13 @@
 	}
 	&__btn {
 		@include media-breakpoint-up(md) {
+			margin-top: rem(35);
+		}
+		@include media-breakpoint-down(md) {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 300px;
 			margin-top: rem(55);
 		}
 	}

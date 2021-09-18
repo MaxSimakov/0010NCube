@@ -1,6 +1,6 @@
 .pixel-perfect {
 	// top: -1170px;
-	top: -10px;
+	top: -1033px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -531,7 +531,7 @@ h2 {
 	height: rem(355);
 	border-radius: 50%;
 	border: 1px solid #e0e0e0;
-	z-index: -1;
+	// z-index: -1;
 }
 
 
