@@ -79,6 +79,10 @@
 		width: 83%;
 		object-fit: cover;
 		margin-left: auto;
+		position: relative;
+	}
+	.stages-bg-second{
+		position: relative;
 	}
 	&__col-left {
 		@include media-breakpoint-up(lg) {
@@ -301,4 +305,7 @@
 			left: -71px;
 		}
 	}
+}
+@media (max-width: 440px) {
+
 }

@@ -312,3 +312,35 @@
 		}
 	}
 } // end.sCalc
+@media (max-width: 440px) {
+	.sCalc__calc-info{
+		font-size: 14px;
+		span{
+			&:nth-child(1){
+				font-size: 18px !important;
+			}
+			&:nth-child(2){
+				font-size: 14px !important;
+			}
+		}
+	}
+	.sCalc__block .row--price .sCalc__calc-info{
+		padding-left: 10px;
+	}
+}
+@media (max-width: 340px) {
+	.sCalc__calc-info{
+		font-size: 13px;
+		span{
+			&:nth-child(1){
+				font-size: 15px !important;
+			}
+			&:nth-child(2){
+				font-size: 12px !important;
+			}
+		}
+	}
+	.sCalc__block .row--price .sCalc__calc-info{
+		padding-left: 10px;
+	}
+}
