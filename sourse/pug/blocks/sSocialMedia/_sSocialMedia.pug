@@ -2,8 +2,26 @@ mixin sSocialMedia(data)
 	// start sSocialMedia
 	+b.SECTION.sSocialMedia.section#sSocialMedia&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sSocialMedia
-				
-			.row
-	// end sSocialMedia
+			+e.heading
+				.row
+					.col-auto
+						+b.section-title
+							h2 Следите за нами в социальных сетях
+					.col
+						+e.hashtags
+							span #нкуб
+							span #nncubestudio
+							span #ncube
+			+e.row.row
+				+e.col.col-sm
+					+pic(`socialmedia-1.jpg`,'bg', '')
+				+e.col.col-sm
+					+pic(`socialmedia-2.jpg`,'bg', '')
+				+e.col.col-sm
+					+pic(`socialmedia-3.jpg`,'bg', '')
+				+e.col-soc.col-sm-auto
+					+soc
+						+item-sos('facebook')
+						+item-sos('instagram')
+						+item-sos('youtube')
+	// end sSocialMedias

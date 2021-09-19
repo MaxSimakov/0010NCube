@@ -6,7 +6,6 @@
 	color: $white;
 	background-color: #41403e;
 	position: relative;
-	overflow-x: clip;
 	margin-top: -1px;
 	@include media-breakpoint-up(md) {
 		--sPB: 0;
