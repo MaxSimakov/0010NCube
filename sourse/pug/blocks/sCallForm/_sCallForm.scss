@@ -1,0 +1,112 @@
+// start .sCallForm
+.sCallForm {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	position: relative;
+	.container{
+		position: relative;
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(45)};
+	}
+	@include media-breakpoint-down(lg) {
+		--sPT: 224px;
+		--sPB: 258px;
+	}
+	.bg-text {
+		color: rgba(245, 245, 245, 0.5);
+		bottom: rem(-45);
+		@include media-breakpoint-up(lg){
+			left: rem(35);
+		}
+		@include media-breakpoint-down(lg){
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+	}
+	.decorative-line{
+		&--callform{
+			@include media-breakpoint-up(lg){
+				display: block;
+				height: rem(465);
+				width: 1px;
+				right: rem(13);
+				top: rem(-116);
+			}
+			display: none;
+		}
+	}
+	.form-wrap {
+		@include media-breakpoint-up(lg) {
+			width: rem(594);
+			height: rem(594);
+			border: 1px solid #e0e0e0;
+			border-radius: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: rem(91);
+			padding-left: rem(100);
+			padding-right: rem(100);
+		}
+		@include media-breakpoint-down(lg) {
+			max-width: 333px;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+		}
+		&::before {
+			@include media-breakpoint-down(lg) {
+				content: "";
+				width: 594px;
+				height: 594px;
+				border-radius: 50%;
+				border: 1px solid #e0e0e0;
+				position: absolute;
+				top: -107px;
+				left: -130px;
+			}
+		}
+		.title {
+			color: #484848;
+			font-weight: 600;
+			text-align: center;
+			font-size: 26px;
+			line-height: 32px;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(26);
+				line-height: rem(32);
+			}
+		}
+		.caption {
+			text-align: center;
+			color: #5a5a5a;
+			font-size: 18px;
+			line-height: 22px;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+				line-height: rem(22);
+				padding-top: rem(22);
+				margin-bottom: rem(29);
+			}
+			padding-top: 22px;
+			margin-bottom: 29px;
+		}
+		input {
+			padding-left: rem(32);
+			border: 1px solid #C6C6C6;
+		}
+		&__input-wrap {
+			margin-bottom: rem(14);
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 14px;
+			}
+		}
+		&__btn {
+			@extend .btn, .btn-primary;
+			display: block;
+			font-weight: 600;
+			letter-spacing: unset;
+		}
+	}
+} // end.sCallForm

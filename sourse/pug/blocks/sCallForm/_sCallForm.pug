@@ -1,0 +1,15 @@
+mixin sCallForm(data)
+	// start sCallForm
+	+b.SECTION.sCallForm.section.bg-wrap#sCallForm&attributes(attributes)
+		.container
+			+form-wrap()
+				.title Хотите встретиться?
+				.caption Мы вам позвоним и согласуем удобное&nbsp;время встречи
+				+input('Имя')
+				+input('Телефон')
+				+e.btn Отправить заявку
+			.decorative-line.decorative-line--callform
+		+pic('call-form.jpg','bg',0).picture-bg
+		.bg-text questions
+		
+	// end sCallForm
