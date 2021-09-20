@@ -1,0 +1,22 @@
+mixin sPublications(data)
+	// start sPublications
+	+b.SECTION.sPublications.section#sPublications&attributes(attributes)
+		.container
+			+e.wrap
+				h1 Публикации и награды
+				+e.block
+					.title 2021
+					.caption Публикация в журнале Домашний очаг
+				+e.block
+					.title 2020
+					.caption Номинанты в INTERIA AWARDS 
+				+e.block
+					.title 2019
+					.caption Выставка ISalone 2019 в Милане Италия
+				+e.btn(href='#') Смотреть все награды
+			+pic('publications.png','',0).bg-publ
+			.decorative-line.decorative-line--1
+			.bg-text AWARDS
+		+pic('publications.png','',0).bg-publ--mob
+		.decorative-line.decorative-line--2
+	// end sPublications
