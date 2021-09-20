@@ -1,10 +1,46 @@
 // start .sSocialMedia
 .sSocialMedia {
-	--sPT: #{rem(95)};
-	// --sPB: ;
+	position: relative;
+
 	--sTPB: #{rem(24)};
+	--sPT: #{rem(75)};
+	--sPB: #{rem(75)};
 	@include media-breakpoint-up(md) {
 		--sTPB: 0;
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(95)};
+		--sPB: #{rem(95)};
+	}
+	.bg-text {
+		z-index: 2;
+		bottom: 25%;
+		right: -5%;
+		max-width: 3em;
+		font-size: rem(124);
+		color: rgba(245, 245, 245, 0.5);
+		@include media-breakpoint-up(sm) {
+			bottom: 0;
+			right: 0;
+		}
+		@include media-breakpoint-up(md) {
+			bottom: rem(10);
+			line-height: 0.65;
+			font-size: rem(130);
+			max-width: 100%;
+			right: 3%;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(148);
+			right: 4%;
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(180);
+			right: 0;
+		}
+		@include media-breakpoint-up(xxxl) {
+			right: 6%;
+		}
 	}
 	.section-title {
 		h2 {
@@ -72,6 +108,8 @@
 		}
 	}
 	&__col {
+		position: relative;
+		z-index: 1;
 		&:nth-child(1) {
 			@include media-breakpoint-down(lg) {
 				width: 100%;
@@ -86,6 +124,8 @@
 		}
 	}
 	&__col-soc {
+		position: relative;
+		z-index: 3;
 		@include media-breakpoint-up(sm) {
 			right: 0;
 			bottom: 0;
