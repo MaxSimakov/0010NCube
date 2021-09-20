@@ -1,6 +1,7 @@
 extends layout/main.pug
 
-include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sDescription/_sDescription.pug
+include ../blocks/sDreamHouse/_sDreamHouse.pug
 
 block variables
 	- let  mainPage= 'about' 
@@ -14,7 +15,8 @@ block pagecontent
 	+header()
 		+top-nav()
 	+breadcrumb('Главная',title)
-	//- +sVariants()
+	+sDescription()
+	+sDreamHouse()
 	+footer()
 
 
