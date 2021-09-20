@@ -280,21 +280,15 @@
 		}
 	}
 	&__btn-fix {
+		@extend .btn, .btn-primary;
 		margin-left: auto;
 		margin-right: auto;
-		cursor: pointer;
-		color: $white;
-		background-color: #ef7f1a;
+		display: block;
 		font-weight: 600;
 		text-align: center;
 		font-size: 18px;
 		line-height: 22px;
-		padding-left: 36px;
-		padding-right: 36px;
-		padding-top: 23px;
-		padding-bottom: 23px;
-		min-height: 75px;
-		max-width: 356;
+		max-width: 356px;
 		text-transform: uppercase;
 		@include media-breakpoint-down(sm){
 			padding-left: 0;
@@ -303,11 +297,6 @@
 		@include media-breakpoint-up(lg) {
 			font-size: rem(18);
 			line-height: rem(22);
-			padding-left: rem(36);
-			padding-right: rem(36);
-			padding-top: rem(23);
-			padding-bottom: rem(23);
-			height: rem(75);
 			max-width: rem(356);
 		}
 	}
