@@ -7,6 +7,7 @@
 		--sPT: #{rem(77)};
 	}
 	position: relative;
+	z-index: 4;
 	&__wrapper {
 		display: grid;
 		@include media-breakpoint-up(xxl) {
@@ -16,7 +17,7 @@
 			grid-template-columns: repeat(4, 1fr);
 			grid-gap: 38px;
 			// grid-auto-rows: minmax(100px, auto);
-			grid-template-rows: auto rem(145) rem(118) auto rem(116);
+			grid-template-rows: auto rem(145) rem(118) auto rem(88);
 		}
 	}
 	&__title-wrap {
@@ -177,7 +178,7 @@
 				grid-column: 1/3;
 				grid-row: 4/6;
 				picture {
-					height: 100%;
+					height: 106%;
 					img {
 						height: 100%;
 						object-fit: cover;
@@ -186,9 +187,12 @@
 			}
 			.card-text {
 				@include media-breakpoint-up(lg) {
-					bottom: rem(35);
+					bottom: rem(6);
 					left: 25.51%;
 				}
+			}
+			@include media-breakpoint-down(lg){
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -232,7 +236,58 @@
 	.sBestWorks__pic-card .card-text .title {
 		margin-bottom: 10px;
 	}
-	.sBestWorks__btn{
+	.sBestWorks__btn {
 		max-width: 270px;
+	}
+}
+.decorative-line--best1 {
+	z-index: -1;
+	@include media-breakpoint-up(xxxl) {
+		left: 15px;
+		top: -306px;
+		height: 1918px;
+		width: 1px;
+		position: absolute;
+	}
+	@include media-breakpoint-up(xxl) {
+		left: 15px;
+		top: -230px;
+		height: 1918px;
+		width: 1px;
+		position: absolute;
+	}
+	@include media-breakpoint-up(lg) {
+		background-color: rgba(207, 207, 207, 0.57);
+		width: 1px;
+		position: absolute;
+		left: 12px;
+		// top: -1020px;
+		top: -140px;
+		height: 1420px;
+	}
+	@include media-breakpoint-down(lg){
+		display: none;
+	}
+}
+.decorative-line--best2 {
+	z-index: -1;
+	@include media-breakpoint-up(xxl) {
+		left: 496px;
+		// top: -1277px;
+		top: -128px;
+		height: 900px;
+		width: 1px;
+		position: absolute;
+	}
+	@include media-breakpoint-up(lg) {
+		background-color: rgba(207, 207, 207, 0.57);
+		width: 1px;
+		position: absolute;
+		left: 362px;
+		top: -80px;
+		height: 600px;
+	}
+	@include media-breakpoint-down(lg){
+		display: none;
 	}
 }
