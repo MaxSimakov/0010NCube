@@ -26,13 +26,13 @@
 			pointer-events: none;
 			background-image: linear-gradient(180deg, rgba(242, 242, 242, 1) 80%, rgba(242, 242, 242, 0) 100%);
 			@include media-breakpoint-up(md) {
-				width: 200%;
+				width: 50vw;
 				height: calc(100% + var(--sPT) + var(--sPB));
 				left: auto;
 				right: -20%;
 				// transform: none;
 				top: calc(-1 * var(--sPT));
-				background-image: linear-gradient(90deg, rgba(242, 242, 242, 1) 85%, rgba(242, 242, 242, 0) 100%);
+				background-image: linear-gradient(90deg, rgba(242, 242, 242, 1) 90%, rgba(242, 242, 242, 0) 100%);
 			}
 		}
 	}
