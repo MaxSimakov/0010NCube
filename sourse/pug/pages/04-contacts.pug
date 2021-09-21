@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sWelcome/_sWelcome.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sOptions/_sOptions.pug
+include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sSocialMedia/_sSocialMedia.pug
+//- include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sCallForm/_sCallForm.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= "main.jpg"
+
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +headerBlock()
+	//- +sWelcome()
+	//- +sProjects()
+	//- +sAdvantages()
+	//- +sOptions()
+	+sContact()
+	+sReviews()
+	//- +sSocialMedia()
+	//- +sFaq()
+	+sCallForm()
+
+	+footer()
+
+
+
