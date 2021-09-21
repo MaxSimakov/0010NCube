@@ -11,7 +11,7 @@ include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sCallForm/_sCallForm.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'contacts' 
 	- let  bg= "main.jpg"
 
 block title
@@ -22,16 +22,19 @@ block pagecontent
 	+header()
 		+top-nav()
 	+breadcrumb('Главная',title)
+	.page-head
+		.container
+			h1 Где можно встретиться?
 	//- +headerBlock()
 	//- +sWelcome()
 	//- +sProjects()
 	//- +sAdvantages()
 	//- +sOptions()
-	+sContact()
+	+sContact-inner()
 	+sReviews()
 	//- +sSocialMedia()
 	//- +sFaq()
-	+sCallForm()
+	+sCallForm(2)
 
 	+footer()
 

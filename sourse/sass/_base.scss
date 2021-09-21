@@ -527,6 +527,7 @@ h2 {
 .decorative-line {
 	position: absolute;
 	background-color: rgba(207, 207, 207, 0.57);
+	pointer-events: none;
 }
 
 .decorative-circle {
@@ -535,10 +536,11 @@ h2 {
 	height: rem(355);
 	border-radius: 50%;
 	border: 1px solid #e0e0e0;
+	pointer-events: none;
 	// z-index: -1;
 }
 
-.services{
+.services, .contacts{
 	.top-nav{
 		.container{
 			@include media-breakpoint-up(lg){
@@ -590,4 +592,10 @@ h2 {
 	.bread-nav{
 		top: 48px;
 	}
+}
+
+.page-head {
+	padding-top: rem(70);
+	padding-bottom: rem(35);
+	background-color: #F2F2F2;
 }

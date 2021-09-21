@@ -39,3 +39,51 @@ mixin sContact()
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.692843057948!2d37.71231956470445!3d55.78120633142721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5356c80aacee1%3A0x736713689c561eac!2z0JHQvtC70YzRiNCw0Y8g0KHQtdC80LXQvdC-0LLRgdC60LDRjyDRg9C7LiwgNTXQkCwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzAyMw!5e0!3m2!1sru!2sby!4v1632230065494!5m2!1sru!2sby" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 		+e.btn.d-md-none(href="#") Проложить маршрут
 	// end sContact
+
+mixin sContact-inner()
+	// start sContact
+	+b.SECTION.sContact--inner.section#sContact&attributes(attributes)
+		.container
+			h2.d-none Контакты
+			+e.info
+				.decorative-circle
+				+e.item
+					+e.shedule
+						span В будни с 10:00 до 20:00
+						span В выходные по договоренности
+					p В офисе, на объекте <br> или в любом месте по согласованию
+				mixin item(t)
+					+e.item
+						h6!= t
+						ul
+							block
+				+item(`Офис:`)
+					li
+						+icon(`geo`)
+						span г. Москва,&nbsp;м.&nbsp;Семёновская, <br> ул.&nbsp;Большая&nbsp;Семёновская, <br> д.&nbsp;55&nbsp;А,&nbsp;офис&nbsp;21
+				+item(`Режим работы:`)
+					li
+						+icon(`clock`)
+						span 10:00 - 20:00
+				+item(`Телефон для заказов и обращений:`)
+					li
+						+icon(`phone-call`)
+						a(href="tel:+74957203051") +7 (495) 720-30-51
+					li
+						a(href="tel:+79037563051") +7 (903) 756-30-51
+				+item(`Для заказчиков:`)
+					li
+						+icon(`mail`)
+						a(href="mailto:nncube@mail.ru") nncube@mail.ru
+				+item(`Для поставщиков:`)
+					li
+						+icon(`phone-call`)
+						a(href="tel:+79161378905") +7 (916) 137-89-05
+					li
+						+icon(`mail`)
+						a(href="mailto:nncube@mail.ru") nncube@mail.ru
+		+e.map
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.692843057948!2d37.71231956470445!3d55.78120633142721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5356c80aacee1%3A0x736713689c561eac!2z0JHQvtC70YzRiNCw0Y8g0KHQtdC80LXQvdC-0LLRgdC60LDRjyDRg9C7LiwgNTXQkCwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzAyMw!5e0!3m2!1sru!2sby!4v1632230065494!5m2!1sru!2sby" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		+e.btn.d-md-none(href="#") Проложить маршрут
+	// end sContact
