@@ -2,17 +2,21 @@ mixin sTimeline1(data)
 	// start sTimeline
 	+b.sTimeline--first.section#sTimeline1&attributes(attributes)
 		.container
+			+pic('timeline.png','',0).bg-timeline
 			mixin year(y,c)
 				+e.year=y
 				+e.caption!=c
-			+year('2021','Публикация в журнале Домашний очаг спец выпуск интерьер + ремонт')
-			+year('2020','Стали номинантами в главной интерьерной премии страны INTERIA AWARDS в конкурсе MODERN HOME Professional Design Award лучшие современные интерьеры ')
-			+year('2019','<p class=`title`>Professional Design Award 2019</p><p class="capt-text"><span>29 марта в мультимедийном зале московского центра дизайна Artplay состоялась первая церемония награждения победителей всероссийской профессиональной премии за лучший современный жилой интерьер MODERN HOME Professional Design Award 2019.</span></p><p>Посетили выставку ISalone 2019 на в Милане Италия </p><p>Публикация нашего проекта в Elledecoration</p>')
+			+year('2021','<p class="short-mob">Публикация в журнале Домашний очаг спец выпуск интерьер + ремонт</p>')
+			+year('2020','<p class="short-mob">Стали номинантами в главной интерьерной премии страны INTERIA AWARDS в конкурсе MODERN HOME Professional Design Award лучшие современные интерьеры</p>')
+			+year('2019','<p class=`title`>Professional Design Award 2019</p><p class="capt-text"><span>29 марта в мультимедийном зале московского центра дизайна Artplay состоялась первая церемония награждения победителей всероссийской профессиональной премии за лучший современный жилой интерьер MODERN HOME Professional Design Award 2019.</span></p><p>Посетили выставку ISalone 2019 на в Милане Италия </p><p class="last">Публикация нашего проекта в Elledecoration</p>')
 	// end sTimeline
 mixin sTimeline2(data)
 	// start sTimeline
 	+b.sTimeline--second.section#sTimeline2&attributes(attributes)
 		.container
+			.bg-text.bg-text--timeline2 awards
+			.bg-text.bg-text--timeline1 2019
+			.decorative-line.decorative-line--timeline
 			mixin year(y,c)
 				+e.year=y
 				+e.caption!=c
