@@ -75,7 +75,6 @@
 			// top: 30%;
 			display: none;
 		}
-		
 	}
 	&__content {
 		max-width: 665px;
@@ -101,6 +100,9 @@
 	p {
 		// margin-bottom: 0;
 		line-height: 125%;
+		@include media-breakpoint-only(md) {
+			font-size: rem(17);
+		}
 	}
 	&__btn {
 		@include media-breakpoint-up(md) {
@@ -133,6 +135,126 @@
 			}
 			@include media-breakpoint-up(lg) {
 				margin-left: calc(-1 * var(--bs-gutter-x));
+			}
+		}
+	}
+	&--inner {
+		margin-top: 0;
+		--sPT: #{rem(50)};
+		--sPB: #{rem(50)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(100)};
+			--sPB: #{rem(100)};
+		}
+		h1 {
+			@extend .h2;
+			position: relative;
+			max-width: 16em;
+			z-index: 4;
+		}
+		&.bg-white {
+			color: #2f2f2f;
+		}
+		.sReviews__col {
+			height: auto;
+			min-height: 670px;
+			@include media-breakpoint-up(md) {
+				min-height: 500px;
+			}
+			picture {
+				height: 670px;
+				@include media-breakpoint-up(md) {
+					height: 100%;
+				}
+			}
+		}
+		.sReviews__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-top: 0;
+			padding-bottom: rem(40);
+			@include media-breakpoint-up(md) {
+				padding-top: rem(40);
+			}
+
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.sReviews__wrapper {
+			padding-top: rem(60);
+			padding-bottom: 0;
+			@include media-breakpoint-up(md) {
+				padding-top: rem(60);
+				padding-bottom: rem(30);
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-top: rem(100);
+				padding-bottom: rem(37.5);
+			}
+			&:nth-child(4n),
+			&:nth-child(4n + 1) {
+				background-color: $white;
+				color: #2f2f2f;
+			}
+			&:nth-of-type(2n + 1) {
+				// padding-top: rem(40);
+				// margin-bottom: 0;
+				margin-top: -1px;
+
+				@include media-breakpoint-up(md) {
+					padding-top: rem(30);
+					padding-bottom: rem(60);
+				}
+				@include media-breakpoint-up(xxl) {
+					padding-top: rem(37.5);
+					padding-bottom: rem(100);
+				}
+				.sReviews__content {
+					margin-left: auto;
+					@include media-breakpoint-up(md) {
+						padding-right: 0;
+						padding-left: calc(var(--bs-gutter-x) * 0.4);
+					}
+					@include media-breakpoint-up(lg) {
+						padding-left: calc(var(--bs-gutter-x) * 1.5);
+					}
+				}
+				.row {
+					@include media-breakpoint-up(md) {
+						flex-direction: row-reverse;
+					}
+					.no-img {
+						.sReviews__content {
+							padding-left: 0 !important;
+							margin-left: 0 !important;
+							padding-top: 0;
+							padding-bottom: rem(60);
+							max-width: 100%;
+							@include media-breakpoint-up(lg) {
+								padding: 0;
+								max-width: 33.3em;
+							}
+						}
+					}
+				}
+				.sReviews__col {
+					picture {
+						@include media-breakpoint-up(md) {
+							left: auto;
+							bottom: auto;
+							right: 0;
+							top: 0;
+						}
+						@include media-breakpoint-up(lg) {
+							margin-right: calc(-1 * var(--bs-gutter-x));
+						}
+					}
+				}
 			}
 		}
 	}

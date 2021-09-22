@@ -73,6 +73,7 @@ $yellow: #ffc107 !default;
 $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
+$brown: #41403E !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -88,6 +89,7 @@ $colors: ("blue": $blue,
   "cyan": $cyan,
   "white": $white,
   "gray": $gray-600,
+  "brown": $brown,
   "gray-dark": $gray-800) !default;
 // scss-docs-end colors-map
 
@@ -111,6 +113,7 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
+  "brown": $brown,
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 

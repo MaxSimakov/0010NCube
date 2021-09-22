@@ -1,6 +1,6 @@
 mixin sReviews(data)
 	// start sReviews
-	+b.SECTION.sReviews.section#sTrusted&attributes(attributes)
+	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
 		.bg-text Reviews
 		.decorative-circle
 		+e.bg-rad
@@ -12,7 +12,7 @@ mixin sReviews(data)
 							+b.section-title
 								h2 Узнайте, почему нам доверяют самое дорогое
 							+e.name Чернилевский Денис
-							+e.adress.d-none.d-md-block Большой Саввинский переулок
+							+e.adress Большой Саввинский переулок
 							p Заказывал у&nbsp;Николая дизайн-проект и&nbsp;авторский надзор в&nbsp;процессе ремонта. Хочу сказать большой спасибо за&nbsp;продуктивное сотрудничество на&nbsp;всех стадиях выполненного проекта. <br> Удивило&nbsp;то, как удачно получилось воплотить в&nbsp;дизайн проекте все мои внутренние хотелки. Когда общались в&nbsp;самом начале и&nbsp;рассматривали варианты того, что мне нравится, я&nbsp;просто отправил 3&nbsp;разных варианта цветовой гаммы и&nbsp;сочетаний материалов, думая, что Николай выберет только один из&nbsp;них, а&nbsp;уж&nbsp;никак не&nbsp;соберет всё это в&nbsp;один проект. Но&nbsp;это удалось, и&nbsp;получилось настолько круто, что я&nbsp;даже и&nbsp;представить себе не&nbsp;мог! Уже полгода не&nbsp;перестаю наслаждаться своим ремонтом и&nbsp;Николай в&nbsp;этом виноват <br> на&nbsp;все 100%!
 							+e.btn(href="#").btn.btn-primary.d-none.d-md-inline-block Смотреть все отзывы
 					+e.col.col-12.col-sm
@@ -20,3 +20,38 @@ mixin sReviews(data)
 		.container
 			+e.btn(href="#").btn.btn-primary.d-md-none Смотреть все отзывы
 	// end sReviews
+
+mixin sReviews-inner(t)
+	// start sReviews-inner
+	+b.SECTION.sReviews--inner.section#sReviews&attributes(attributes)
+		//- .decorative-circle
+		.container
+			h1!= t
+		block
+		
+	// end sReviews-inner
+
+mixin sReviews-item(p, data)
+	+e.wrapper
+		//- +e.bg-rad
+		.container
+			.row
+				if p
+					.col-lg-6.no-img
+						+e.content
+							+e.name!= data.name
+							+e.adress!= data.adress
+							block
+					.col-lg-6.no-img
+						+e.content
+							+e.name!= data.name2
+							+e.adress!= data.adress2
+							block
+				else
+					.col-md-6
+						+e.content
+							+e.name!= data.name
+							+e.adress!= data.adress
+							block
+					+e.col.col-12.col-sm
+						+pic(`reviews-${data.image}.jpg`,'bg', '')
