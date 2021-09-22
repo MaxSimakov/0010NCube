@@ -92,15 +92,19 @@
 	}
 	.bg-publ {
 		position: absolute;
-		@include media-breakpoint-up(xxl) {
+		@include media-breakpoint-up(xxxl) {
 			// top: rem(113);
 			bottom: 0;
-			right: rem(144);
-			width: rem(550);
-			height: rem(830);
+			img {
+				max-width: none;
+			}
 		}
 		@include media-breakpoint-up(xl) {
 			right: 96px;
+			right: rem(144);
+			width: rem(550);
+			height: rem(830);
+			
 		}
 		@include media-breakpoint-up(lg) {
 			// top: rem(113);

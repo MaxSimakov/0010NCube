@@ -59,3 +59,221 @@
 		@extend .btn-primary;
 	}
 }
+.wrapper-grid {
+	display: grid;
+	@include media-breakpoint-up(xxl) {
+		grid-gap: rem(53);
+	}
+	@include media-breakpoint-up(lg) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 38px;
+		// grid-auto-rows: minmax(100px, auto);
+		grid-template-rows: auto rem(145) rem(118) auto rem(88);
+	}
+	
+	&__btn-wrap {
+		@include media-breakpoint-up(lg) {
+			grid-column: 3/4;
+			grid-row: 5/6;
+		}
+	}
+	&__card {
+		position: relative;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.card-text {
+			color: $white;
+			position: absolute;
+			text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+			font-size: 18px;
+			line-height: 22px;
+			height: 66px;
+			@include media-breakpoint-down(lg) {
+				bottom: 44px;
+				left: 80px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+				line-height: rem(22);
+				height: rem(66);
+			}
+			.title {
+				text-transform: uppercase;
+				font-weight: 600;
+				margin-bottom: rem(22);
+			}
+		}
+		&:nth-child(1) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 1/3;
+				grid-row: 1/2;
+			}
+			h2 {
+				@include media-breakpoint-up(xxl) {
+					font-size: rem(46);
+					line-height: rem(56);
+					text-align: right;
+					padding-right: rem(80);
+					padding-top: rem(45);
+				}
+				@include media-breakpoint-up(xl) {
+					padding-right: 40px;
+					padding-top: rem(45);
+					font-size: 34px;
+					line-height: 41px;
+				}
+				@include media-breakpoint-up(lg) {
+					text-align: right;
+					padding-top: rem(40);
+					font-size: 32px;
+					line-height: 39px;
+				}
+				@include media-breakpoint-down(lg) {
+					font-size: 28px;
+					line-height: 34px;
+					padding-left: 79px;
+					padding-right: 50px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&:nth-child(2) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 3/5;
+				grid-row: 1/3;
+				picture {
+					width: 100%;
+					img {
+						height: rem(300);
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			@include media-breakpoint-down(lg) {
+				height: 62.5vw;
+				picture {
+					height: 100%;
+					width: 100%;
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.card-text {
+				@include media-breakpoint-up(lg) {
+					bottom: rem(44);
+					left: rem(44);
+				}
+			}
+		}
+		&:nth-child(3) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 1/3;
+				grid-row: 2/4;
+				padding-top: rem(22);
+				picture {
+					width: 100%;
+					img {
+						height: rem(300);
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.card-text {
+				@include media-breakpoint-up(lg) {
+					bottom: rem(35);
+					left: 25.51%;
+				}
+			}
+		}
+		&:nth-child(4) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 3/4;
+				grid-row: 3/5;
+				picture {
+					height: 100%;
+					img {
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.card-text {
+				@include media-breakpoint-up(lg) {
+					bottom: rem(42);
+					left: rem(42);
+				}
+			}
+		}
+		&:nth-child(5) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 4/5;
+				grid-row: 3/5;
+				picture {
+					height: 100%;
+					img {
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.card-text {
+				@include media-breakpoint-up(lg) {
+					bottom: rem(42);
+					left: rem(42);
+				}
+			}
+		}
+		&:nth-child(6) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 1/3;
+				grid-row: 4/6;
+				picture {
+					height: 100%;
+					img {
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.card-text {
+				@include media-breakpoint-up(lg) {
+					bottom: rem(44);
+					left: 25.51%;
+				}
+			}
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 30px;
+			}
+		}
+		&:nth-child(7) {
+			@include media-breakpoint-up(lg) {
+				grid-column: 3/4;
+				grid-row: 5/6;
+			}
+		}
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		padding-left: 10px;
+		padding-right: 10px;
+		letter-spacing: unset;
+		@include media-breakpoint-up(lg) {
+			width: rem(320);
+			height: rem(75);
+		}
+		@include media-breakpoint-down(lg) {
+			display: block;
+			max-width: 320px;
+			height: 70px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
