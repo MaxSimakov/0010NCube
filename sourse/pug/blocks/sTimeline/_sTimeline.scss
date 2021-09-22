@@ -1,0 +1,50 @@
+// start .sTimeline
+.sTimeline {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	
+	&__year {
+		color: #c5c5c5;
+		font-weight: bold;
+		@include media-breakpoint-up(lg){
+			font-size: rem(52);
+			line-height: rem(63);
+			padding-left: rem(39);
+		}
+	}
+	&__caption{
+		font-weight: 600;
+		@include media-breakpoint-up(lg){
+			font-size: rem(16);
+			line-height: rem(20);
+			margin-top: rem(10);
+			max-width: 515px;
+			margin-left: rem(102);
+			margin-bottom: rem(32);
+		}
+		.capt-text{
+			margin-bottom: rem(33);
+		}
+		span{
+			font-weight: 400;
+		}
+	}
+	&--first {
+		@include media-breakpoint-up(lg) {
+			--sPT:#{rem(70)};
+			--sPB:0;
+		}
+		background-color: #f2f2f2;
+	}
+	&--second {
+		@include media-breakpoint-up(lg) {
+			--sPT:#{rem(10)};
+			--sPB:#{rem(100)};
+			.long{
+				max-width: 555px;
+				margin-top: rem(20);
+			}
+		}
+	}
+} // end.sTimeline
