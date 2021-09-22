@@ -599,3 +599,15 @@ h2 {
 	padding-bottom: rem(35);
 	background-color: #F2F2F2;
 }
+
+.timeline{
+	.top-nav{
+		background-color: #F2F2F2;
+		.container{
+			@include media-breakpoint-up(lg){
+				padding-bottom: rem(6);
+				border-bottom: 1px solid #CFCFCF;
+			}
+		}
+	}
+}
