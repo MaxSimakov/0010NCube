@@ -1,6 +1,34 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
+			.row
+				.col
+					ul
+						li
+							a(href='#') О студии
+						li
+							a(href='#') Портфолио
+						li
+							a(href='#') Таймлайн
+						li
+							a(href='#') Услуги и стоимость
+						li
+							a(href='#') Контакты
+						li
+							a(href='#') Отзывы
+						li
+							a(href='#') Статьи
+				.col-lg-3.d-lg-block.d-flex.flex-column
+					+e.title.order-lg-0.order-1 Офис:
+					+e.caption.order-lg-1.order-2 г. Москва, м. Семёновская, ул. Большая Семёновская, д. 55 А, офис 21
+					+e.policy.order-lg-2.order-0(href="#") Политика конфиденциальности
+				.col-lg-2
+					+e.title Режим работы:
+					+e.caption 10:00 - 20:00
+				.col-auto
+					+e.tel(href="tel:+7(495)720-30-51") +7 (495) 720-30-51
+					br
+					+e.tel(href="tel:+7(903)756-30-51") +7 (903) 756-30-51
 			//- +e.UL.list
 			//- 	+e.LI.simple-link
 			//- 			a(href='#') О студии
