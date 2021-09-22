@@ -517,7 +517,7 @@ h2 {
 	line-height: 1;
 	font-size: rem(120);
 	@include media-breakpoint-up(sm) {
-	font-size: rem(150);
+		font-size: rem(150);
 	}
 	@include media-breakpoint-up(xxl) {
 		font-size: rem(180);
@@ -540,56 +540,57 @@ h2 {
 	// z-index: -1;
 }
 
-.services, .contacts{
-	.top-nav{
-		.container{
-			@include media-breakpoint-up(lg){
+.services,
+.contacts {
+	.top-nav {
+		.container {
+			@include media-breakpoint-up(lg) {
 				padding-bottom: rem(18);
-				border-bottom: 1px solid #CFCFCF;
+				border-bottom: 1px solid #cfcfcf;
 			}
 		}
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding-bottom: 0;
-			background-color: #F2F2F2;
+			background-color: #f2f2f2;
 		}
 	}
 }
-.bread-nav{
+.bread-nav {
 	position: absolute;
 	top: 32px;
 	left: 0;
 	z-index: 30;
-	@include media-breakpoint-down(lg){
+	@include media-breakpoint-down(lg) {
 		display: none;
 	}
 }
-.breadcrumb{
+.breadcrumb {
 	list-style-type: none;
 	display: flex;
 	padding-left: 15px;
-	li{
+	li {
 		font-size: rem(12);
 		margin-right: rem(20);
-		a{
-			color: #5A5A5A;
+		a {
+			color: #5a5a5a;
 		}
 	}
-	.prev-active{
+	.prev-active {
 		position: relative;
-		a{
-			&::after{
-				content:'/';
+		a {
+			&::after {
+				content: "/";
 				position: absolute;
 				top: 0;
 				right: rem(-12);
-				color: #5A5A5A;
+				color: #5a5a5a;
 			}
 		}
 	}
 }
 
-.about{
-	.bread-nav{
+.about {
+	.bread-nav {
 		top: 48px;
 	}
 }
@@ -597,17 +598,31 @@ h2 {
 .page-head {
 	padding-top: rem(70);
 	padding-bottom: rem(35);
-	background-color: #F2F2F2;
+	background-color: #f2f2f2;
 }
 
-.timeline{
-	.top-nav{
-		background-color: #F2F2F2;
-		.container{
-			@include media-breakpoint-up(lg){
+.timeline,
+.error404 {
+	.top-nav {
+		background-color: #f2f2f2;
+		.container {
+			@include media-breakpoint-up(lg) {
 				padding-bottom: rem(6);
-				border-bottom: 1px solid #CFCFCF;
+				border-bottom: 1px solid #cfcfcf;
 			}
 		}
+	}
+}
+.error404 {
+	.top-nav{
+		padding-bottom: 0 !important;
+		.container {
+			padding-bottom: rem(20) !important;
+		}
+	}
+	.main-wrapper{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
 	}
 }
