@@ -1,0 +1,52 @@
+// start .sArticleHead
+.sArticleHead {
+	position: relative;
+	z-index: 10;
+	--sPT: 49px;
+	height: 670px;
+	.container{
+		position: relative;
+	}
+	@include media-breakpoint-up(lg){
+		height: rem(617);
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+	}
+	h2 {
+		text-transform: none;
+		color: #535353;
+		font-weight: bold;
+		text-align: left;
+		font-size: 38px;
+		line-height: 46px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(52);
+			line-height: rem(63);
+			padding-left: rem(39);
+		}
+	}
+	.decorative-line{
+		&--some-article{
+			top: 0;
+			left: 0;
+			width: 1px;
+			@include media-breakpoint-up(xxxl){
+				height: 1000px;
+			}
+			@include media-breakpoint-up(xxl){
+				height: 900px;
+				top: rem(32);
+				left: rem(14);
+			}
+			@include media-breakpoint-up(lg){
+				height: 728px;
+				top: rem(32);
+				left: rem(14);
+			}
+			@include media-breakpoint-down(lg){
+				display: none;
+			}
+		}
+	}
+} // end.sArticleHead
