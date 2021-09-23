@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+
+include ../blocks/sArticles/_sArticles.pug
+
+block variables
+	- let  mainPage= 'articles' 
+	- let  bg= "articles.jpg"
+
+block title
+	- let  title= 'Статьи'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+breadcrumb('Главная',title)
+	+sArticles()
+	+footer()
+
+
+

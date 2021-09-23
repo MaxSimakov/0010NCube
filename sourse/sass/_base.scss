@@ -607,7 +607,8 @@ h2 {
 }
 
 .timeline,
-.error404 {
+.error404,
+.articles {
 	.top-nav {
 		background-color: #f2f2f2;
 		.container {
@@ -634,17 +635,18 @@ h2 {
 		}
 	}
 }
-.error404 {
-	.top-nav{
+.error404,
+.articles {
+	.top-nav {
 		padding-bottom: 0 !important;
 		.container {
 			padding-bottom: rem(20) !important;
 		}
 	}
-	.main-wrapper{
-	// 	height: 100vh;
+	.main-wrapper {
+		// 	height: 100vh;
 		display: flex;
 		flex-direction: column;
-		min-height: calc(var(--vh, 1vh)*100);
+		min-height: calc(var(--vh, 1vh) * 100);
 	}
 }

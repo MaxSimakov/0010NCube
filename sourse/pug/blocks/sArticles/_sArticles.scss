@@ -1,0 +1,161 @@
+// start .sArticles
+.sArticles {
+	--sPT: 49px;
+	--sPB: #{rem(80)};
+	position: relative;
+	.container {
+		position: relative;
+	}
+	&::before {
+		content: "";
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #f2f2f2;
+		z-index: -1;
+		@include media-breakpoint-up(lg) {
+			height: 32.3%;
+		}
+		@include media-breakpoint-down(lg) {
+			height: 30%;
+		}
+		@include media-breakpoint-down(md) {
+			height: 30.9%;
+		}
+		@include media-breakpoint-down(sm) {
+			height: 30.3%;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(74)};
+	}
+	&__wrap {
+		padding-bottom: 60px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(10);
+		}
+	}
+	h2 {
+		text-align: left;
+		color: #c5c5c5;
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 46px;
+		text-transform: none;
+		padding-bottom: 40px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(52);
+			line-height: rem(63);
+			max-width: rem(845);
+			padding-left: rem(39);
+			padding-bottom: rem(26);
+		}
+	}
+	p {
+		font-weight: 600;
+		color: #000000;
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 23px;
+		padding-left: 20px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(16);
+			line-height: rem(20);
+			margin-bottom: rem(20);
+			padding-left: rem(102);
+		}
+	}
+	.decorative-line {
+		&--articles {
+			width: 1px;
+			@include media-breakpoint-up(xxl) {
+				height: 800px;
+				left: 14px;
+				top: 6px;
+			}
+			@include media-breakpoint-up(xxxl){
+				height: 1000px;
+			}
+			@include media-breakpoint-up(lg) {
+				height: 729px;
+				left: 14px;
+				top: 8px;
+			}
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
+	}
+	.decorative-circle {
+		&--first {
+			border-color: #e0e0e0;
+			z-index: -1;
+			@include media-breakpoint-up(xxl) {
+				width: rem(642);
+				height: rem(642);
+			}
+			@include media-breakpoint-up(lg) {
+				right: rem(-152);
+				top: rem(122);
+				width: 468px;
+				height: 468px;
+			}
+			@include media-breakpoint-down(lg) {
+				width: 344px;
+				height: 344px;
+				top: 185px;
+				right: -240px;
+			}
+			@include media-breakpoint-down(md) {
+				width: 344px;
+				height: 344px;
+				top: 225px;
+				right: -240px;
+			}
+		}
+		&--second {
+			border-color: #e0e0e0;
+			z-index: -1;
+			@include media-breakpoint-up(xxl) {
+				width: rem(339);
+				height: rem(339);
+			}
+			@include media-breakpoint-up(lg) {
+				bottom: rem(-111);
+				left: rem(-253);
+				width: 247px;
+				height: 247px;
+			}
+			@include media-breakpoint-down(lg) {
+				width: 143px;
+				height: 143px;
+				bottom: 130px;
+				left: -200px;
+			}
+			@include media-breakpoint-down(md) {
+				bottom: 130px;
+				left: -150px;
+			}
+		}
+	}
+	.bg-text{
+		&--articles{
+			z-index: -1;
+			transform: rotate(-90deg);
+			color: rgba(245, 245, 245, 0.5);
+			@include media-breakpoint-up(xxl){
+				bottom: rem(365);
+				right: rem(-212);
+			}
+			@include media-breakpoint-up(lg){
+				bottom: 425px;
+				right: -170px;
+			}
+			@include media-breakpoint-down(lg){
+				bottom: 650px;
+				right: -200px;
+			}
+		}
+	}
+} // end.sArticles
