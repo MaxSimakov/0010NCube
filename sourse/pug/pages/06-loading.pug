@@ -1,0 +1,14 @@
+extends layout/main.pug
+
+
+include ../blocks/sLoading/_sLoading.pug
+
+block variables
+	- let  mainPage= 'loading' 
+	- let  bg= "timeline.jpg"
+
+block title
+	- let  title= 'loading'
+	title= title
+block pagecontent 
+	+sLoading()

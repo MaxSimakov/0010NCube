@@ -1,0 +1,17 @@
+extends layout/main.pug
+
+
+include ../blocks/sError/_sError.pug
+
+block variables
+	- let  mainPage= 'error404' 
+	- let  bg= "timeline.jpg"
+
+block title
+	- let  title= 'Error 404'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+sError()

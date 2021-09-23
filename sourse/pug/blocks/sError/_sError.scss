@@ -1,0 +1,64 @@
+// start .sError
+.sError {
+	--sPT: 135px;
+	background-color: #f2f2f2;
+	flex-grow: 1;
+	position: relative;
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(73)};
+	}
+	.decorative-line{
+		&--error{
+			height: 1px;
+			right: 0;
+			background-color: rgba(207, 207, 207, 0.67);
+			width: 92vw;
+			top: 319px;
+			@include media-breakpoint-up(xl){
+				width: 59vw;
+				top: rem(427);
+			}
+			@include media-breakpoint-up(lg){
+				width: 59vw;
+				top: 315px;
+			}
+		}
+	}
+	.bg-text{
+		&--error{
+			top: 50px;
+			color: rgba(255, 255, 255, 0.65);
+		}
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 144px;
+		line-height: 176px;
+		color: #5a5a5a;
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(288);
+			line-height: rem(351);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: 200px;
+			line-height: 244px;
+			text-align: left;
+		}
+	}
+	&__caption {
+		padding-top: 34px;
+		color: #838383;
+		font-size: 28px;
+		line-height: 34px;
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(62);
+			font-size: rem(28);
+			line-height: rem(34);
+			text-align: left;
+		}
+	}
+} // end.sError

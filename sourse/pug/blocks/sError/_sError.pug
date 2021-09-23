@@ -1,0 +1,12 @@
+mixin sError(data)
+	// start sError
+	+b.sError.section#sError&attributes(attributes)
+		.container
+			.decorative-line.decorative-line--error
+			.row
+				.col-lg-6.col-12.order-1.order-lg-0.position-relative
+					.bg-text.bg-text--error!=`page<br>not<br>found`
+				.col-lg-6.col-12.order-0.order-lg-1
+					+e.title 404
+					+e.caption Нет такой страницы
+	// end sError

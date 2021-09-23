@@ -4,20 +4,14 @@ mixin sBestWorks(data)
 		.container(style="position:relative")
 				.decorative-line.decorative-line--best1
 				.decorative-line.decorative-line--best2
-		+e.wrapper
-			+e.title-wrap
+		+b.wrapper-grid
+			+e.card
 				h2 Наши лучшие работы
-			mixin pic-card(count)
-				div(class=`sBestWorks__pic-card sBestWorks__pic-card--${count}`)
-					+pic(`best-works-${count}.jpg`,'',0)
-					.card-text
-						.title название дома
-						.square 315 м²
 			+pic-card(1)
 			+pic-card(2)
 			+pic-card(3)
 			+pic-card(4)
 			+pic-card(5)
-			+e.btn-wrap
+			+e.card
 				+e.btn(href="#") СМОТРЕТЬ ВСЕ ПРОЕКТЫ
 	// end sBestWorks

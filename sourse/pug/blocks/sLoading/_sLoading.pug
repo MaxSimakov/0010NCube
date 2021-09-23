@@ -1,0 +1,10 @@
+mixin sLoading(data)
+	// start sLoading
+	+b.sLoading.section.bg-wrap#sLoading&attributes(attributes)
+		+pic('loading-bg.jpg','bg',0).picture-bg
+		.container
+			+e.wrap
+				+pic('header-logo','',0).pic
+				+icon('loading')
+				+e.title Загрузка
+	// end sLoading
