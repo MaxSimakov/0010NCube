@@ -29,7 +29,9 @@ mixin ie11()
 
 mixin pic-card(count)
 	+e.card
-		+pic(`best-works-${count}.jpg`,'',0)
-		.card-text
-			.title название дома
-			.square 315 м²
+		a.pic-card(href="#")
+			+pic(`best-works-${count}.jpg`,'',0)
+		a.pic-card(href="#")
+			.card-text
+				.title название дома
+				.square 315 м²

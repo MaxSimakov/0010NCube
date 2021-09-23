@@ -139,8 +139,30 @@
 		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(70)};
 			--sPB: 1px;
+			background-color: #f2f2f2;
 		}
-		background-color: #f2f2f2;
+		@include media-breakpoint-down(lg){
+			--sPB:10px;
+			&::before{
+				content:'';
+				background-color: #f2f2f2;
+				width: 100%;
+				height: 59%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		@include media-breakpoint-down(md){
+			&::before{
+				height: 57%;
+			}
+		}
+		@include media-breakpoint-down(sm){
+			&::before{
+				height: 53%;
+			}
+		}
 		.bg-timeline {
 			position: absolute;
 			z-index: 1;

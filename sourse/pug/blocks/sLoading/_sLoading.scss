@@ -35,8 +35,10 @@
 		color: #5a5a5a;
 		transition: all 0.5s ease;
 		animation: rotate 0.8s linear infinite;
+		transform-origin: 24px 26px;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(45);
+			transform-origin: rem(24) rem(26);
 		}
 	}
 	@keyframes rotate {
