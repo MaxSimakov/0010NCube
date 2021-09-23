@@ -7,13 +7,13 @@
 	background-color: #41403e;
 	position: relative;
 	margin-top: -1px;
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		--sPB: 0;
 	}
 	&__wrapper {
 		position: relative;
 		overflow: hidden;
-		z-index: 3;
+		// z-index: 3;
 	}
 	.bg-text {
 		position: absolute;
@@ -23,11 +23,11 @@
 		color: rgba(255, 255, 255, 0.06);
 		font-size: rem(110);
 		@include media-breakpoint-up(md) {
+			font-size: rem(130);
 			left: 2%;
 			bottom: -1.5%;
 		}
 		@include media-breakpoint-up(lg) {
-			font-size: rem(130);
 		}
 		@include media-breakpoint-up(xl) {
 			font-size: rem(180);
@@ -54,37 +54,27 @@
 	&__bg-rad {
 		background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.36) 0%, rgba(196, 196, 196, 0) 100%);
 		position: absolute;
-		z-index: -1;
-		width: 219.17vw;
-		height: 144.375vw;
-		z-index: 1;
+		display: block;
+		width: 140vw;
+		height: 570px;
+		top: auto;
+		right: -20vw;
+		bottom: 350px;
+		left: auto;
 		@include media-breakpoint-up(lg) {
 			width: 84.5vw;
 			height: 39.7vw;
 			top: -3.32vw;
 			right: -20.15vw;
 		}
-		@include media-breakpoint-down(lg) {
-			left: 10%;
-			top: -15%;
-			// transform: translate(-50%,0);
-		}
-		@include media-breakpoint-down(md) {
-			// top: 160px;
-			// left: -70%;
-			// top: 30%;
-			display: none;
-		}
 	}
 	&__content {
-		max-width: 665px;
 		height: 100%;
 		padding-bottom: rem(30);
-		@include media-breakpoint-up(md) {
-			padding-bottom: 182px;
-			padding-right: calc(var(--bs-gutter-x) * 0.4);
-		}
 		@include media-breakpoint-up(lg) {
+			max-width: 665px;
+			padding-bottom: 182px;
+			// padding-right: calc(var(--bs-gutter-x) * 0.4);
 			padding-right: calc(var(--bs-gutter-x) * 1.5);
 		}
 	}
@@ -98,17 +88,10 @@
 		margin-bottom: rem(30);
 	}
 	p {
-		// margin-bottom: 0;
 		line-height: 125%;
-		@include media-breakpoint-only(md) {
-			font-size: rem(17);
-		}
 	}
 	&__btn {
-		@include media-breakpoint-up(md) {
-			margin-top: rem(35);
-		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
@@ -118,7 +101,7 @@
 	}
 	&__col {
 		min-height: 561px;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			position: relative;
 		}
 		picture {
@@ -127,7 +110,7 @@
 			bottom: 0;
 			width: 100%;
 			height: 561px;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				left: 0;
 				top: 0;
 				height: 100%;
@@ -141,29 +124,59 @@
 	&--inner {
 		margin-top: 0;
 		--sPT: #{rem(50)};
-		--sPB: #{rem(50)};
+		--sPB: 0;
+		overflow: visible;
 		@include media-breakpoint-up(md) {
-			--sPT: #{rem(100)};
-			--sPB: #{rem(100)};
+			--sPT: #{rem(90)};
+			--sPB: 0;
+		}
+		& > .container {
+			position: relative;
+			.bg-text {
+				color: rgba(255, 255, 255, 0.06);
+				font-size: rem(147);
+				@include media-breakpoint-down(lg) {
+					top: 100%;
+					bottom: auto;
+				}
+				@include media-breakpoint-down(md) {
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				@media (max-width: 480px) {
+					left: 0;
+					transform: none;
+					font-size: rem(120);
+				}
+				@include media-breakpoint-up(lg) {
+					left: auto;
+					bottom: auto;
+					top: rem(-15);
+					right: 0;
+				}
+				@include media-breakpoint-up(xl) {
+					right: rem(-55);
+				}
+				@include media-breakpoint-up(xxl) {
+					top: rem(-25);
+					right: rem(-35);
+				}
+			}
 		}
 		h1 {
 			@extend .h2;
-			position: relative;
 			max-width: 16em;
-			z-index: 4;
 		}
-		&.bg-white {
-			color: #2f2f2f;
-		}
+
 		.sReviews__col {
 			height: auto;
 			min-height: 670px;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				min-height: 500px;
 			}
 			picture {
 				height: 670px;
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					height: 100%;
 				}
 			}
@@ -174,7 +187,8 @@
 			justify-content: center;
 			padding-top: 0;
 			padding-bottom: rem(40);
-			@include media-breakpoint-up(md) {
+			position: relative;
+			@include media-breakpoint-up(lg) {
 				padding-top: rem(40);
 			}
 
@@ -188,7 +202,8 @@
 		.sReviews__wrapper {
 			padding-top: rem(60);
 			padding-bottom: 0;
-			@include media-breakpoint-up(md) {
+			overflow: visible;
+			@include media-breakpoint-up(lg) {
 				padding-top: rem(60);
 				padding-bottom: rem(30);
 			}
@@ -196,17 +211,61 @@
 				padding-top: rem(100);
 				padding-bottom: rem(37.5);
 			}
+			.container {
+				@include media-breakpoint-up(lg) {
+					position: relative;
+					z-index: 3;
+				}
+			}
+			.decorative-circle {
+				border: 1px solid #515151;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+				width: rem(384);
+				height: rem(384);
+				@include media-breakpoint-up(xxl) {
+					width: rem(526);
+					height: rem(526);
+				}
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
+			}
+			.sReviews__bg-rad {
+				height: 800px;
+				bottom: 0;
+				@include media-breakpoint-up(lg) {
+					right: -10vw;
+					top: 0;
+					bottom: auto;
+					width: 70.5vw;
+					height: 110%;
+				}
+			}
+			&:nth-child(2) {
+				@include media-breakpoint-up(xxl) {
+					margin-top: rem(-20);
+				}
+				@include media-breakpoint-down(lg) {
+					padding-top: rem(140);
+				}
+			}
 			&:nth-child(4n),
 			&:nth-child(4n + 1) {
 				background-color: $white;
 				color: #2f2f2f;
 			}
+			&:nth-child(4n) {
+				.decorative-circle {
+					border-color: #f2f2f2;
+				}
+			}
 			&:nth-of-type(2n + 1) {
-				// padding-top: rem(40);
-				// margin-bottom: 0;
 				margin-top: -1px;
 
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					padding-top: rem(30);
 					padding-bottom: rem(60);
 				}
@@ -214,9 +273,12 @@
 					padding-top: rem(37.5);
 					padding-bottom: rem(100);
 				}
+				.decorative-circle {
+					display: none;
+				}
 				.sReviews__content {
 					margin-left: auto;
-					@include media-breakpoint-up(md) {
+					@include media-breakpoint-up(lg) {
 						padding-right: 0;
 						padding-left: calc(var(--bs-gutter-x) * 0.4);
 					}
@@ -244,7 +306,7 @@
 				}
 				.sReviews__col {
 					picture {
-						@include media-breakpoint-up(md) {
+						@include media-breakpoint-up(lg) {
 							left: auto;
 							bottom: auto;
 							right: 0;
@@ -253,6 +315,13 @@
 						@include media-breakpoint-up(lg) {
 							margin-right: calc(-1 * var(--bs-gutter-x));
 						}
+					}
+				}
+				.sReviews__bg-rad {
+					@include media-breakpoint-up(lg) {
+						left: -10vw;
+						right: auto;
+						top: -3vw;
 					}
 				}
 			}
