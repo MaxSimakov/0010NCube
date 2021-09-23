@@ -4,6 +4,7 @@
 	background-color: #f2f2f2;
 	flex-grow: 1;
 	position: relative;
+	padding-top: auto;
 	// --sPB: ;
 	// --sTPB: ;
 	@include media-breakpoint-up(lg) {
@@ -30,6 +31,9 @@
 		&--error{
 			top: 50px;
 			color: rgba(255, 255, 255, 0.65);
+			@include media-breakpoint-down(lg){
+				position: relative;
+			}
 		}
 	}
 	&__title {

@@ -316,6 +316,9 @@
 	.sCalc__block .row--price .sCalc__calc-info{
 		padding-left: 10px;
 	}
+	.sCalc__btn-fix{
+		font-size: 15px;
+	}
 }
 @media (max-width: 340px) {
 	.sCalc__calc-info{
@@ -331,5 +334,8 @@
 	}
 	.sCalc__block .row--price .sCalc__calc-info{
 		padding-left: 10px;
+	}
+	.sCalc__btn-fix{
+		font-size: 13px;
 	}
 }
