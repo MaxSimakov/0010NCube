@@ -1,0 +1,31 @@
+// start .sArticleImages
+.sArticleImages {
+	--sPT: 0;
+	// --sPB: ;
+	// --sTPB: ;
+	margin-top: rem(-25);
+	.row{
+		--bs-gutter-x:#{rem(27)};
+		@include media-breakpoint-down(lg){
+			--bs-gutter-y:30px;
+		}
+	}
+	picture{
+		position: relative;
+		@include media-breakpoint-up(lg){
+			@include block(100,100);
+		}
+		img{
+			@include media-breakpoint-up(lg){
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__col{
+		position: relative;
+	}
+} // end.sArticleImages

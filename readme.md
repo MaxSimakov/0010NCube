@@ -9,3 +9,4 @@
 7. <https://maxsimakov.github.io/0010NCube/public/07-reviews.html>
 8. <https://maxsimakov.github.io/0010NCube/public/404.html>
 9. <https://maxsimakov.github.io/0010NCube/public/08-articles.html>
+10. <https://maxsimakov.github.io/0010NCube/public/09-some-article.html>

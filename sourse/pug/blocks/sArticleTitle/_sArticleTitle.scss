@@ -3,6 +3,7 @@
 	--sPT: 42px;
 	--sPB: 40px;
 	// --sTPB: ;
+	position: relative;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(61)};
 		--sPB:#{rem(85)};
@@ -71,6 +72,51 @@
 			margin-left: rem(39);
 			font-size: rem(16);
 			line-height: rem(20);
+		}
+	}
+	.decorative-circle{
+		&--title1{
+			z-index: -1;
+			@include media-breakpoint-up(xxl){
+				width: rem(642);
+				height: rem(642);
+				top: rem(-471);
+				right: rem(-187);
+			}
+			@include media-breakpoint-up(lg){
+				width: 468px;
+				height: 468px;
+				top: -350px;
+				right: -200px;
+			}
+			@include media-breakpoint-down(lg){
+				width: 344px;
+				height: 344px;
+				top: -180px;
+				right: -200px;
+			}
+		}
+		&--title2{
+			z-index: -1;
+			@include media-breakpoint-up(xxl){
+				width: rem(339);
+				height: rem(339);
+				bottom: -179px;
+				left: -78px;
+
+			}
+			@include media-breakpoint-up(lg){
+				width: 247px;
+				height: 247px;
+				bottom: -100px;
+				left: -50px;
+			}
+			@include media-breakpoint-down(lg){
+				width: 143px;
+				height: 143px;
+				bottom: 100px;
+				left: -85px;
+			}
 		}
 	}
 } // end.sArticleTitle
