@@ -1,0 +1,145 @@
+// start .sPortfolio
+.sPortfolio {
+	--sPT: #{rem(85)};
+	// --sPB: ;
+	--sTPB: #{rem(25)};
+	.section-title {
+		h1 {
+			@extend h2;
+			margin-bottom: rem(30);
+		}
+		h6 {
+			font-weight: 600;
+		}
+	}
+	.form-wrap {
+		.row {
+			--bs-gutter-y: #{rem(25)};
+		}
+		.custom-input {
+			padding: 0;
+			margin: 0;
+			display: inline-block;
+			width: auto;
+			&__text {
+				@include mt;
+				cursor: pointer;
+				display: inline-block;
+				padding: rem(5) 0;
+				text-decoration-line: underline;
+				color: #494949;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			&__input {
+				display: none;
+				&:checked + .custom-input__text {
+					color: $primary;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&__cards {
+		display: grid;
+		margin-top: rem(45);
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: repeat(4, 1fr);
+			grid-auto-rows: rem(255);
+			grid-gap: 2.7vw;
+		}
+		@include media-breakpoint-up(xl) {
+			grid-auto-rows: rem(300);
+		}
+	}
+	&__card-item {
+		--x: 0;
+		@include media-breakpoint-up(lg) {
+			&:nth-child(12n + 1) {
+				grid-area: calc(var(--x) + 1) / 1 / calc(var(--x) + 2) / 3;
+			}
+			&:nth-child(12n + 2) {
+				grid-area: calc(var(--x) + 2) / 1 / calc(var(--x) + 2) / 3;
+			}
+			&:nth-child(12n + 3) {
+				grid-area: calc(var(--x) + 1) / 3 / calc(var(--x) + 3) / 5;
+			}
+			&:nth-child(12n + 4) {
+				grid-area: calc(var(--x) + 3) / 1 / calc(var(--x) + 5) / 3;
+			}
+			&:nth-child(12n + 5) {
+				grid-area: calc(var(--x) + 3) / 3 / calc(var(--x) + 5) / 4;
+			}
+			&:nth-child(12n + 6) {
+				grid-area: calc(var(--x) + 3) / 4 / calc(var(--x) + 5) / 5;
+			}
+			&:nth-child(12n + 7) {
+				grid-area: calc(var(--x) + 5) / 1 / calc(var(--x) + 7) / 3;
+			}
+			&:nth-child(12n + 8) {
+				grid-area: calc(var(--x) + 5) / 3 / calc(var(--x) + 6) / 5;
+			}
+			&:nth-child(12n + 9) {
+				grid-area: calc(var(--x) + 6) / 3 / calc(var(--x) + 7) / 5;
+			}
+			&:nth-child(12n + 10) {
+				grid-area: calc(var(--x) + 7) / 1 / calc(var(--x) + 9) / 2;
+			}
+			&:nth-child(12n + 11) {
+				grid-area: calc(var(--x) + 7) / 2 / calc(var(--x) + 9) / 3;
+			}
+			&:nth-child(12n) {
+				grid-area: calc(var(--x) + 7) / 3 / calc(var(--x) + 9) / 5;
+			}
+			@for $i from 0 to 4 {
+				&:nth-child(n + #{12 * $i + 1}) {
+					--x: #{8 * $i};
+				}
+			}
+		}
+	}
+
+	&__caption {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 2.2vw;
+		// pointer-events: none;
+
+		span {
+			color: #ffffff;
+			display: block;
+			font-size: rem(18);
+			text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.65);
+			margin-top: rem(10);
+			margin-bottom: rem(10);
+			&:first-child {
+				text-transform: uppercase;
+				font-weight: 600;
+				margin-top: 0;
+				margin-bottom: rem(25);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPortfolio

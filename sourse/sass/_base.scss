@@ -559,7 +559,8 @@ h2 {
 
 .services,
 .project,
-.contacts {
+.contacts,
+.portfolio {
 	.top-nav {
 		.container {
 			@include media-breakpoint-up(lg) {
@@ -675,6 +676,12 @@ h2 {
 }
 
 .project {
+	.bread-nav {
+		top: rem(45);
+	}
+}
+
+.portfolio {
 	.bread-nav {
 		top: rem(45);
 	}
