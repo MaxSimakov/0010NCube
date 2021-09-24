@@ -368,6 +368,18 @@ function eventHandler() {
 		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
+	}));
+	const specificProjectSlider = new Swiper('.sSpecificProject__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sSpecificProject__slider--js .swiper-button-next',
+			prevEl: '.sSpecificProject__slider--js .swiper-button-prev'
+		}
 	})); // modal window
 }
 
