@@ -1,8 +1,39 @@
 // start .sPortfolio
 .sPortfolio {
 	--sPT: #{rem(85)};
-	// --sPB: ;
+	--sPB: #{rem(135)};
 	--sTPB: #{rem(25)};
+	position: relative;
+
+	&::before {
+		@include media-breakpoint-up(lg) {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: rem(720);
+			top: rem(-100);
+			z-index: -1;
+			background-color: #f2f2f2;
+		}
+		@include media-breakpoint-up(xl) {
+			height: rem(970);
+		}
+	}
+	&::after {
+		@include media-breakpoint-up(lg) {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: rem(1050);
+			top: rem(1200);
+			z-index: -1;
+			background-color: #41403E;
+		}
+		@include media-breakpoint-up(xl) {
+			height: rem(1500);
+		}
+	}
+
 	.section-title {
 		h1 {
 			@extend h2;
@@ -15,6 +46,9 @@
 	.form-wrap {
 		.row {
 			--bs-gutter-y: #{rem(25)};
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: #{rem(50)};
+			}
 		}
 		.custom-input {
 			padding: 0;
@@ -43,9 +77,9 @@
 	}
 
 	&__cards {
-		display: grid;
 		margin-top: rem(45);
 		@include media-breakpoint-up(lg) {
+			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			grid-auto-rows: rem(255);
 			grid-gap: 2.7vw;
@@ -56,6 +90,13 @@
 	}
 	&__card-item {
 		--x: 0;
+		@include media-breakpoint-down(lg) {
+			@include block(480, 300);
+			margin-bottom: 4vw;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 		@include media-breakpoint-up(lg) {
 			&:nth-child(12n + 1) {
 				grid-area: calc(var(--x) + 1) / 1 / calc(var(--x) + 2) / 3;
@@ -105,7 +146,10 @@
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		padding: 2.2vw;
+		padding: rem(45);
+		@include media-breakpoint-up(lg) {
+			padding: 2.1vw;
+		}
 		// pointer-events: none;
 
 		span {
@@ -124,7 +168,6 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
-
 		}
 	}
 
