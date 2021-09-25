@@ -12,7 +12,7 @@
 		.decorative-line {
 			width: 1px;
 			height: 200vh;
-			left: 15px;
+			left: rem(15);
 			top: -50%;
 			@include media-breakpoint-down(lg) {
 				display: none;
