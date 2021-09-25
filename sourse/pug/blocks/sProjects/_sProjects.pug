@@ -2,8 +2,27 @@ mixin sProjects(data)
 	// start sProjects
 	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sProjects
-				
-			.row
+			+b.section-title
+				h2 с 2010 года наша студия реализовала более 200 объектов
+		.container.container--slider
+			+b.bg-text--first After
+			+b.bg-text--second Before
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide
+							+b.before-after.swiper-no-swiping
+								+e.item( class='img background-img').bg-wrap
+									+pic("projects-1.jpg",'bg',0).picture-bg
+								+e.item(class='img foreground-img').bg-wrap
+									+pic("projects-2.jpg",'bg',0).picture-bg
+								<input type="range" min="0" max="100" value="50" class="slider-ba" name='slider'  >
+								.slider-button
+									+icon('chevron-left')
+									+icon('chevron-right')
+									
+				+e.arrows
+					+arrow
+		+e.btn-wrap
+			+e.btn(href="#").btn.btn-primary Все работы
 	// end sProjects

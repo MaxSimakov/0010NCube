@@ -50,6 +50,21 @@
 			width: 100%;
 			height: auto;
 		}
+		@include media-breakpoint-down(sm) {
+			@include block(480, 428);
+			picture {
+				position: absolute;
+				height: 100%;
+				left: 0;
+				top: 0;
+				width: 100%;
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
 	}
 	&__arrows {
 		display: flex;
@@ -65,8 +80,8 @@
 				top: 0;
 				bottom: 0;
 				right: 0;
-				margin-left: calc(var(--swiperArrowSize) / 4);
-				margin-right: calc(var(--swiperArrowSize) / 4);
+				margin-left: calc(var(--swiperArrowSize) / 6);
+				margin-right: calc(var(--swiperArrowSize) / 6);
 			}
 		}
 	}

@@ -301,7 +301,7 @@ ul {
 	user-select: none;
 	&:not(:hover) {
 		@include media-breakpoint-up(sm) {
-			opacity: 0.6;
+			opacity: 0.3;
 		}
 	}
 	&-next {
@@ -323,7 +323,10 @@ ul {
 
 	.icon {
 		@include a-cent;
-		font-size: rem(24);
+		font-size: rem(20);
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(24);
+		}
 	}
 
 	&::after {

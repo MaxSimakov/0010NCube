@@ -325,8 +325,13 @@ function eventHandler() {
 		window.scrollY > 0 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
 	}
 
+	function baW() {
+		$(".before-after picture").width($(".before-after").width());
+	}
+
 	function whenResize() {
 		setFixedNav();
+		baW();
 	}
 
 	window.addEventListener('scroll', () => {
@@ -380,7 +385,27 @@ function eventHandler() {
 			nextEl: '.sSpecificProject__slider--js .swiper-button-next',
 			prevEl: '.sSpecificProject__slider--js .swiper-button-prev'
 		}
-	})); // modal window
+	}));
+	const sProjects = new Swiper('.sProjects__slider--js', {
+		// slidesPerView: 5,
+		// ...defaultSl,
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		}
+	});
+	$(".sProjects__slide").each(function () {
+		let th = $(this);
+		th.find(".slider-ba").on("input change", e => {
+			const sliderPos = e.target.value; // Update the width of the foreground image
+
+			th.find('.foreground-img').css('width', "".concat(sliderPos, "%")); // Update the position of the slider button
+
+			th.find('.slider-button').css('left', "calc(".concat(sliderPos, "% - var(--swiperArrowSize) / 2)"));
+		});
+	}); // modal window
 }
 
 ;
