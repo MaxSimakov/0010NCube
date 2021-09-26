@@ -30,13 +30,15 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(74)};
 	}
-	&__wrap {
+	ul {
+		list-style: none;
 		padding-bottom: 60px;
 		@include media-breakpoint-up(lg) {
 			padding-bottom: rem(10);
 		}
 	}
-	h2 {
+	.h2 {
+		display: inline-block;
 		text-align: left;
 		color: #c5c5c5;
 		font-weight: bold;
@@ -44,6 +46,7 @@
 		line-height: 46px;
 		text-transform: none;
 		padding-bottom: 40px;
+		margin-bottom: 0;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(52);
 			line-height: rem(63);
@@ -52,17 +55,18 @@
 			padding-bottom: rem(26);
 		}
 	}
-	p {
+	a {
+		display: inline-block;
 		font-weight: 600;
 		color: #000000;
 		font-size: 14px;
 		line-height: 17px;
-		margin-bottom: 23px;
+		margin-bottom: 20px;
 		padding-left: 20px;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(16);
 			line-height: rem(20);
-			margin-bottom: rem(20);
+			margin-bottom: rem(18);
 			padding-left: rem(102);
 		}
 	}
