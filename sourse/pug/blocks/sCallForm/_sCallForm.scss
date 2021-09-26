@@ -4,7 +4,7 @@
 	// --sPB: ;
 	// --sTPB: ;
 	position: relative;
-	.container{
+	.container {
 		position: relative;
 	}
 	@include media-breakpoint-up(lg) {
@@ -17,17 +17,17 @@
 	.bg-text {
 		color: rgba(245, 245, 245, 0.5);
 		bottom: rem(-45);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			left: rem(35);
 		}
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			left: 50%;
-			transform: translate(-50%,0);
+			transform: translate(-50%, 0);
 		}
 	}
-	.decorative-line{
-		&--callform{
-			@include media-breakpoint-up(lg){
+	.decorative-line {
+		&--callform {
+			@include media-breakpoint-up(lg) {
 				display: block;
 				height: rem(465);
 				width: 1px;
@@ -55,8 +55,8 @@
 			margin-right: auto;
 			position: relative;
 		}
-		&::before {
-			@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(lg) {
+			&::before {
 				content: "";
 				width: 594px;
 				height: 594px;
@@ -65,6 +65,7 @@
 				position: absolute;
 				top: -107px;
 				left: -130px;
+				z-index: -1;
 			}
 		}
 		h2 {
@@ -109,5 +110,8 @@
 			font-weight: 600;
 			letter-spacing: unset;
 		}
+	}
+	.picture-bg{
+		z-index: -3;
 	}
 } // end.sCallForm

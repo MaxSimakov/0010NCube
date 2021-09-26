@@ -7,90 +7,103 @@
 	.container {
 		position: relative;
 	}
-	.decorative-line{
-		&--timeline{
+	&::before {
+		content: "";
+		width: 100%;
+		height: rem(711);
+		z-index: -3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #f2f2f2;
+		@include media-breakpoint-down(lg) {
+			height: 485px;
+		}
+		@include media-breakpoint-down(md) {
+			height: 446px;
+		}
+	}
+	.decorative-line {
+		&--timeline {
 			width: 1px;
 			background-color: rgba(207, 207, 207, 0.57);
 			position: absolute;
-			@include media-breakpoint-up(xxxl){
-				top: -638px;
+			top: 20px;
+			@include media-breakpoint-up(xxxl) {
 				left: 14px;
 				height: rem(1701);
 			}
-			@include media-breakpoint-up(xxl){
-				top: -538px;
+			@include media-breakpoint-up(xxl) {
 				left: 14px;
 				height: rem(1701);
 			}
-			@include media-breakpoint-up(xl){
-				top: -538px;
+			@include media-breakpoint-up(xl) {
 				left: 14px;
 				height: 1240px;
 			}
-			@include media-breakpoint-up(lg){
-				top: -538px;
+			@include media-breakpoint-up(lg) {
 				left: 14px;
 				height: 1240px;
 			}
-			@include media-breakpoint-down(lg){
+			@include media-breakpoint-down(lg) {
 				display: none;
 			}
 		}
 	}
-	.bg-text{
-		&--timeline1{
+	.bg-text {
+		&--timeline1 {
 			z-index: -2;
 			transform: rotate(-90deg);
 			color: rgba(245, 245, 245, 0.5);
 			position: absolute;
-			@include media-breakpoint-up(xxxl){
+			@include media-breakpoint-up(xxxl) {
 				left: -148px;
-				top: 530px;
+				top: 1160px;
 			}
-			@include media-breakpoint-up(xxl){
+			@include media-breakpoint-up(xxl) {
 				left: -105px;
-				top: 530px;
+				top: 1160px;
 			}
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				left: -105px;
-				top: 430px;
+				top: 1000px;
 			}
-			@include media-breakpoint-down(lg){
+			@include media-breakpoint-down(lg) {
 				display: none;
 			}
 		}
-		&--timeline2{
+		&--timeline2 {
 			z-index: -2;
 			transform: rotate(-90deg);
 			color: rgba(245, 245, 245, 0.5);
 			position: absolute;
-			@include media-breakpoint-up(xxxl){
+			@include media-breakpoint-up(xxxl) {
 				right: rem(-166);
-				top: rem(350);
+				top: rem(1010);
 			}
-			@include media-breakpoint-up(xxl){
+			@include media-breakpoint-up(xxl) {
 				right: rem(-166);
-				top: rem(550);
+				top: rem(1250);
 			}
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xl) {
 				right: rem(-280);
-				top: rem(550);
+				top: rem(1250);
 			}
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				right: rem(-300);
-				top: rem(200);
+				top: rem(900);
 			}
-			@include media-breakpoint-down(lg){
+			@include media-breakpoint-down(lg) {
 				right: rem(-300);
-				top: -20px;
+				top: 650px;
 			}
-			@include media-breakpoint-down(md){
+			@include media-breakpoint-down(md) {
 				right: rem(-300);
-				top: -230px;
+				top: 600px;
 			}
-			@include media-breakpoint-down(sm){
+			@include media-breakpoint-down(sm) {
 				right: -200px;
-				top: -230px;
+				top: 600px;
 			}
 		}
 	}
@@ -107,7 +120,7 @@
 		}
 	}
 	&__caption {
-		font-weight: 600;
+		// font-weight: 600;
 		margin-top: 10px;
 		margin-left: 30px;
 		font-size: 14px;
@@ -135,129 +148,91 @@
 			font-weight: 400;
 		}
 	}
-	&--first {
+	.bg-timeline {
+		position: absolute;
+		z-index: 1;
+		@include media-breakpoint-up(xxl) {
+			top: -47px;
+			right: 236px;
+		}
+		@include media-breakpoint-up(xl) {
+			top: -47px;
+			right: 0;
+		}
 		@include media-breakpoint-up(lg) {
-			--sPT: #{rem(70)};
-			--sPB: 1px;
-			background-color: #f2f2f2;
+			top: -47px;
+			right: 0;
 		}
-		@include media-breakpoint-down(lg){
-			--sPB:10px;
-			&::before{
-				content:'';
-				background-color: #f2f2f2;
-				width: 100%;
-				height: 59%;
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
+		@include media-breakpoint-down(xl) {
+			height: 750px;
+			width: 272px;
 		}
-		@include media-breakpoint-down(md){
-			&::before{
-				height: 57%;
-			}
+		@include media-breakpoint-down(lg) {
+			right: 20px;
+			top: -30px;
+			height: 455px;
+			width: 165px;
 		}
-		@include media-breakpoint-down(sm){
-			&::before{
-				height: 53%;
-			}
+		@include media-breakpoint-down(sm) {
+			right: auto;
+			left: 210px;
 		}
-		.bg-timeline {
+		&::before {
+			content: "";
 			position: absolute;
-			z-index: 1;
-			@include media-breakpoint-up(xxl) {
-				top: -47px;
-				right: 236px;
-			}
+			border-radius: 50%;
+			border: 1px solid #e0e0e0;
+			z-index: -1;
 			@include media-breakpoint-up(xl) {
-				top: -47px;
-				right: 0;
+				top: rem(64);
+				left: rem(-48);
+				width: rem(339);
+				height: rem(339);
 			}
 			@include media-breakpoint-up(lg) {
-				top: -47px;
-				right: 0;
-			}
-			@include media-breakpoint-down(xl) {
-				height: 750px;
-				width: 272px;
+				top: 20px;
+				left: -20px;
+				width: 240px;
+				height: 240px;
 			}
 			@include media-breakpoint-down(lg) {
-				right: 20px;
-				top: -30px;
+				top: 20px;
+				left: -7px;
+				width: 143px;
+				height: 143px;
 			}
 			@include media-breakpoint-down(md) {
-				height: 455px;
-				width: 165px;
 			}
-			@include media-breakpoint-down(sm) {
-				right: auto;
-				left: 210px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			border: 1px solid #e0e0e0;
+			z-index: -1;
+			@include media-breakpoint-up(xl) {
+				width: rem(642);
+				height: rem(642);
+				bottom: rem(-14);
+				right: rem(-389);
 			}
-			&::before {
-				content: "";
-				position: absolute;
-				border-radius: 50%;
-				border: 1px solid #E0E0E0;
-				z-index: -1;
-				@include media-breakpoint-up(xl) {
-					top: rem(64);
-					left: rem(-48);
-					width: rem(339);
-					height: rem(339);
-				}
-				@include media-breakpoint-up(lg) {
-					top: 20px;
-					left: -20px;
-					width: 240px;
-					height: 240px;
-				}
-				@include media-breakpoint-down(lg) {
-					top: 20px;
-					left: -20px;
-					width: 240px;
-					height: 240px;
-				}
-				@include media-breakpoint-down(md) {
-					top: 20px;
-					left: -7px;
-					width: 143px;
-					height: 143px;
-				}
+			@include media-breakpoint-up(lg) {
+				width: 440px;
+				height: 440px;
+				bottom: -10px;
+				right: -262px;
 			}
-			&::after{
-				content: "";
-				position: absolute;
-				border-radius: 50%;
-				border: 1px solid #E0E0E0;
-				z-index: -1;
-				@include media-breakpoint-up(xl){
-					width: rem(642);
-					height: rem(642);
-					bottom: rem(-14);
-					right: rem(-389);
-				}
-				@include media-breakpoint-up(lg){
-					width: 440px;
-					height: 440px;
-					bottom: -10px;
-					right: -262px;
-				}
-				@include media-breakpoint-down(lg){
-					width: 440px;
-					height: 440px;
-					bottom: -10px;
-					right: -262px;
-				}
-				@include media-breakpoint-down(md){
-					width: 344px;
-					height: 344px;
-					bottom: -105px;
-					right: -208px;
-				}
+			@include media-breakpoint-down(lg) {
+				width: 344px;
+				height: 344px;
+				bottom: -105px;
+				right: -208px;
+			}
+			@include media-breakpoint-down(md) {
 			}
 		}
 	}
+
 	&--first {
 		.container > * {
 			z-index: 2;
@@ -288,18 +263,18 @@
 		height: 341px;
 		left: 190px;
 	}
-	.sTimeline--first .bg-timeline:before{
+	.sTimeline--first .bg-timeline:before {
 		top: 10px;
 		left: -15px;
 		width: 100px;
 		height: 100px;
 	}
-	.sTimeline--first .bg-timeline:after{
+	.sTimeline--first .bg-timeline:after {
 		width: 258px;
 		height: 258px;
 		right: -160px;
 	}
-	.sTimeline .bg-text--timeline2{
+	.sTimeline .bg-text--timeline2 {
 		right: -200px;
 		top: -400px;
 	}

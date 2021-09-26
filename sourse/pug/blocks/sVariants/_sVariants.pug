@@ -22,29 +22,20 @@ mixin variant-card(modal,caption,title,price,bg,...items)
 				//- +e.title Start <span>C</span>ube
 				+e.price!=`от&nbsp;${price} руб./кв.м`
 				//- +e.price от&nbsp;2&nbsp;000 руб./кв.м
-				+e.UL.list
+				ul
 					each item in items
 						li!=item
-					//- li замеры и фотофиксация пространства
-					//- li обмерный план
-					//- li разработка планировочного решения
-					//- li план демонтажа/монтажа стен и перегородок
-					//- li план привязки сантехнического оборудования 
-					//- li план расположения светильников
-					//- li план привязки выключателей + описание
-					//- li план размещения розеток и электровыводов
 				+e.more.link-modal-js(href=`#modal-${modal}`) Подробнее
 			+b.modal-win--services(id=`modal-${modal}` class=" " style="display: none" )
 				.modal-wrap
 					.main-info
 						.main-info__wrap
-							+e.variant-title!=title
-							+e.UL.list
+							h2!=title
+							ul
 								each item in items
 									li!=item
 						+pic(`variants-modal-${bg}.jpg`,'bg',0).modal-win__bg-card
 					.add-info
-						//- +e.variant-caption Этот тариф подойдет вам, если от&nbsp;нас, вам нужна лишь профессиональная помощь в&nbsp;разработке функционального зонирования пространства, плюс основные чертежи, которые помогут избежать ошибок в&nbsp;инженерии.<br>И&nbsp;если вы&nbsp;хотите придумать дизайн вашей новой квартиры или загородного дома самостоятельно.<br>Всю остальную работу&nbsp;&mdash; подборку по&nbsp;цветам, материалам, оборудованию, сантехнике, освещению, мебели и&nbsp;аксессуарам вы&nbsp;берете на&nbsp;себя. А&nbsp;еще вы&nbsp;располагаете временем и&nbsp;готовы самостоятельно контролировать весь процесс ремонта, решать вопросы со&nbsp;строителями и&nbsp;производителями услуг, закупать, организовывать доставки, приемку, установку и&nbsp;сборку всех составляющих ремонта.
 						+e.variant-caption!=caption
 						+e.example(href="#") Смотреть пример
 				.bg-text!=title

@@ -144,6 +144,12 @@
 			position: absolute;
 			bottom: 50px;
 			right: -10px;
+			@include media-breakpoint-up(md){
+				right: 260px;
+			}
+			@include media-breakpoint-up(sm){
+				right: 180px;
+			}
 			width: 320px;
 			height: 472px;
 			z-index: -1;
