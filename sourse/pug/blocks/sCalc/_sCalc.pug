@@ -62,5 +62,12 @@ mixin sCalc(data)
 						+e.sale-price
 							+e.calc-title Со скидкой 5% 
 							+e.input-sale 399 000 р
-				+e.btn-fix(href='#') Зафиксировать скидку
+				+e.btn-fix.link-modal-js(href='modal-sale') Зафиксировать скидку
+				+b.modal-win--sale(id=`modal-sale` class=" " style="display: none" )
+					.modal-wrap
+						.modal-text
+							.modal-text__title Ваша скидка зафиксирована
+							.modal-text__caption Вы можете&nbsp;обратиться к&nbsp;нам&nbsp;в&nbsp;любое время и воспользоваться скидкой
+						+pic('modal-sale.png','',0).pic-sale
+					.bg-text.bg-text--sale Thank You
 	// end sCalc

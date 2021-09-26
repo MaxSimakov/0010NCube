@@ -7,13 +7,12 @@ mixin sStages(data)
 			.decorative-line.decorative-line--stages-second
 			+b.section-title.text-center
 				h1 этапы проектирования
-		+pic('stages-1-mini.jpg','bg',0).stages-bg-first.d-lg-none.d-block
 		.container
 			.row
-				+e.content-col.col-auto
+				+e.content-col.col-auto.order-lg-0.order-1
 					+e.text-wrap
 						+e.title ЗАКЛЮЧЕНИЕ ДОГОВОРА
-						+e.UL.list
+						ul
 							li Заключаем соглашение на&nbsp;разработку дизайн проекта
 							li Составляем техническое задание
 							li Определяемся по&nbsp;бюджету
@@ -21,36 +20,35 @@ mixin sStages(data)
 					+e.text-wrap
 						+e.title.d-lg-block.d-none ВЫЕЗД<br>НА&nbsp;ОБЪЕКТ
 						+e.title.d-lg-none.d-block ВЫЕЗД НА&nbsp;ОБЪЕКТ
-						+e.UL.list
+						ul
 							li Выезжаем на&nbsp;обмер помещений и&nbsp;фотофиксацию, в котором отметим все существующие коммуникации, несущие конструкции, в&nbsp;общем, изучим объект.
 							li Мы&nbsp;можем делать проекты удаленно, без выезда! Для этого у&nbsp;нас должны быть обмеры помещения, которым можно доверять и&nbsp;есть все необходимые размеры или точный документ от&nbsp;проектировщиков, например, не построенного загородного дома
 					+e.text-wrap
 						+e.title ПЛАНИРОВОЧНОЕ РЕШЕНИЕ
-						+e.UL.list
+						ul
 							li Прорабатываем возможные варианты планировки и зонирования&nbsp;помещений, учитывая нормы и возможность согласования.
 							li Планировка&nbsp;- это важный момент в&nbsp;работе над интерьером, поэтому ей&nbsp;стоит уделить максимум внимания.
-				+e.col.col-lg.col-12
+				+e.col.col-lg.col-12.order-lg-1.order-0
 					+pic('stages-1.jpg','bg',0)
-		+pic('stages-2.jpg','bg',0).d-block.d-lg-none.stages-bg-second
 		.container
 			.row.row-reverse
-				+e.content-col-left.col-auto
+				+e.content-col-left.col-auto.order-lg-0.order-1
 					+e.text-wrap
 						+e.title КОНЦЕПТУАЛЬНОЕ РЕШЕНИЕ И ПОДБОР МАТЕРИАЛОВ
-						+e.UL.list--second
+						ul
 							li Разрабатываем концептуальное решение помещений и подбираем все отделочные материалы и оборудование
 					+e.text-wrap
 						+e.title 3D ВИЗУАЛИЗАЦИЯ
-						+e.UL.list--second
+						ul
 							li Делаем 3D визуализации помещений, которые позволяют&nbsp;лучше представить планировку, концепцию&nbsp;дизайна, созданную именно для Вас. Эти эскизы дают нам четкое представление о цветовой гамме&nbsp;и стилю будущего дизайна интерьера
 					+e.text-wrap
 						+e.title РАБОЧИЙ ПРОЕКТ
-						+e.UL.list--second
+						ul
 							li Все необходимые чертежи, которые, по мнению дизайнера необходимы для успешной реализации задуманной концепции.
 					+e.text-wrap
 						+e.title ВЫХОД НА СТРОЙКУ
-						+e.UL.list--second
+						ul
 							li Выбор услуги авторского надзора (только при выборе  project cube+ и комплектация если maxi cube)
-				+e.col-left.col-lg.col-12.d-none.d-lg-block
+				+e.col-left.col-lg.col-12.order-lg-1.order-0
 					+pic('stages-2.jpg','bg',0)
 	// end sStages

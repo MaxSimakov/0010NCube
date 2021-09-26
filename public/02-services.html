@@ -360,18 +360,13 @@
 						<h1>этапы проектирования</h1>
 					</div>
 				</div>
-				<!-- picture-->
-				<picture class="stages-bg-first d-lg-none d-block"> 
-					<source type="image/webp" srcset="img/@2x/webp/stages-1-mini.webp"/><img class="object-fit-js" src="img/@2x/stages-1-mini.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
 				<div class="container">
 					<div class="row">
-						<div class="sStages__content-col col-auto">
+						<div class="sStages__content-col col-auto order-lg-0 order-1">
 							<div class="sStages__text-wrap">
 								<div class="sStages__title">ЗАКЛЮЧЕНИЕ ДОГОВОРА
 								</div>
-								<ul class="sStages__list">
+								<ul>
 									<li>Заключаем соглашение на&nbsp;разработку дизайн проекта</li>
 									<li>Составляем техническое задание</li>
 									<li>Определяемся по&nbsp;бюджету</li>
@@ -383,7 +378,7 @@
 								</div>
 								<div class="sStages__title d-lg-none d-block">ВЫЕЗД НА&nbsp;ОБЪЕКТ
 								</div>
-								<ul class="sStages__list">
+								<ul>
 									<li>Выезжаем на&nbsp;обмер помещений и&nbsp;фотофиксацию, в котором отметим все существующие коммуникации, несущие конструкции, в&nbsp;общем, изучим объект.</li>
 									<li>Мы&nbsp;можем делать проекты удаленно, без выезда! Для этого у&nbsp;нас должны быть обмеры помещения, которым можно доверять и&nbsp;есть все необходимые размеры или точный документ от&nbsp;проектировщиков, например, не построенного загородного дома</li>
 								</ul>
@@ -391,13 +386,13 @@
 							<div class="sStages__text-wrap">
 								<div class="sStages__title">ПЛАНИРОВОЧНОЕ РЕШЕНИЕ
 								</div>
-								<ul class="sStages__list">
+								<ul>
 									<li>Прорабатываем возможные варианты планировки и зонирования&nbsp;помещений, учитывая нормы и возможность согласования.</li>
 									<li>Планировка&nbsp;- это важный момент в&nbsp;работе над интерьером, поэтому ей&nbsp;стоит уделить максимум внимания.</li>
 								</ul>
 							</div>
 						</div>
-						<div class="sStages__col col-lg col-12">
+						<div class="sStages__col col-lg col-12 order-lg-1 order-0">
 							<!-- picture-->
 							<picture> 
 								<source type="image/webp" srcset="img/@2x/webp/stages-1.webp"/><img class="object-fit-js" src="img/@2x/stages-1.jpg" alt="" loading="lazy"/>
@@ -406,44 +401,39 @@
 						</div>
 					</div>
 				</div>
-				<!-- picture-->
-				<picture class="d-block d-lg-none stages-bg-second"> 
-					<source type="image/webp" srcset="img/@2x/webp/stages-2.webp"/><img class="object-fit-js" src="img/@2x/stages-2.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
 				<div class="container">
 					<div class="row row-reverse">
-						<div class="sStages__content-col-left col-auto">
+						<div class="sStages__content-col-left col-auto order-lg-0 order-1">
 							<div class="sStages__text-wrap">
 								<div class="sStages__title">КОНЦЕПТУАЛЬНОЕ РЕШЕНИЕ И ПОДБОР МАТЕРИАЛОВ
 								</div>
-								<ul class="sStages__list sStages__list--second">
+								<ul>
 									<li>Разрабатываем концептуальное решение помещений и подбираем все отделочные материалы и оборудование</li>
 								</ul>
 							</div>
 							<div class="sStages__text-wrap">
 								<div class="sStages__title">3D ВИЗУАЛИЗАЦИЯ
 								</div>
-								<ul class="sStages__list sStages__list--second">
+								<ul>
 									<li>Делаем 3D визуализации помещений, которые позволяют&nbsp;лучше представить планировку, концепцию&nbsp;дизайна, созданную именно для Вас. Эти эскизы дают нам четкое представление о цветовой гамме&nbsp;и стилю будущего дизайна интерьера</li>
 								</ul>
 							</div>
 							<div class="sStages__text-wrap">
 								<div class="sStages__title">РАБОЧИЙ ПРОЕКТ
 								</div>
-								<ul class="sStages__list sStages__list--second">
+								<ul>
 									<li>Все необходимые чертежи, которые, по мнению дизайнера необходимы для успешной реализации задуманной концепции.</li>
 								</ul>
 							</div>
 							<div class="sStages__text-wrap">
 								<div class="sStages__title">ВЫХОД НА СТРОЙКУ
 								</div>
-								<ul class="sStages__list sStages__list--second">
+								<ul>
 									<li>Выбор услуги авторского надзора (только при выборе  project cube+ и комплектация если maxi cube)</li>
 								</ul>
 							</div>
 						</div>
-						<div class="sStages__col-left col-lg col-12 d-none d-lg-block">
+						<div class="sStages__col-left col-lg col-12 order-lg-1 order-0">
 							<!-- picture-->
 							<picture> 
 								<source type="image/webp" srcset="img/@2x/webp/stages-2.webp"/><img class="object-fit-js" src="img/@2x/stages-2.jpg" alt="" loading="lazy"/>
@@ -526,8 +516,22 @@
 								</div>
 							</div>
 						</div>
-						<a class="sCalc__btn-fix" href="#">Зафиксировать скидку
+						<a class="sCalc__btn-fix link-modal-js" href="modal-sale">Зафиксировать скидку
 						</a>
+						<div class="modal-win modal-win--sale" id="modal-sale" style="display: none">
+							<div class="modal-wrap">
+								<div class="modal-text">
+									<div class="modal-text__title">Ваша скидка зафиксирована</div>
+									<div class="modal-text__caption">Вы можете&nbsp;обратиться к&nbsp;нам&nbsp;в&nbsp;любое время и воспользоваться скидкой</div>
+								</div>
+								<!-- picture-->
+								<picture class="pic-sale"> 
+									<source type="image/webp" srcset="img/@2x/webp/modal-sale.webp"/><img src="img/@2x/modal-sale.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="bg-text bg-text--sale">Thank You</div>
+						</div>
 					</div>
 				</div>
 			</section>
