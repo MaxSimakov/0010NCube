@@ -1,13 +1,14 @@
 mixin sArticles(data)
 	// start sArticles
-	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
+	+b.sArticles.section#sArticles&attributes(attributes)
 		.container
 			.decorative-line.decorative-line--articles
 			.decorative-circle.decorative-circle--first
 			.decorative-circle.decorative-circle--second
 			.bg-text.bg-text--articles articles
 			ul 
-				a.h2(href="#") Дизайн проект квартиры от&nbsp;студии&nbsp;Н&#8209;КУБ
+				li
+					a.h2(href="#") Дизайн проект квартиры от&nbsp;студии&nbsp;Н&#8209;КУБ
 				li
 					a(href="#") Элитный дизайн квартиры
 				li
@@ -33,7 +34,8 @@ mixin sArticles(data)
 				li
 					a(href="#") Четырехкомнатная квартира
 			ul
-				a.h2(href="#") Интерьер загородного дома
+				li
+					a.h2(href="#") Интерьер загородного дома
 				li
 					a(href="#") Дизайн коттеджа
 				li
@@ -43,7 +45,8 @@ mixin sArticles(data)
 				li
 					a(href="#") Дизайн загородного дома
 			ul
-				a.h2(href="#") Интерьеры
+				li
+					a.h2(href="#") Интерьеры
 				li
 					a(href="#") Интерьер гостиной
 				li

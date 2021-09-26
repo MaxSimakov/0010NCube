@@ -4,11 +4,15 @@ mixin sArticleImages(data)
 		.container
 			.row
 				+e.col.col-lg-3.col-12
-					+pic(`some-article.jpg`,'', '')
+					a(data-fancybox="responsive" data-src="img/@2x/some-article.jpg")
+						+pic(`some-article.jpg`,'', '')
 				+e.col.col-lg-3.col-12
-					+pic(`some-article.jpg`,'', '')
+					a(data-fancybox="responsive" data-src="img/@2x/some-article.jpg")
+						+pic(`some-article.jpg`,'', '')
 				+e.col.col-lg-3.col-12
-					+pic(`some-article.jpg`,'', '')
+					a(data-fancybox="responsive" data-src="img/@2x/some-article.jpg")
+						+pic(`some-article.jpg`,'', '')
 				+e.col.col-lg-3.col-12
-					+pic(`some-article.jpg`,'', '')
+					a(data-fancybox="responsive" data-src="img/@2x/some-article.jpg")
+						+pic(`some-article.jpg`,'', '')
 	// end sArticleImages
