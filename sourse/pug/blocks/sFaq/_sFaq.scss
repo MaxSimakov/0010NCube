@@ -117,6 +117,7 @@
 		}
 	}
 	&__item-head {
+		cursor: pointer;
 		padding: rem(20) rem(25);
 		@include media-breakpoint-up(md) {
 			padding: rem(25) rem(35);
