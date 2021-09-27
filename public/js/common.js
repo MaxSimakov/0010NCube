@@ -406,6 +406,10 @@ function eventHandler() {
 			th.find('.slider-button').css('left', "calc(".concat(sliderPos, "% - var(--swiperArrowSize) / 2)"));
 		});
 	}); // modal window
+
+	$(".dd-head-js").click(function () {
+		$(this).next().slideToggle().parent().toggleClass("active");
+	});
 }
 
 ;

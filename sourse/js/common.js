@@ -90,7 +90,7 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -99,7 +99,7 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
 			this.menuMobile.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
 		}
 
 	},
@@ -291,7 +291,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -351,7 +351,7 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+
 	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -382,13 +382,13 @@ function eventHandler() {
 		// ...defaultSl,
 		slidesPerView: 1,
 		loop: true,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	});
 
-	$(".sProjects__slide").each(function(){
+	$(".sProjects__slide").each(function () {
 		let th = $(this);
 		th.find(".slider-ba").on("input change", (e) => {
 			const sliderPos = e.target.value;
@@ -396,10 +396,13 @@ function eventHandler() {
 			th.find('.foreground-img').css('width', `${sliderPos}%`)
 			// Update the position of the slider button
 			th.find('.slider-button').css('left', `calc(${sliderPos}% - var(--swiperArrowSize) / 2)`);
-	
+
 		});
 	});
 	// modal window
+	$(".dd-head-js").click(function () {
+		$(this).next().slideToggle().parent().toggleClass("active");
+	})
 
 };
 if (document.readyState !== 'loading') {
