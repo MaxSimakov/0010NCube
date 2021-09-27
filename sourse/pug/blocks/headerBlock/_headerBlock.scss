@@ -10,9 +10,25 @@
 	// background-image: url(../img);
 	// background-color: #000000;
 
+	--left: calc(50vw - 50%);
 	&__slider {
 		position: relative;
+		margin-left: calc(-1 * var(--left));
+		width: calc(100% + var(--left));
+		overflow: visible;
 	}
+		&__slide-inner {
+			position: relative;
+			z-index: 4;
+			margin-left: auto;
+			// max-width: calc(100% - (100vw - 100%) / 2);
+			margin-right: calc(-1 * var(--bs-gutter-x) / 2);
+			padding-left: rem(30);
+		}
+		&__slide{
+			// padding-left: 
+
+		}
 	.swiper-wrapper {
 		min-height: calc(var(--vh, 1vh) * 100 - var(--topH));
 	}

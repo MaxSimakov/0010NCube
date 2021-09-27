@@ -1,12 +1,13 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
 			+e.slider--js.swiper
 				.swiper-wrapper
 					mixin slide(i, t, ...items)
 						+e.slide.swiper-slide.bg-wrap
 							+pic(`header-block-${i}.jpg`,'bg').picture-bg
-							.container
+							+e.slide-inner.container
 								+b.section-title
 									h1!= t
 								ul
