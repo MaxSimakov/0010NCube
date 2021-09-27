@@ -90,6 +90,15 @@
 	}
 	&__card-item {
 		--x: 0;
+		
+		&:hover {
+			picture {
+				&::after {
+					// background-color: transparent;
+					opacity: 0;
+				}
+			}
+		}
 		@include media-breakpoint-down(lg) {
 			@include block(480, 300);
 			margin-bottom: 4vw;
@@ -140,6 +149,18 @@
 				}
 			}
 		}
+		picture {
+			&::after {
+				content: "";
+				@include mt;
+				position: absolute;
+				width: inherit;
+				height: inherit;
+				left: 0;
+				top: 0;
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+		}
 	}
 
 	&__caption {
@@ -147,6 +168,7 @@
 		left: 0;
 		bottom: 0;
 		padding: rem(45);
+		z-index: 5;
 		@include media-breakpoint-up(lg) {
 			padding: 2.1vw;
 		}
