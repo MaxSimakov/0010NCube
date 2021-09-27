@@ -171,7 +171,7 @@
 		margin-top: rem(25);
 		position: relative;
 		@include block;
-		z-index: 3;
+		// z-index: 3;
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(60);
 		}
@@ -184,7 +184,7 @@
 			margin-right: -30%;
 		}
 		&::before {
-			z-index: 3;
+			// z-index: 3;
 			border-radius: 50%;
 			border: 1px solid #e0e0e0;
 		}
