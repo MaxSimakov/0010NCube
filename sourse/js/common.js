@@ -396,6 +396,48 @@ function eventHandler() {
 			prevEl: '.sSpecificProject__slider--js .swiper-button-prev',
 		},
 	});
+	const sFaqSlider = new Swiper('.sFaq__slider--js', {
+		// slidesPerView: 5,
+		// ...defaultSl,
+		// loop: true,
+		slidesPerView: 'auto',
+		direction: "vertical",
+		slideToClickedSlide: true,
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sFaq__btn-wrap .sFaq__btn',
+		},
+	});
+
+
+	// modal window
+	$(".dd-head-js").click(function () {
+		sFaqSlider.update();
+		$(this).next().slideToggle().parent().toggleClass("active");
+
+		$(this).parents('.sFaq__slide').siblings().find('.sFaq__item-content').slideUp().parent().removeClass("active");
+	})
+
+
+	// sFaqSlider.on(\
+
+	// 	$(`.sFaq__slide.swiper-slide-active`).addClass("active");
+	// 	$(".sFaq__item-content").slideDown();
+	// )
+	// on('transitionEnd', function (swiper) {
+	// })
+	sFaqSlider.on('slideChange', function (swiper) {
+		let n = swiper.activeIndex + 1; 
+		 let slide = $(`.sFaq__slide:nth-child(${n}) `);
+		 let item = $(`.sFaq__slide:nth-child(${n}) .sFaq__item`);
+		 item.find(".sFaq__item-content").slideDown();
+		item.addClass("active")
+			.parent().siblings().find('.sFaq__item').removeClass("active").find(".sFaq__item-content").slideUp();
+	});
 
 	const sProjects = new Swiper('.sProjects__slider--js', {
 		// slidesPerView: 5,
@@ -419,10 +461,6 @@ function eventHandler() {
 
 		});
 	});
-	// modal window
-	$(".dd-head-js").click(function () {
-		$(this).next().slideToggle().parent().toggleClass("active");
-	})
 
 };
 if (document.readyState !== 'loading') {

@@ -4,19 +4,19 @@ mixin sPortfolio(data)
 		.container
 			+b.section-title
 				h1 Наши лучшие работы
-				h6 Сортировка
-			+form-wrap
-				.row
-					.col-auto
-						+in-c(`checkbox`, `Квартиры до 100 кв.м.`)
-					.col-auto
-						+in-c(`checkbox`, `Квартиры 100 кв.м.`)
-					.col-auto
-						+in-c(`checkbox`, `Квартиры более 100 кв.м.`)
-					.col-auto
-						+in-c(`checkbox`, `Квартиры 100 кв.м.`)
-					.col-auto
-						+in-c(`checkbox`, `Квартиры более 100 кв.м.`)
+				//- h6 Сортировка
+			//- +form-wrap
+			//- 	.row
+			//- 		.col-auto
+			//- 			+in-c(`checkbox`, `Квартиры до 100 кв.м.`)
+			//- 		.col-auto
+			//- 			+in-c(`checkbox`, `Квартиры 100 кв.м.`)
+			//- 		.col-auto
+			//- 			+in-c(`checkbox`, `Квартиры более 100 кв.м.`)
+			//- 		.col-auto
+			//- 			+in-c(`checkbox`, `Квартиры 100 кв.м.`)
+			//- 		.col-auto
+			//- 			+in-c(`checkbox`, `Квартиры более 100 кв.м.`)
 		+e.cards
 			mixin card-item(i)
 				+e.card-item(href="#").bg-wrap

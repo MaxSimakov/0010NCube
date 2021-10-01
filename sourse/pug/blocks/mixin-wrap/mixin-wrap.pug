@@ -18,7 +18,7 @@ mixin arrow()
 //- /arrow for swiper-slider
 
 mixin btn-round(l, i)
-	+b.btn-round(href=`${l}`)
+	+b.btn-round(href= (l || null))
 		+icon(`${i}`)
 //- rounded buttons for video and social
 

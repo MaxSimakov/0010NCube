@@ -10,6 +10,7 @@
 	// .container {
 	// 	position: relative;
 	// }
+
 	.decorative-circle {
 		width: rem(475);
 		height: rem(475);
@@ -104,10 +105,7 @@
 		@include mt;
 		@include media-breakpoint-up(xxl) {
 			width: rem(650);
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
+		} 
 		&.active {
 			border-color: $primary;
 			// margin-bottom: rem(35);
@@ -116,6 +114,7 @@
 			}
 		}
 	}
+
 	&__item-head {
 		cursor: pointer;
 		padding: rem(20) rem(25);
@@ -218,6 +217,26 @@
 			position: relative;
 			top: rem(-5);
 		}
+	}
+
+		&__slider{
+		height: (478px + 88px + 72px + 40px);
+	}
+
+	.swiper-slide{
+		height: auto;
+	}
+		.swiper-slide-active {
+		.sFaq__item{
+			border-color: $primary;
+
+		}
+		// h6{
+		// 	font-weight: 600;
+		// }
+		// .sFaq__item-content{
+		// 	// display: block; 
+		// }
 	}
 	@include media-breakpoint-up(xl) {
 	}
