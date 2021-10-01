@@ -371,9 +371,28 @@ function eventHandler() {
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
 		// touchRatio: 0.2,
-		slideToClickedSlide: true // freeModeMomentum: true,
-
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.headerBlock__slider-btn-next'
+		},
+		// autoplay: {
+		// 	delay: 5000,
+		// }, 
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				// shadow: true,
+				translate: ["-50%", 0, -2]
+			},
+			next: {
+				translate: ["100%", 0, 0]
+			}
+		}
 	}));
+	$(".headerBlock__slider-btn-next").hover(function () {
+		$(this).parent().find(".swiper").toggleClass("active");
+	});
 	const specificProjectSlider = new Swiper('.sSpecificProject__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		// freeMode: true,
