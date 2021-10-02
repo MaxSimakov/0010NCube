@@ -6,13 +6,40 @@
 	--sPT: 40px;
 	// --sPB: ;
 	--sTPB: #{rem(55)};
+	@include media-breakpoint-down(sm){
+		--sTPB:85px;
+	}
 	.container {
+		position: relative;
 		&--calc {
 			@include media-breakpoint-down(sm) {
 				width: 100%;
 				max-width: none;
 				padding: 0;
 			}
+		}
+	}
+
+	.bg-text{
+		&--calc{
+			@include media-breakpoint-up(xxl){
+				top: rem(15);
+				right: rem(-136);
+			}
+			@include media-breakpoint-up(lg){
+				top: 15px;
+				right: -136px;
+			}
+			@include media-breakpoint-down(lg){
+				top:0px;
+				left: 30px;
+			}
+			@include media-breakpoint-down(sm){
+				top:90px;
+				left: 30px;
+			}
+			color: rgba(245, 245, 245, 0.5);
+			z-index: -1;
 		}
 	}
 	h1 {
