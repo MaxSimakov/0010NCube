@@ -7,10 +7,7 @@ const SwiperSlide = {
       type: String,
       default: 'div'
     },
-    swiperRef: {
-      type: Object,
-      required: false
-    },
+    swiperRef: Object,
     zoom: {
       type: Boolean,
       default: undefined
