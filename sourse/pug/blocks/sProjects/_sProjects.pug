@@ -3,13 +3,13 @@ mixin sProjects(data)
 	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
 		.decorative-circle
 		.container
-			+b.section-title
+			+b.section-title(class="animate__fadeInUp animate__animated wow")
 				h2 с 2010 года наша студия реализовала более 200 объектов
 		.container--slider
-			.decorative-line
-			+b.bg-text--first After
-			+b.bg-text--second Before
-			+e.slider--js.swiper
+			.decorative-line(class="animate__slideInUp animate__animated wow"  data-wow-delay=".5s")
+			+b.bg-text--first(class="animate__fadeInRight animate__animated wow" data-wow-delay=".2s") After
+			+b.bg-text--second(class="animate__fadeInLeft animate__animated wow" data-wow-delay=".2s") Before
+			+e.slider--js.swiper(class="animate__fadeInUp animate__animated wow")
 				.swiper-wrapper
 					- for (var x = 0; x < 3; x++)
 						+e.slide.swiper-slide
@@ -25,6 +25,6 @@ mixin sProjects(data)
 									
 				+e.arrows
 					+arrow
-		+e.btn-wrap
+		+e.btn-wrap(class="animate__fadeInUp animate__animated wow")
 			+e.btn(href="#").btn.btn-primary Все работы
 	// end sProjects

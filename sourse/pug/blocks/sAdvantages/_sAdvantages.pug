@@ -4,12 +4,12 @@ mixin sAdvantages(data)
 		.container
 			.row
 				.col-md-8
-					+b.section-title
+					+b.section-title(class="animate__fadeInUp animate__animated wow")
 						h2 Клиенты выделяют основные&nbsp;наши преимущества
 					+e.row.row
-						+b.decorative-line
+						+b.decorative-line(class="animate__slideInUp animate__animated wow" data-wow-delay="1s")
 						mixin item(h, p)
-							.col-lg-6
+							.col-lg-6(class="animate__fadeInUp animate__animated wow")
 								+e.item
 									h5!= h
 									p!= p
@@ -20,7 +20,7 @@ mixin sAdvantages(data)
 						+item(`ЕДИНЕНИЕ С&nbsp;ПРИРОДОЙ`, `Уделяем особое внимание при подборе материалов. Очень любим природу, поэтому дерево, камень и&nbsp;экологичные материалы нас вдохновляют`)
 						+item(`КОМФОРТНАЯ РАБОТА`, `Благодаря нашему полному погружению в&nbsp;проект, любая деталь будет учтена`)
 				
-				+e.col.col-12.col-sm
+				+e.col.col-12.col-sm(class="animate__fadeInRight animate__animated wow")
 					+pic(`advantages-1.jpg`,'bg', '')
 		
 	// end sAdvantages

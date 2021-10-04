@@ -1,24 +1,24 @@
 mixin sSocialMedia(data)
 	// start sSocialMedia
 	+b.SECTION.sSocialMedia.section#sSocialMedia&attributes(attributes)
-		+b.bg-text Social Media
+		+b.bg-text(class="animate__fadeInRight animate__animated wow" data-wow-delay=".5s") Social Media
 		.container
 			+e.heading
 				.row
 					.col-auto
-						+b.section-title
+						+b.section-title(class="animate__fadeInUp animate__animated wow"  )
 							h2 Следите за нами в социальных сетях
 					.col
-						+e.hashtags
+						+e.hashtags(class="animate__fadeInRight animate__animated wow" data-wow-delay=".2s")
 							span #нкуб
 							span #nncubestudio
 							span #ncube
 			+e.row.row
-				+e.col.col-sm
+				+e.col.col-sm(class="animate__fadeInUp animate__animated wow" data-wow-delay=".1s")
 					+pic(`socialmedia-1.jpg`,'bg', '')
-				+e.col.col-sm
+				+e.col.col-sm(class="animate__fadeInUp animate__animated wow" data-wow-delay=".2s")
 					+pic(`socialmedia-2.jpg`,'bg', '')
-				+e.col.col-sm
+				+e.col.col-sm(class="animate__fadeInUp animate__animated wow" data-wow-delay=".3s")
 					+pic(`socialmedia-3.jpg`,'bg', '')
 				+e.col-soc.col-sm-auto
 					+soc

@@ -3,6 +3,11 @@
 	--sPT: #{rem(95)};
 	--sPB: #{rem(70)};
 	--sTPB: #{rem(125)};
+	.container--slider{
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(50)};
 	}

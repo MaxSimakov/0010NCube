@@ -2,12 +2,13 @@ mixin sWelcome(data)
 	// start sWelcome
 	+b.SECTION.sWelcome.section#sWelcome&attributes(attributes)
 		.container
-			+b.bg-text team
-			+b.decorative-line
+			+b.bg-text
+				div(class="animate__slideInUp animate__animated wow" data-wow-delay=".5s") team
+			+b.decorative-line(class="animate__slideInUp animate__animated wow" data-wow-delay="1s")
 			+b.decorative-circle
 			.row
 				.col-lg-6
-					+e.content
+					+e.content(class="animate__fadeInUp animate__animated wow")
 						h2 Добро пожаловать <br> в N-cube
 						+e.text
 							p Меня зовут Николай Николаев <br> Я&nbsp;дизайнер и&nbsp;арт директор дизайн студии N-cube
@@ -23,7 +24,7 @@ mixin sWelcome(data)
 							+btn-round('', 'play-button')
 							.strong Смотреть видео&#8209;обращение
 				.col-lg-6
-					+e.img-wrap
+					+e.img-wrap(class="animate__fadeInRight animate__animated wow")
 						+e.caption
 							+e.name Николай Николаев
 							+e.position Дизайнер и арт директор

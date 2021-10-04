@@ -89,10 +89,12 @@
 		}
 	}
 	&__card-item {
+
 		--x: 0;
 		
 		&:hover {
 			picture {
+				 filter: grayscale(0);
 				&::after {
 					// background-color: transparent;
 					opacity: 0;
@@ -150,6 +152,8 @@
 			}
 		}
 		picture {
+			filter: grayscale(.5);
+			@include mt;
 			&::after {
 				content: "";
 				@include mt;

@@ -6,38 +6,38 @@
 	position: relative;
 	overflow: hidden;
 	background-color: #f2f2f2;
+	.decorative-line {
+		width: 1px;
+		height: 200vh;
+		left: rem(15);
+		top: calc(-1 * var(--sPT));
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+	.decorative-circle {
+		width: rem(355);
+		height: rem(355);
+		top: 22%;
+		left: -40%;
+		bottom: auto;
+		right: auto;
+		@include media-breakpoint-up(sm) {
+			top: 13%;
+			left: -27%;
+		}
+		@include media-breakpoint-up(lg) {
+			width: rem(642);
+			height: rem(642);
+			top: auto;
+			left: auto;
+			bottom: -17%;
+			right: -30%;
+		}
+	}
 	.container {
 		position: relative;
 		z-index: 2;
-		.decorative-line {
-			width: 1px;
-			height: 200vh;
-			left: rem(15);
-			top: -50%;
-			@include media-breakpoint-down(lg) {
-				display: none;
-			}
-		}
-		.decorative-circle {
-			width: rem(355);
-			height: rem(355);
-			top: 22%;
-			left: -40%;
-			bottom: auto;
-			right: auto;
-			@include media-breakpoint-up(sm) {
-				top: 13%;
-				left: -27%;
-			}
-			@include media-breakpoint-up(lg) {
-				width: rem(642);
-				height: rem(642);
-				top: auto;
-				left: auto;
-				bottom: -17%;
-				right: -30%;
-			}
-		}
 	}
 	.bg-text {
 		color: rgba(255, 255, 255, 0.630769);
