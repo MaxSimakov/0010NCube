@@ -1272,6 +1272,7 @@
             else {
                 this.swiperRef.params[_key] = value;
             }
+            this.setIndex(2);
         };
         /**
          * @deprecated will be removed in upcoming versions

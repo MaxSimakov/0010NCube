@@ -193,6 +193,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: 3;
 			background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 19%);
 			// @include media-breakpoint-down(xxl){
 			// 	background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%);
@@ -301,7 +302,13 @@
 		}
 	}
 }
-
+.modal-project1,.modal-project2,.modal-maxi{
+	@include media-breakpoint-down(sm){
+		.main-info{
+			min-height: 1100px;
+		}
+	}
+}
 .modal-win {
 	&__bg-card {
 		flex-grow: 1;
@@ -330,6 +337,9 @@
 		}
 		@include media-breakpoint-down(md) {
 			max-width: 440px;
+		}
+		@include media-breakpoint-down(sm){
+			max-width: 320px;
 		}
 		.bg-text {
 			color: rgba(208, 208, 208, 0.2);
@@ -437,7 +447,8 @@
 					position: absolute;
 					top: 0;
 					left: 0;
-					background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
+					background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 28%);
+					z-index: 3;
 					// @include media-breakpoint-down(xxl){
 					// 	background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%);
 					// }
@@ -584,7 +595,8 @@
 		min-height: 200px;
 	}
 	.modal-win--services .main-info__wrap:before {
-		background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 28%);
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 21%);
+		height: 130%;
 	}
 }
 .fancybox__slide {

@@ -84,6 +84,25 @@
 			width: 100%;
 			margin-bottom: 20px;
 		}
+		picture{
+			position: relative;
+			--op-pic:0.3;
+			&:hover{
+				--op-pic:0;
+			}
+			&::after{
+				@include mt;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: grey;
+				z-index: 2;
+				opacity: var(--op-pic);
+			}
+		}
 		.card-text {
 			color: $white;
 			position: absolute;

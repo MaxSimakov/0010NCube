@@ -689,3 +689,12 @@ h2 {
 		top: rem(45);
 	}
 }
+
+.main-page,
+.services {
+	.fancybox__slide {
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}
+	}
+}
