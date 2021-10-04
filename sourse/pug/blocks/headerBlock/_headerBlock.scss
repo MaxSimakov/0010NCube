@@ -15,6 +15,9 @@
 			z-index: 300;
 		}
 	}
+	h1{
+		min-height: 3em;
+	}
 	// --left: calc(150px);
 	// margin-bottom: 1px;
 	// min-height: 100vh;
@@ -178,6 +181,7 @@
 
 	.section-title {
 		max-width: 51.1em;
+		margin-bottom: 0.5rem;
 	}
 
 	ul {

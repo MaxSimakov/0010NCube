@@ -2,10 +2,11 @@ mixin sTimeline(data)
 	// start sTimeline
 	+b.sTimeline.section#sTimeline&attributes(attributes)
 		.container
-			+pic('timeline.png','',0).bg-timeline
+			+pic('timeline.png','',0).bg-timeline(class="animate__fadeInRight animate__animated wow" data-wow-delay=".8s")
 			mixin year(y,c)
-				+e.year=y
-				+e.caption!=c
+				div(class="animate__fadeInUp animate__animated wow"  )
+					+e.year=y
+					+e.caption!=c
 			+year('2021','<p class="short-mob"><b>Публикация в журнале Домашний очаг спец выпуск интерьер + ремонт</b></p>')
 			+year('2020','<p class="short-mob"><b>Стали номинантами в главной интерьерной премии страны INTERIA AWARDS в конкурсе MODERN HOME Professional Design Award лучшие современные интерьеры</b></p>')
 			+year('2019','<p><b>Professional Design Award 2019</b></p><p>29 марта в мультимедийном зале московского центра дизайна Artplay состоялась первая церемония награждения победителей всероссийской профессиональной премии за лучший современный жилой интерьер MODERN HOME Professional Design Award 2019.</p><p><b>Посетили выставку ISalone 2019 на в Милане Италия</b></p><p class="last"><b>Публикация нашего проекта в Elledecoration</b></p>')
@@ -15,9 +16,9 @@ mixin sTimeline(data)
 			+year('2015','<p><b>Яркие каникулы со Schneider Electric@ 2015</b></p><p>Ежегодный федеральный конкурс для дизайнеров интерьера “Яркие каникулы со Schneider Electric@ 2015. Мы стали победителями в номинации “Лучший интерьер чвстной квартиры с использованием серии Odace”, получили приз - поездку в Германию.</p>')
 			+year('2014','<p><b>A`Design Award & Competition</b></p><p>Ежегодная престижная международная премия в области дизайна, которая отмечает лучшие дизайнерские идеи и объединяет дизайнеров, как профессионалов, так и новичков, компании и всех новаторов, имеющих отношение к дизайну, с целью воплощения лучших концепций в жизнь.</p><p>A`Design Award & Competition - не просто награда, а показатель превосходного качества в дизайне, это премия, которую признают во всем мире. Победа в A`Design Award является сертификатом отличия для дизайнеров и доказательством качества компаний. Победители не только привлекают внимание аудитории во всем мире, но и гарантию более высокого статуса как профессионала.</p>')
 			+year('2013','<p><b>PinWin - “Лучший интерьер гостиной”</b></p><p>PinWin - международный он-лайн проект, на котором в интерактивном режиме проводятся конкурсы в области архитектуры и дизайна. Мы стали победителями в конкурсе “Лучший интерьер гостиной”.</p>')
-			.bg-text.bg-text--timeline2 awards
-			.bg-text.bg-text--timeline1 2019
-			.decorative-line.decorative-line--timeline
+			.bg-text.bg-text--timeline2(class="animate__fadeInLeft animate__animated wow" data-wow-delay="1.2s") awards
+			.bg-text.bg-text--timeline1(class="animate__fadeInLeft animate__animated wow" data-wow-delay=".4s") 2019
+			.decorative-line.decorative-line--timeline(class="animate__fadeInLeft animate__animated wow" data-wow-delay=".8s")
 	// end sTimeline
 
 

@@ -42,6 +42,7 @@ mixin select(label,pl,...items)
 //- wrapper for form
 mixin form-wrap(inp)
 	+b.form-wrap&attributes(attributes)
+		.before(class="animate__heartBeat animate__animated wow" data-wow-delay="1s")
 		form
 			if inp
 				input(name='example-input-field', type='hidden')

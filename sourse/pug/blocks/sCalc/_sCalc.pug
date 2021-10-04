@@ -2,10 +2,10 @@ mixin sCalc(data)
 	// start sCalc
 	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
 		.container
-			.bg-text.bg-text--calc calculator
-			+b.section-title.text-center
+			.bg-text.bg-text--calc(class="animate__lightSpeedInRight animate__animated wow"  data-wow-delay=".5s") calculator
+			+b.section-title.text-center(class="animate__fadeInUp animate__animated wow"  )
 				h1 Калькулятор расчета цены дизайн проекта
-		.container.container--calc
+		.container.container--calc(class="animate__fadeInUp animate__animated wow"  )
 			+e.block
 				+e.block-title Выберите тариф
 				form(name="type")

@@ -2,10 +2,10 @@ mixin sArticles(data)
 	// start sArticles
 	+b.sArticles.section#sArticles&attributes(attributes)
 		.container
-			.decorative-line.decorative-line--articles
-			.decorative-circle.decorative-circle--first
-			.decorative-circle.decorative-circle--second
-			.bg-text.bg-text--articles articles
+			.decorative-line.decorative-line--articles(class="animate__slideInUp animate__animated wow" data-wow-delay=".2s")
+			.decorative-circle.decorative-circle--first(class="animate__slideInRight animate__animated wow" data-wow-delay=".4s")
+			.decorative-circle.decorative-circle--second(class="animate__slideInRight animate__animated wow" data-wow-delay=".6s")
+			.bg-text.bg-text--articles(class="animate__slideInLeft animate__animated wow" data-wow-delay="1s") articles
 			ul 
 				li
 					a.h2(href="#") Дизайн проект квартиры от&nbsp;студии&nbsp;Н&#8209;КУБ

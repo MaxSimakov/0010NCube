@@ -3,20 +3,21 @@ mixin sPublications(data)
 	+b.SECTION.sPublications.section#sPublications&attributes(attributes)
 		.container
 			+e.wrap
-				h1 Публикации и награды
-				+e.block
+				div(class="animate__fadeInUp animate__animated wow"  )
+					h1 Публикации и награды
+				+e.block(class="animate__fadeInUp animate__animated wow"  )
 					.title 2021
 					.caption Публикация в журнале Домашний очаг
-				+e.block
+				+e.block(class="animate__fadeInUp animate__animated wow"  )
 					.title 2020
 					.caption Номинанты в INTERIA AWARDS 
-				+e.block
+				+e.block(class="animate__fadeInUp animate__animated wow"  )
 					.title 2019
 					.caption Выставка ISalone 2019 в Милане Италия
-				+e.btn(href='#') Смотреть все награды
+				+e.btn(href='#'  class="animate__fadeInUp animate__animated wow"  ) Смотреть все награды
 			+pic('publications.png','',0).bg-publ
-			.decorative-line.decorative-line--1
+			.decorative-line.decorative-line--1(class="animate__slideInUp animate__animated wow"  )
 			.bg-text AWARDS
 		+pic('publications.png','',0).bg-publ--mob
-		.decorative-line.decorative-line--2
+		.decorative-line.decorative-line--2(class="animate__slideInRight animate__animated wow"  )
 	// end sPublications

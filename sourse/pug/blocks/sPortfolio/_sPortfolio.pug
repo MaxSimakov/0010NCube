@@ -2,8 +2,8 @@ mixin sPortfolio(data)
 	// start sPortfolio
 	+b.SECTION.sPortfolio.section#sPortfolio&attributes(attributes)
 		.container
-			+b.section-title
-				h1 Наши лучшие работы
+			+b.section-title(class="animate__fadeInUp animate__animated wow"  )
+				h1 Наши работы
 				//- h6 Сортировка
 			//- +form-wrap
 			//- 	.row
@@ -19,25 +19,25 @@ mixin sPortfolio(data)
 			//- 			+in-c(`checkbox`, `Квартиры более 100 кв.м.`)
 		+e.cards
 			mixin card-item(i)
-				+e.card-item(href="#").bg-wrap
+				+e.card-item.bg-wrap(href="#" class="animate__slideInUp animate__animated wow"  )
 					+pic(`portfolio-${i}.jpg`,'bg').picture-bg
 					+e.caption
 						span Название дома Lorem ipsum dolor sit amet.
 						span 315&nbsp;м#[sup 2]
 				// /+e.card-item
-			//- - for (var x = 0; x < 4; x++)
-			+card-item(1, x)
-			+card-item(2, x)
-			+card-item(3, x)
-			+card-item(4, x)
-			+card-item(5, x)
-			+card-item(6, x)
-			+card-item(3, x)
-			+card-item(1, x)
-			+card-item(2, x)
-			+card-item(6, x)
-			+card-item(5, x)
-			+card-item(4, x)
+			- for (var x = 0; x < 4; x++)
+				+card-item(1, x)
+				+card-item(2, x)
+				+card-item(3, x)
+				+card-item(4, x)
+				+card-item(5, x)
+				+card-item(6, x)
+				+card-item(3, x)
+				+card-item(1, x)
+				+card-item(2, x)
+				+card-item(6, x)
+				+card-item(5, x)
+				+card-item(4, x)
 			
 				
 	// end sPortfolio

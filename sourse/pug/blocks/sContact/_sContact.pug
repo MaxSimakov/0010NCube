@@ -44,10 +44,9 @@ mixin sContact()
 mixin sContact-inner()
 	// start sContact--inner
 	+b.SECTION.sContact--inner.section#sContact&attributes(attributes)
-		.container
-			h2.d-none Контакты
+		.container 
 			+e.info
-				.decorative-circle
+				.decorative-circle(class="animate__fadeLeft animate__animated wow" data-wow-delay=".8s")
 				+e.item
 					+e.shedule
 						span В будни с 10:00 до 20:00

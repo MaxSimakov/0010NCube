@@ -34,9 +34,9 @@ mixin sReviews-inner(t)
 	// end sReviews-inner
 
 mixin sReviews-item(p, data)
-	+e.wrapper
-		+e.bg-rad
-		.decorative-circle
+	+e.wrapper(class="animate__fadeInUp animate__animated wow"  )
+		+e.bg-rad(class="animate__fadeIn animate__animated wow"  )
+		.decorative-circle(class="animate__fadeIn animate__animated wow"  )
 		.container
 			.row
 				if p

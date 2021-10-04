@@ -1,15 +1,15 @@
 mixin sCallForm(i)
 	// start sCallForm
-	+b.SECTION.sCallForm.section.bg-wrap#sCallForm&attributes(attributes)
+	+b.SECTION.sCallForm.section.bg-wrap(class="animate__fadeInUp animate__animated wow"  )#sCallForm&attributes(attributes)
 		.container
 			+form-wrap()
-				h2 Хотите встретиться?
-				.caption Мы вам позвоним и согласуем удобное&nbsp;время встречи
+				h2(class="animate__fadeInUp animate__animated wow"  ) Хотите встретиться?
+				.caption(class="animate__fadeInUp animate__animated wow"  ) Мы вам позвоним и согласуем удобное&nbsp;время встречи
 				+input('Имя')
 				+input('Телефон')
 				+e.btn Отправить заявку
-			.decorative-line.decorative-line--callform
+			.decorative-line.decorative-line--callform(class="animate__fadeInRight animate__animated wow"  data-wow-delay="1s")
 		+pic(`call-form-${i}.jpg`,'bg',0).picture-bg
-		.bg-text questions
+		.bg-text(class="animate__fadeInLeft animate__animated wow"  ) questions
 		
 	// end sCallForm

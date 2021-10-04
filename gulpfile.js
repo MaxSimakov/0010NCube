@@ -33,7 +33,7 @@ global.$ = {
     nested: require('postcss-nested'),
     plumber: require('gulp-plumber'),
     webpack: require('webpack-stream'),
-    resizer: require('gulp-images-resizer'),
+    responsive: require('gulp-responsive'),
     path: {
         tasks: require('./gulp/config/tasks.js'),
     },

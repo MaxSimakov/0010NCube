@@ -2,11 +2,11 @@ mixin sSpecificProject(data)
 	// start sSpecificProject
 	+b.SECTION.sSpecificProject.section#sSpecificProject&attributes(attributes)
 		.container
-			+b.section-title 
+			+b.section-title(class="animate__slideInUp animate__animated wow"  )
 				h1 ЖК&nbsp;Утесов
 			.row
 				mixin item(...items)
-					.col-lg-4
+					.col-lg-4(class="animate__slideInUp animate__animated wow"  )
 						ul
 							each item in items
 								li!= item
@@ -14,10 +14,10 @@ mixin sSpecificProject(data)
 				+item(`2,5 месяца`, `Срок реализации`)
 				+item(`93&nbsp;кв.м.`, `Площадь помещения`)
 		
-		+e.slider--js.swiper
+		+e.slider--js.swiper(class="animate__slideInUp animate__animated wow"  )
 			.swiper-wrapper
 				mixin slide(i)
-					+e.slide.swiper-slide
+					+e.slide.swiper-slide()
 						+pic(`${i}.jpg`,'')
 				+slide(`specific-project-1`)
 				+slide(`header-block-2`)
