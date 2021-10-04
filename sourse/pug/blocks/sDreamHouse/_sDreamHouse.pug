@@ -1,13 +1,28 @@
 mixin sDreamHouse(data)
 	// start sDreamHouse
 	+b.SECTION.sDreamHouse.section#sDreamHouse&attributes(attributes)
-		.container
-			.row
-				+pic('dream-house.jpg','bg',0).bg-pic(class="animate__fadeInLeft animate__animated wow"  )
-				+e.content-col.col-auto
-					h2 Дом вашей мечты -&nbsp;это реально
-					+e.caption <p>Отработанный многими годами подход и&nbsp;опыт позволяют нам создавать штучные&nbsp;интерьеры в&nbsp;различных стилях.</p><p>Каждый наш сотрудник основательно подходит к&nbsp;проекту, бережно и&nbsp;внимательно&nbsp;работая над каждой деталью&nbsp;интерьера.</p><p>Качественно прорабатывая все составляющие проекта. В&nbsp;каждую составляющую проекта вдыхая жизнь, добавляя индивидуальные детали и&nbsp;аксессуары.</p>
-		//- +pic('dream-house.jpg','bg',0).bg-pic--mob.d-block.d-lg-none
-		.bg-text dream house
-		+e.bg-rad
+		+e.wrapper(class="animate__fadeInUp animate__animated wow")
+			.container
+				.row
+					.col-lg-6
+						+e.caption-wrap
+							h2 Дом вашей мечты -&nbsp;это реально
+							+e.caption <p>Отработанный многими годами подход и&nbsp;опыт позволяют нам создавать штучные&nbsp;интерьеры в&nbsp;различных стилях.</p><p>Каждый наш сотрудник основательно подходит к&nbsp;проекту, бережно и&nbsp;внимательно&nbsp;работая над каждой деталью&nbsp;интерьера.</p><p>Качественно прорабатывая все составляющие проекта. В&nbsp;каждую составляющую проекта вдыхая жизнь, добавляя индивидуальные детали и&nbsp;аксессуары.</p>
+					+e.col.col-12.col-sm
+						+pic('dream-house.jpg','bg',0).bg-pic(class="animate__fadeInUp animate__animated wow"  )
+			.bg-text dream house
+			+e.bg-rad
 	// end sDreamHouse
+//- mixin sDreamHouse(data)
+//- 	// start sDreamHouse
+//- 	+b.SECTION.sDreamHouse.section#sDreamHouse&attributes(attributes)
+//- 		.container
+//- 			.row
+//- 				+pic('dream-house.jpg','bg',0).bg-pic(class="animate__fadeInLeft animate__animated wow"  )
+//- 				+e.content-col.col-auto
+//- 					h2 Дом вашей мечты -&nbsp;это реально
+//- 					+e.caption <p>Отработанный многими годами подход и&nbsp;опыт позволяют нам создавать штучные&nbsp;интерьеры в&nbsp;различных стилях.</p><p>Каждый наш сотрудник основательно подходит к&nbsp;проекту, бережно и&nbsp;внимательно&nbsp;работая над каждой деталью&nbsp;интерьера.</p><p>Качественно прорабатывая все составляющие проекта. В&nbsp;каждую составляющую проекта вдыхая жизнь, добавляя индивидуальные детали и&nbsp;аксессуары.</p>
+//- 		//- +pic('dream-house.jpg','bg',0).bg-pic--mob.d-block.d-lg-none
+//- 		.bg-text dream house
+//- 		+e.bg-rad
+//- 	// end sDreamHouse

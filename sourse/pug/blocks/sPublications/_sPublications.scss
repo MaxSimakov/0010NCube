@@ -7,12 +7,13 @@
 	position: relative;
 	z-index: 3;
 	.container {
-		position: relative;
+		
 		@include media-breakpoint-up(xxl) {
 			padding-bottom: 170px;
 		}
 		@include media-breakpoint-up(lg) {
 			padding-bottom: 20px;
+			position: relative;
 		}
 	}
 	z-index: 3;
@@ -95,13 +96,12 @@
 		@include media-breakpoint-up(xxxl) {
 			// top: rem(113);
 			bottom: 0;
+			right: rem(144);
 			img {
 				max-width: none;
 			}
 		}
 		@include media-breakpoint-up(xl) {
-			right: 96px;
-			right: rem(144);
 			width: rem(550);
 			height: rem(830);
 			
@@ -114,7 +114,14 @@
 			height: 605px;
 		}
 		@include media-breakpoint-down(lg) {
-			display: none;
+			bottom: 0;
+			right: 0;
+			width: 66.4vw;
+			max-width: 500px;
+			min-width: 250px;
+			img{
+				width: 100%;
+			}
 		}
 		&::before {
 			content: "";
@@ -135,46 +142,6 @@
 				left: 10px;
 				width: 433px;
 				height: 433px;
-			}
-		}
-		&--mob {
-			@include media-breakpoint-up(lg) {
-				display: none;
-			}
-			position: absolute;
-			bottom: 50px;
-			right: -10px;
-			@include media-breakpoint-up(md){
-				right: 260px;
-			}
-			@include media-breakpoint-up(sm){
-				right: 180px;
-			}
-			width: 320px;
-			height: 472px;
-			z-index: -1;
-			&::before {
-				content: "";
-				border-radius: 50%;
-				// border: 1px solid #E0E0E0;
-				border: 1px solid #e0e0e0;
-				background-color: transparent;
-				position: absolute;
-				z-index: -3;
-				width: 474px;
-				height: 474px;
-				top: 62px;
-				left: -50px;
-			}
-			&::after {
-				content: "";
-				width: 474px;
-				height: 50px;
-				background-color: $white;
-				position: absolute;
-				bottom: -61px;
-				left: 40px;
-				z-index: -2;
 			}
 		}
 	}
@@ -225,7 +192,7 @@
 			line-height: rem(208);
 		}
 		@include media-breakpoint-down(lg) {
-			right: -130px;
+			right: -80px;
 			top: 170px;
 			font-size: 110px;
 			line-height: 127px;
@@ -233,16 +200,3 @@
 		z-index: -4;
 	}
 } // end.sPublications
-
-@media (max-width: 400px) {
-	.sPublications .bg-publ--mob {
-		width: 215px;
-		height: 317px;
-		&::before {
-			width: 320px;
-			height: 320px;
-			top: 40px;
-			left: -50px;
-		}
-	}
-}
