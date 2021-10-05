@@ -111,7 +111,7 @@
 		padding-right: rem(15);
 	}
 	position: fixed;
-	z-index: 5;
+	z-index: 1500;
 	@include media-breakpoint-down(md) {
 		bottom: 18px;
 		left: 50%;

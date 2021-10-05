@@ -10,6 +10,7 @@
 	// .container {
 	// 	position: relative;
 	// }
+	z-index: 5;
 		position: relative;
 	.decorative-circle {
 		width: rem(475);
@@ -17,7 +18,7 @@
 		left: -21.5%;
 		bottom: auto;
 		top: 15%;
-		z-index: 3;
+		z-index: -1;
 		@include media-breakpoint-up(lg) {
 			width: rem(642);
 			height: rem(642);
@@ -97,7 +98,7 @@
 	}
 	&__item {
 		position: relative;
-		z-index: 4;
+		z-index: 6;
 		// padding: rem(25) rem(35);
 		border: 1px solid #e0e0e0;
 		margin-bottom: rem(18);
