@@ -63,8 +63,14 @@ mixin sCalc(data)
 						+e.sale-price
 							+e.calc-title Со скидкой 5% 
 							+e.input-sale 399 000 р
-				+e.btn-fix.link-modal-js(href='modal-sale') Зафиксировать скидку
-				+b.modal-win--sale(id=`modal-sale` class=" " style="display: none" )
+				+e.btn-fix.link-modal-js(href='modal-call') Зафиксировать скидку
+				+b.modal-win--call(id=`modal-call` class=" " style="display: none" )
+					+form-wrap
+						+input("Имя")
+						+input("Телефон",'tel')
+						+input("Почта",'email')
+						input.btn.btn-primary.w-100(type="button" value="ПОЛУЧИТЬ СКИДКУ")
+				+b.modal-win--sale(id=`modal-sale-thanks` class=" " style="display: none" )
 					.modal-wrap
 						.modal-text
 							.modal-text__title Ваша скидка зафиксирована

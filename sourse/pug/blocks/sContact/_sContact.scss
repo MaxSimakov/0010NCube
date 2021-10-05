@@ -156,10 +156,10 @@
 		}
 		.decorative-circle {
 			z-index: 3;
-			left: -30%;
+			left: -28%;
 			top: -20%;
-			width: rem(468);
-			height: rem(468);
+			width: rem(480);
+			height: rem(480);
 			@include media-breakpoint-up(md) {
 				left: -64%;
     top: -28%;

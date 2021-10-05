@@ -7,48 +7,49 @@ mixin sStages(data)
 			.decorative-line.decorative-line--stages-second(class="animate__slideInUp animate__animated wow" data-wow-delay=".5s")
 			+b.section-title.text-center(class="animate__slideInUp animate__animated wow"  )
 				h2 этапы проектирования
-		.container
-			.row
-				+e.content-col.col-auto.order-lg-0.order-1
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title ЗАКЛЮЧЕНИЕ ДОГОВОРА
-						ul
-							li Заключаем соглашение на&nbsp;разработку дизайн проекта
-							li Составляем техническое задание
-							li Определяемся по&nbsp;бюджету
-							li Продумываем функционал
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title.d-lg-block.d-none ВЫЕЗД<br>НА&nbsp;ОБЪЕКТ
-						+e.title.d-lg-none.d-block ВЫЕЗД НА&nbsp;ОБЪЕКТ
-						ul
-							li Выезжаем на&nbsp;обмер помещений и&nbsp;фотофиксацию, в котором отметим все существующие коммуникации, несущие конструкции, в&nbsp;общем, изучим объект.
-							li Мы&nbsp;можем делать проекты удаленно, без выезда! Для этого у&nbsp;нас должны быть обмеры помещения, которым можно доверять и&nbsp;есть все необходимые размеры или точный документ от&nbsp;проектировщиков, например, не построенного загородного дома
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title ПЛАНИРОВОЧНОЕ РЕШЕНИЕ
-						ul
-							li Прорабатываем возможные варианты планировки и зонирования&nbsp;помещений, учитывая нормы и возможность согласования.
-							li Планировка&nbsp;- это важный момент в&nbsp;работе над интерьером, поэтому ей&nbsp;стоит уделить максимум внимания.
-				+e.col.col-lg.col-12.order-lg-1.order-0(class="animate__fadeIn  animate__animated wow"  )
-					+pic('stages-1.jpg','bg',0)
-		.container
-			.row.row-reverse
-				+e.content-col-left.col-auto.order-lg-0.order-1
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title КОНЦЕПТУАЛЬНОЕ РЕШЕНИЕ И ПОДБОР МАТЕРИАЛОВ
-						ul
-							li Разрабатываем концептуальное решение помещений и подбираем все отделочные материалы и оборудование
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title 3D ВИЗУАЛИЗАЦИЯ
-						ul
-							li Делаем 3D визуализации помещений, которые позволяют&nbsp;лучше представить планировку, концепцию&nbsp;дизайна, созданную именно для Вас. Эти эскизы дают нам четкое представление о цветовой гамме&nbsp;и стилю будущего дизайна интерьера
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title РАБОЧИЙ ПРОЕКТ
-						ul
-							li Все необходимые чертежи, которые, по мнению дизайнера необходимы для успешной реализации задуманной концепции.
-					+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
-						+e.title ВЫХОД НА СТРОЙКУ
-						ul
-							li Выбор услуги авторского надзора (только при выборе  project cube+ и комплектация если maxi cube)
-				+e.col-left.col-lg.col-12.order-lg-1.order-0(class="animate__fadeIn  animate__animated wow"  )
-					+pic('stages-2.jpg','bg',0)
+		div
+			+e.item.container
+				.row
+					+e.content-col.col-auto
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title ЗАКЛЮЧЕНИЕ ДОГОВОРА
+							ul
+								li Заключаем соглашение на&nbsp;разработку дизайн проекта
+								li Составляем техническое задание
+								li Определяемся по&nbsp;бюджету
+								li Продумываем функционал
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title.d-lg-block.d-none ВЫЕЗД<br>НА&nbsp;ОБЪЕКТ
+							+e.title.d-lg-none.d-block ВЫЕЗД НА&nbsp;ОБЪЕКТ
+							ul
+								li Выезжаем на&nbsp;обмер помещений и&nbsp;фотофиксацию, в котором отметим все существующие коммуникации, несущие конструкции, в&nbsp;общем, изучим объект.
+								li Мы&nbsp;можем делать проекты удаленно, без выезда! Для этого у&nbsp;нас должны быть обмеры помещения, которым можно доверять и&nbsp;есть все необходимые размеры или точный документ от&nbsp;проектировщиков, например, не построенного загородного дома
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title ПЛАНИРОВОЧНОЕ РЕШЕНИЕ
+							ul
+								li Прорабатываем возможные варианты планировки и зонирования&nbsp;помещений, учитывая нормы и возможность согласования.
+								li Планировка&nbsp;- это важный момент в&nbsp;работе над интерьером, поэтому ей&nbsp;стоит уделить максимум внимания.
+					+e.col.col-lg.col-12(class="animate__fadeInUp  animate__animated wow"  )
+						+pic('stages-1.jpg','bg')
+			+e.item.container
+				.row
+					+e.content-col.col-auto
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title КОНЦЕПТУАЛЬНОЕ РЕШЕНИЕ И ПОДБОР МАТЕРИАЛОВ
+							ul
+								li Разрабатываем концептуальное решение помещений и подбираем все отделочные материалы и оборудование
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title 3D ВИЗУАЛИЗАЦИЯ
+							ul
+								li Делаем 3D визуализации помещений, которые позволяют&nbsp;лучше представить планировку, концепцию&nbsp;дизайна, созданную именно для Вас. Эти эскизы дают нам четкое представление о цветовой гамме&nbsp;и стилю будущего дизайна интерьера
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title РАБОЧИЙ ПРОЕКТ
+							ul
+								li Все необходимые чертежи, которые, по мнению дизайнера необходимы для успешной реализации задуманной концепции.
+						+e.text-wrap(class="animate__fadeInUp animate__animated wow"  )
+							+e.title ВЫХОД НА СТРОЙКУ
+							ul
+								li Выбор услуги авторского надзора (только при выборе  project cube+ и комплектация если maxi cube)
+					+e.col.col-lg.col-12(class="animate__fadeInUp  animate__animated wow"  )
+						+pic('stages-2.jpg','bg')
 	// end sStages
