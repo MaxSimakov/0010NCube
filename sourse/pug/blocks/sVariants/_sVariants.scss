@@ -337,10 +337,10 @@
 			max-width: 530px;
 		}
 		@include media-breakpoint-down(md) {
-			max-width: 440px;
 		}
+		max-width: 440px;
 		@include media-breakpoint-down(sm){
-			max-width: 320px;
+			// max-width: 320px;
 		}
 		.bg-text {
 			color: rgba(208, 208, 208, 0.2);
@@ -362,13 +362,17 @@
 				bottom: 28px;
 			}
 			@include media-breakpoint-down(lg) {
-				font-size: 110px;
+				// font-size: 70px;
+				@include rfs(170px);
 				line-height: 92%;
 				bottom: 45px;
+				text-align: center;
+				width: 100%;
+				display: block;
 				// top: 83%;
 				// left: 50%;
 				// transform: translate(-50%, 0);
-				width: auto;
+				// width: auto;
 				max-width: 100%;
 				text-overflow: clip;
 				overflow: hidden;
@@ -543,11 +547,11 @@
 				width: 46.31%;
 			}
 			@include media-breakpoint-down(lg) {
-				min-height: 740px;
+				min-height: 640px;
 				padding-top: 51px;
 				padding-left: 41px;
 				padding-right: 42px;
-				padding-bottom: 280px;
+				padding-bottom: 180px;
 			}
 		}
 	}
