@@ -2,7 +2,7 @@ mixin sTimeline(data)
 	// start sTimeline
 	+b.sTimeline.section#sTimeline&attributes(attributes)
 		.container
-			+pic('timeline.png','',0).bg-timeline(class="animate__fadeInRight animate__animated wow" data-wow-delay=".8s")
+			+pic('timeline.png').bg-timeline(class="animate__fadeInRight animate__animated wow" data-wow-delay=".8s")
 			mixin year(y,c)
 				div(class="animate__fadeInUp animate__animated wow"  )
 					+e.year=y

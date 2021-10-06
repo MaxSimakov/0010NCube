@@ -10,11 +10,12 @@ mixin headerBlock()
 							+e.inner
 								+pic(`header-block-${i}.jpg`,'bg').picture-bg
 								+e.slide-inner.container
-									+b.section-title
-										h1!= t
-									ul
-										each item in items
-											li!= item
+									+e.content
+										+b.section-title
+											h1!= t
+										ul
+											each item in items
+												li!= item
 									+e.btn(href="#") Рассчитать проект
 					+slide(1, `Дизайн интерьера жилых помещений под ключ`, `Работа в&nbsp;срок, с&nbsp;учетом бюджета и&nbsp;пожеланий клиента`, `Стиль&nbsp;&dash; наше главное отличие от&nbsp;других студий`, `18&nbsp;лет практики в&nbsp;сфере дизайна`)
 					+slide(2, `Эстетика в каждой <br> детали`, `Все продумываем до&nbsp;мелочей`, `Сочетаем красоту с&nbsp;функциональностью`, `Гармония в&nbsp;каждом интерьере`)

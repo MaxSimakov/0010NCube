@@ -437,6 +437,36 @@ function eventHandler() {
 		offset: 150,
 	});
 	wow.init();
+	
+	$(".btn-cookie").click(function () {
+	
+		writeCookie('cookie-block', 'hide', 30);
+		// document.querySelector(".cookie-block").classList.add("d-none")
+	})
+	
+	function writeCookie(name, val, expires) {
+		var date = new Date;
+		date.setDate(date.getDate() + expires);
+		document.cookie = name + "=" + val + "; path=/; expires=" + date.toUTCString();
+	}
+	
+	
+	function readCookie(name) {
+		var matches = document.cookie.match(new RegExp(
+			"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		));
+		return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+	let test = readCookie('cookie-block');
+	if (!test) {
+		const fancybox = Fancybox.show([
+			{
+				src: "#modal-cookies",
+				type: "inline",
+			},
+		]);
+	}
+		
 
 };
 if (document.readyState !== 'loading') {

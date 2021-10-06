@@ -18,7 +18,7 @@ mixin footer()
 							a(href='#') Отзывы
 						li
 							a(href='#') Статьи
-				.col-lg-3.d-lg-block.d-flex.flex-column
+				+e.col.col-lg-3.d-flex.flex-column
 					+e.title.order-lg-0.order-1 Офис:
 					+e.caption.order-lg-1.order-2 г. Москва, м. Семёновская, ул. Большая Семёновская, д. 55 А, офис 21
 					+e.policy.order-lg-2.order-0(href="#") Политика конфиденциальности
@@ -82,5 +82,8 @@ mixin footer()
 			//- 		+e.tel(href="tel:+7(903)756-30-51") +7 (903) 756-30-51
 
 	+b.modal-cookies(class=" " id="modal-cookies")
-		+e.caption Продолжая пользоваться сайтом, Вы соглашаетесь с условиями "#[a(href="#" target="_blank") Политики конфиденциальности]" и с тем, что данный сайт использует файлы cookie, которые улучшают работу сайта.
-		+e.btn(type="button") Принять
+		+e.caption Этот сайт использует файлы cookie для хранения данных. Продолжая использовать сайт, вы&nbsp;даете свое согласие на&nbsp;работу с&nbsp;этими файлами.
+		+e.btn(type="button").modal-close-js.btn-cookie ХОРОШО, ПРИНИМАЮ
+		+pic("modal-cookie",'bg')
+		.bg-text Cookie
+	

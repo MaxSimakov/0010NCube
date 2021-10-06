@@ -726,7 +726,7 @@
 								<li><a href="#">Статьи</a></li>
 							</ul>
 						</div>
-						<div class="col-lg-3 d-lg-block d-flex flex-column">
+						<div class="footer__col col-lg-3 d-flex flex-column">
 							<div class="footer__title order-lg-0 order-1">Офис:
 							</div>
 							<div class="footer__caption order-lg-1 order-2">г. Москва, м. Семёновская, ул. Большая Семёновская, д. 55 А, офис 21
@@ -750,10 +750,19 @@
 				</div>
 			</footer>
 			<div class="modal-cookies" id="modal-cookies">
-				<div class="modal-cookies__caption">Продолжая пользоваться сайтом, Вы соглашаетесь с условиями "<a href="#" target="_blank">Политики конфиденциальности</a>" и с тем, что данный сайт использует файлы cookie, которые улучшают работу сайта.
+				<div class="modal-cookies__caption">Этот сайт использует файлы cookie для хранения данных. Продолжая использовать сайт, вы&nbsp;даете свое согласие на&nbsp;работу с&nbsp;этими файлами.
 				</div>
-				<button class="modal-cookies__btn" type="button">Принять
+				<button class="modal-cookies__btn modal-close-js btn-cookie" type="button">ХОРОШО, ПРИНИМАЮ
 				</button>
+				<!-- picture-->
+				<picture> 
+					<source type="image/webp" srcset="img/@2x/webp/modal-cookie.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/modal-cookie.webp"/>
+					<source type="image/jpg" srcset="img/@2x/modal-cookie.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/modal-cookie.jpg"/><img class="object-fit-js" src="img/@2x/modal-cookie.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="bg-text">Cookie</div>
 			</div>
 		</div>
 		<!--  start modals-->

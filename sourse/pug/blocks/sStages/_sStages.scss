@@ -8,8 +8,18 @@
 	@include media-breakpoint-between(lg,xxl){
 		--sPB:0;
 	}
+	&__item .row  {
+		@include media-breakpoint-down(lg) {
+			.sStages__col{
+				order: -1;
+			}
+		}
+
+	}
 	&__item:nth-child(2) .row  {
+		@include media-breakpoint-up(lg) {
 		flex-direction: row-reverse;
+		}
 		ul{
 			@include media-breakpoint-up(xxl){
 				padding-left: 18px;
