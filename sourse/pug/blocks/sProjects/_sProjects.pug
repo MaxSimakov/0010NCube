@@ -7,8 +7,9 @@ mixin sProjects(data)
 				h2 с 2010 года наша студия реализовала более 200 объектов
 		.container--slider
 			.decorative-line(class="animate__slideInUp animate__animated wow"  data-wow-delay=".5s")
-			+b.bg-text--first(class="animate__fadeInRight animate__animated wow" data-wow-delay=".2s") After
-			+b.bg-text--second(class="animate__fadeInLeft animate__animated wow" data-wow-delay=".2s") Before
+			.container
+				+b.bg-text--first(class="animate__fadeInRight animate__animated wow" data-wow-delay=".2s") After
+				+b.bg-text--second(class="animate__fadeInLeft animate__animated wow" data-wow-delay=".2s") Before
 			+e.slider--js.swiper(class="animate__fadeInUp animate__animated wow")
 				.swiper-wrapper
 					- for (var x = 0; x < 3; x++)

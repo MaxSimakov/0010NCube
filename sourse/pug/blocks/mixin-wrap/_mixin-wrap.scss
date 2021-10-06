@@ -217,7 +217,7 @@
 				grid-column: 3/4;
 				grid-row: 3/5;
 				picture {
-					height: 100%;
+					// height: 100%; 
 					img {
 						height: 100%;
 						object-fit: cover;
@@ -236,7 +236,7 @@
 				grid-column: 4/5;
 				grid-row: 3/5;
 				picture {
-					height: 100%;
+					// height: 100%;
 					img {
 						height: 100%;
 						object-fit: cover;
@@ -255,13 +255,14 @@
 				grid-column: 1/3;
 				grid-row: 4/6;
 				picture {
-					height: 100%;
+					// height: 100%;
 					img {
 						height: 100%;
 						object-fit: cover;
 					}
 				}
 			}
+
 			.card-text {
 				@include media-breakpoint-up(lg) {
 					bottom: rem(44);
@@ -278,6 +279,27 @@
 				grid-row: 5/6;
 			}
 		}
+
+					&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
+				picture img{
+					@include media-breakpoint-up(xxxl) {
+					height: 650px;
+				}
+					@include media-breakpoint-up(xxl) {
+					height: 550px;
+				}
+				
+					@include media-breakpoint-up(xl) {
+					height: 500px;
+				}
+
+					@include media-breakpoint-up(lg) {
+					height: 450px;
+				}
+				}
+			}
 	}
 	&__btn {
 		@extend .btn, .btn-primary;

@@ -33,13 +33,15 @@
 			// top: rem(-80);
 
 			// left: rem(464);
+			left: 30%;
+			bottom: -220px;
 		}
 		@include media-breakpoint-up(xxl) {
 			// top: rem(-80);
 			// left: rem(320);
-			left: 30%;
-			bottom: -220px;
 			max-width: none;
+			bottom: -300px;
+			left: 20%;
 			// max-width: none;
 		}
 		@include media-breakpoint-up(xl) {

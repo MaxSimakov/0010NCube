@@ -72,6 +72,15 @@
 	}
 	.container--slider {
 		position: relative;
+		z-index: 2;
+		.container{
+			// position: relative;
+			position: absolute;
+			z-index: -1;
+			@include a-cent1(x);
+			height: 100%;
+
+		}
 		@include media-breakpoint-down(lg) {
 			max-width: 100%;
 			padding: 0;
@@ -92,7 +101,7 @@
 				bottom: 97%;
 				right: 0;
 				@include media-breakpoint-up(xxxl) {
-					right: rem(-60);
+					right: rem(-30);
 				}
 			}
 			&--second {
@@ -102,7 +111,7 @@
 					top: 98%;
 				}
 				@include media-breakpoint-up(xxxl) {
-					left: rem(-60);
+					left: rem(-30);
 				}
 			}
 		}
