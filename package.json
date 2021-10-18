@@ -56,6 +56,7 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.0-beta.3",
     "animate.css": "^4.1.1",
+    "fslightbox": "^3.3.0-2",
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",

@@ -109,7 +109,7 @@
 			text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 			font-size: 18px;
 			line-height: 22px;
-			height: 66px;
+			//height: 66px;
 			@include media-breakpoint-down(lg) {
 				bottom: 44px;
 				left: 80px;
@@ -117,7 +117,7 @@
 			@include media-breakpoint-up(lg) {
 				font-size: rem(18);
 				line-height: rem(22);
-				height: rem(66);
+				//height: rem(66);
 			}
 			.title {
 				text-transform: uppercase;

@@ -11,33 +11,34 @@ Template Name: Page with sidebar
  */
 
 get_header();
+$page;
 ?>
 
- <div class="container landing-body">
-      <div class="row">
-        <div class="col-xl-8"> 
-          <div class="page-head">
-            <h1><?php echo get_the_title(); ?></h1>
-          </div>  
-					<?php
-						while ( have_posts() ) :
-								the_post();
-								the_content();
-						endwhile;
-						?>
-        </div> 
-				<?php get_sidebar(); ?> 
-      </div>
-    </div>
-    <?php  	if( get_field('discount') ) :  ?> 
-      <div class="DiscountLine container section">
-      <div class="DiscountLine__inner">
-        <div class="row">
-          	<?php echo the_field('discount'); ?>
+    <!-- start sArticleHead-->
+    <section class="sArticleHead section animate__fadeInUp animate__animated wow" >
+        <!-- picture-->
+        <picture class="picture-bg">
+	        <?php echo get_the_post_thumbnail( $page->ID, '2560'); ?>
+        </picture>
+        <!-- /picture-->
+        <div class="container">
+            <div class="decorative-line decorative-line--some-article"></div>
+            <h1><?php wp_title('',true); ?></h1>
         </div>
-      </div>
-    </div>
-  <?php endif;  ?>
-
+    </section>
+    <!-- end sArticleHead-->
+    <!-- start sArticleTitle-->
+    <section class="sArticleTitle section animate__fadeInUp animate__animated wow" id="sArticleTitle">
+        <div class="decorative-circle decorative-circle--title1"></div>
+        <div class="decorative-circle decorative-circle--title2"></div>
+        <div class="container">
+	        <?php
+	        while ( have_posts() ) :
+		        the_post();
+		        the_content();
+	        endwhile;
+	        ?>
+        </div>
+    </section>
 <?php
 get_footer();

@@ -15,6 +15,16 @@
 get_header();
 ?>
 
+<?php if( !is_front_page() ) { ?>
+	<?php if( $post->ID != 121 &&  $post->ID != 202  && $post->ID != 247) { ?>
+		<div class="page-head">
+			<div class="container">
+				<h1><?php wp_title('',true); ?></h1>
+			</div>
+		</div>
+	<?php } ?>
+<?php } ?>
+
 			<?php
 while ( have_posts() ) :
     the_post();

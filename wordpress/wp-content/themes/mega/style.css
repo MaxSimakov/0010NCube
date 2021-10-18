@@ -363,8 +363,8 @@ a:hover, a:active {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+	/*margin: 0 0 1.5em;*/
+	/*overflow: hidden;*/
 }
 
 .comment-navigation .nav-previous,
@@ -501,7 +501,7 @@ a:hover, a:active {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	/*margin: 0 0 1.5em;*/
 }
 
 .updated:not(.published) {

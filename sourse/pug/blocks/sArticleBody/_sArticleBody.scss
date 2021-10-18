@@ -1,10 +1,40 @@
 // start .sArticleBody
+.wp-block-media-text{
+	img{
+		margin-bottom: 30px;
+	}
+}
+.wp-block-media-text,
+
+.wp-block-columns{
+	@extend  .section;
+}
+.wp-block-columns,
 .sArticleBody {
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
 	--sPT: 30px;
 	--sPB:0;
+	.wp-block-column{
+		position: relative;
+		&:is(:nth-child(2)):last-child{
+			img {
+				@extend  .object-fit-js;
+				@include media-breakpoint-up(lg) {
+					top: 4px;
+					height: 88%;
+					// margin-left: calc(var(--bs-gutter-x)*-7.6);
+					margin-right: calc(1 * var(--bs-gutter-x));
+					right: 0;
+					left: auto;
+				}
+				@include media-breakpoint-up(xxl){
+					margin-right: calc(-1 * var(--bs-gutter-x));
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(60)};
 	}

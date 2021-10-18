@@ -15,6 +15,7 @@
 		--sPT: #{rem(130)};
 		--sPB: #{rem(130)};
 	}
+
 	position: relative;
 	overflow: hidden;
 	background-color: $brown;
@@ -23,7 +24,7 @@
 		width: 1px;
 		height: 150vw;
 		top: -50%;
-		left: rem(15);
+		left: 15px;
 		display: none;
 		@include media-breakpoint-up(lg) {
 			display: block;

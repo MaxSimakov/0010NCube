@@ -14,18 +14,8 @@
 		left: 0;
 		background-color: #f2f2f2;
 		z-index: -1;
-		@include media-breakpoint-up(lg) {
-			height: 32.3%;
-		}
-		@include media-breakpoint-down(lg) {
-			height: 30%;
-		}
-		@include media-breakpoint-down(md) {
-			height: 30.9%;
-		}
-		@include media-breakpoint-down(sm) {
-			height: 30.3%;
-		}
+			height: 400px;
+
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(74)};

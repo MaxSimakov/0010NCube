@@ -37,7 +37,8 @@ global.$ = {
     path: {
         tasks: require('./gulp/config/tasks.js'),
     },
-    public: 'public',
+    public: 'wordpress/wp-content/themes/mega/public',
+    // public: 'public',
     sourse: 'sourse',
 }
 $.path.tasks.forEach(function (taskPath) {
@@ -53,7 +54,7 @@ $.gulp.task('default', $.gulp.series('svg', 'svgCopy',
     // $.gulp.parallel('file'),
 
     $.gulp.parallel(
-        'img',
+        // 'img',
         'pug',
         'libs',
         // 'scripts',

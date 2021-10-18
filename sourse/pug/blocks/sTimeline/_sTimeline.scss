@@ -148,6 +148,15 @@
 			font-weight: 400;
 		}
 	}
+	.time-line-item{
+		&:nth-child(-n + 3) {
+			p{
+				@include media-breakpoint-down(lg) {
+					max-width: 160px;
+				}
+			}
+		}
+	}
 	.bg-timeline {
 		position: absolute;
 		z-index: 1;

@@ -11,6 +11,9 @@
 			padding-top: rem(66);
 		}
 	}
+	img{
+		@extend  .object-fit-js;
+	}
 
 	.decorative-line {
 		width: calc(100% - 30px);

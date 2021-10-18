@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Шаблон записей
+Template Name: Шаблон страницы всех проектов
 */
 /**
  * The template for displaying all articals
@@ -26,51 +26,47 @@ while ( have_posts() ) :
     the_content();
 endwhile;
 ?>
-    <!-- start sArticles-->
-    <div class="sArticles section" id="sArticles">
-    <div class="container">
-    <div class="decorative-line decorative-line--articles animate__slideInUp animate__animated wow" data-wow-delay=".2s"></div>
-    <div class="decorative-circle decorative-circle--first animate__slideInRight animate__animated wow" data-wow-delay=".4s"></div>
-    <div class="decorative-circle decorative-circle--second animate__slideInRight animate__animated wow" data-wow-delay=".6s"></div>
-    <div class="bg-text bg-text--articles animate__slideInLeft animate__animated wow" data-wow-delay="1s">articles</div>
 
+    <!-- start sPortfolio-->
+    <section class="sPortfolio section" id="sPortfolio">
+        <div class="container">
+            <div class="section-title animate__fadeInUp animate__animated wow">
+                <h1>Наши работы</h1>
+            </div>
+        </div>
+        <div class="sPortfolio__cards">
+            <?php
+            global $post;
+            $all_pages = (new WP_Query())->query([
+                'post_type' => 'page',
+                'posts_per_page' => -1
+            ]);
+            $about_childrens = get_page_children($post->ID, $all_pages);
+            foreach ($about_childrens as & $page):?>
+                <a class="sPortfolio__card-item bg-wrap animate__slideInUp animate__animated wow" href="<?php echo get_the_permalink($page->ID); ?>">
+                    <!-- picture-->
+                    <picture class="picture-bg">
+	                    <?php
+	                    if (has_post_thumbnail($page->ID)):
+		                    echo get_the_post_thumbnail($page->ID, 'large');
+	                    endif; ?>
+                    </picture>
+                    <!-- /picture-->
+                    <div class="sPortfolio__caption">
+                        <span><?php echo $page->post_title; ?></span>
+                        <span><?php echo $page->post_excerpt; ?>&nbsp;м<sup>2</sup></span>
+                    </div>
+                </a>
+                <!-- /+e.card-item-->
 
-<?php
-$terms = get_terms([
-	'taxonomy' => 'category',
-	'hide_empty' => false,
-]);
-if ($terms) {
-	foreach ($terms as $term):
-		?>
+            <?php
+            endforeach;
+            wp_reset_postdata();
+            ?>
 
-        <ul>
-            <li><h2><?php echo $term->name; ?></h2></li>
-			<?php
-			$args = array(
-				'posts_per_page' => -1,
-				'category' => $term->term_id
-			);
+        </div>
+    </section>
+    <!-- end sPortfolio-->
 
-			$myposts = get_posts($args);
-			foreach ($myposts as $post) : setup_postdata($post); ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </li>
-			<?php endforeach;
-			wp_reset_postdata(); ?>
-        </ul>
-	<?php
-	endforeach;
-}
-?>
-
-    </div>
-    </div>
-    <!-- end sArticles-->
-			
-		
-			
-	
 <?php
 get_footer();
